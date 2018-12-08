@@ -14,10 +14,10 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: ADA LYN - CS401
+title: CS401 Applied Data Analysis EPFL - Project
 
 # Short description of your site
-description: CS401 Project - ADA LYN
+description: ADA Project
 
 # --- Navigation bar options --- #
 
