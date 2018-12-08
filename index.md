@@ -54,10 +54,33 @@ We have two main questions we will try to answer during this project
 
 ### By Product Category
 
-- Interesting effects observed (dates, helpful, ...) for Books
-	- Interpretation
-	- Importance for bias correction
-- Comparasion with other categories
+####  Analysis of some features
+
+BLABLA
+
+**Analysis of the `verified_purchase` feature**
+
+This might have an influence, since non-verified purchases won't be as reliable since poeple might not have actually bought the product. ... **explain by date**
+
+![alt text][img/other/verified_by_year.png)]
+
+We can clearly see, with a 95% confidence interval, that the average rating is higher for verified reviews in recent years. This is difficult to guess what could have caused it to change along the years, possibly one or more modifications in the condition to be a verified purchase. It would be good to ignore all unverified reviews, to have more reliable ratings.
+
+There is however a problem with that. By looking at the evolution of the number of reviews over the years (graph on the right just above), we realized that in the earliest years there are almost no verified reviews. This is probably due to the fact that this functionality was added quite late, or that maybe it used to be harder to be a verified review. Hence, we decided, despite the difference of rating, to keep all reviews, in order to avoid losing so much data for the earliest years.
+It is clear that a lot of data is missing in the 2000's if we limit ourselves to the verified reviews. From now on, we will use all the data.
+
+**Analysis of the 'helpful_votes' and 'total_votes' features**
+
+**Analysis of the 'review_date' feature**
+
+**Analysis of the number of reviews per product**
+
+**Analysis of the 'review_headline` and `review_body` features**
+
+#### Importance of the features for the bias correction
+
+#### Comparaison with other categories
+
 
 ### By Country
 
