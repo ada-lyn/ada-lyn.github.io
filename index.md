@@ -1,8 +1,8 @@
 ---
-layout: base
+layout: page
 title: Applied Data Analysis - Project
 subtitle: By ADA-LYN
-use-site-title: true
+
 ---
 
 # Detecting Bias in Amazon reviews
