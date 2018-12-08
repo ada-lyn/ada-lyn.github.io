@@ -48,11 +48,13 @@ We have two main questions we will try to answer during this project
 
 ### General Description of Data
 
-This is the number of reviews and the average rating for each category
+This is the number of reviews for each category
 
-![Number of review for each category](/img/other/n_by_category.png) ![Average rating for each category](/img/other/avg_by_category.png)
+![Number of review for each category](/img/other/n_by_category.png)
 
+This is the average rating for each category
 
+![Average rating for each category](/img/other/avg_by_category.png)
 
 # Effects on Rating
 
