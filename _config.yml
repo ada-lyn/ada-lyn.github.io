@@ -24,10 +24,9 @@ description: ADA Project
 # List of links in the navigation bar
 navbar-links:
   Course Webpage: "https://dlab.epfl.ch/teaching/fall2018/cs401/"
-  Source Code:
-  	- GitHub Repo: "https://github.com/Billotais/cs_401_project"
-  	- Notebook Link: "https://github.com/Billotais/cs_401_project/notebook.ipynb"
-    - Graphs created: "https://github.com/Billotais/cs_401_project/tree/master/img"
+  GitHub Repo: "https://github.com/Billotais/cs_401_project"
+  Notebook Link: "https://github.com/Billotais/cs_401_project/notebook.ipynb"
+
     
 ##  About Me: "aboutme"
 #  Resources:
