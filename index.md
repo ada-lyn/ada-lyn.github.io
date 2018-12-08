@@ -5,8 +5,7 @@ subtitle: By ADA-LYN
 
 ---
 
-# Detecting Bias in Amazon reviews
-
+# Introduction
 
 ## Abstract
 
@@ -18,15 +17,6 @@ In the past, when buying an item, one had to trust reviews in newspapers or from
 - Content of review (length of text, number of 'helpful' votes, author, verified_purchase, ...)
 - Eventually : influence of the language (if we can find some common products)
 
-
-## Research questions
-
-A list of research questions we would like to address during the project. 
-
-- What factors influence the amount of stars given in an amazon review (other than product quality)?
-- Is there a way to correct this bias? Should we correct this bias?
-- Eventually : Should we trust the number of stars or the review itself to know how people really liked a product ? 
-
 ## Dataset
 
 We will use the [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/).
@@ -35,30 +25,57 @@ We will use NLP to extract interesting features from the product name and from t
 
 Since the dataset is very big, we will first concentrate on books, and possibly in a second stage extend our work to other categories if time permits. Since the dataset of books is still very large, we will use a subsample of the data for prototyping.
 
-## Plan
+## Research Questions
 
-- Introduction :
-	- Context
-	- Motivation
-	- General description / statistics
-	- Explanations of decisions / simplification
-- Effect on rating :
-	- by category
-		- Interesting effects observed (dates, helpful, ...) for Books
-			- Interpretation
-			- Importance for bias correction
-		- Comparasion with other categories
-	- by country
-		- Difference between countries
-		- Herding
-	- (by user) 
-		- by category 
-- Bias correction
-	- Decisions
-	- Correction by date and other factors seen in previous observations
-	- Correction by user history (using the formula)
-- Conclusion
-	- Summary
-	- Further possible work
-	- Usefulness (ethics, applicable, for whom, ...)
-	- (Comparasion with otehr studies ?)
+A list of research questions we would like to address during the project. 
+
+- What factors influence the amount of stars given in an amazon review (other than product quality)?
+- Is there a way to correct this bias? Should we correct this bias?
+- Eventually : Should we trust the number of stars or the review itself to know how people really liked a product ? 
+
+## Motivation
+
+## General Description of Data
+
+# Effects on Rating
+
+## By Product Category
+
+- Interesting effects observed (dates, helpful, ...) for Books
+	- Interpretation
+	- Importance for bias correction
+- Comparasion with other categories
+
+## By Country
+
+- Difference between countries
+	- Herding
+
+## By User
+
+- by category 
+
+# Bias Correction
+
+## Decisions
+
+## Correction by Date
+
+and other factors seen in previous observations
+
+## Correction by User History
+
+(using the formula)
+
+# Conclusion
+
+## Summary
+
+## Further Possible Work
+
+## Usefulness
+
+(ethics, applicable, for whom, ...)
+
+## Comparaison with Other Studies
+
