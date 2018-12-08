@@ -9,33 +9,46 @@ subtitle: By ADA-LYN
 
 ### Abstract
 
-In the past, when buying an item, one had to trust reviews in newspapers or from friends. In todays age, with online shopping, we have to tap into the minds of thousands of people who have purchased the product we are thinking about. With the help of Amazon reviews and their star-system, we can easily analyse how well to product likely is. But while a newspaper or professional reviewer is generally working hard for consistency and unbiasedness, these facts are not given for a general public reviewer writing a comment. With help of the Amazon dataset, we will try to find bias in the reviews, in order to possibly give an idea on whether or not, and if so how, to correct a bias. We will be especially interested in the influence of (some/all depending on the time) the following factors on the number of stars given:
+In the past, when buying an item, one had to trust reviews in newspapers or from friends. In todays age, with online shopping, we have to tap into the minds of thousands of people who have purchased the product we are thinking about. With the help of Amazon reviews and their star-system, we can easily analyse how well to product likely is. But while a newspaper or professional reviewer is generally working hard for consistency and unbiasedness, these facts are not given for a general public reviewer writing a comment. With help of the Amazon dataset, we will try to find bias in the reviews, in order to possibly give an idea on whether or not, and if so how, to correct a bias. We will be especially interested in the influence of the following factors on the number of stars given:
 
-- Time the review was written
-- Type of product the review was written for
-- Other informations about the product (Name, brand, also_bought, price, picture, ...)
-- Content of review (length of text, number of 'helpful' votes, author, verified_purchase, ...)
-- Eventually : influence of the language (if we can find some common products)
+- The date the review was written on ?
+- The category of the product the review was written for ?
+- The country of residence of the buyer (What the product bough on Amazon US or Amazon UK ?)
+- Past ratings from the reviewer
 
 ### Dataset
 
-We will use the [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/).
+We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that consist multiple millions of Amazon reviews. More precisely, it contains (amongst other informations that will not be used) the following informations for each review : 
 
-We will use NLP to extract interesting features from the product name and from the review text, and some image processing if we analyse the product picture
+- marketplace : The country "of amazon". Data is available for the United Stated, United Kingdom, France, Germany and Japan.
+- customer_id : A unique id representing the user that wrote the review
+- product_id : A unique id representing the product reviews
+- product_title : The name of the product
+- product_category : The category of the product. The following categories are available : Wireless, Watches, Video Games, Video DVD, Video, Toys, Tools, Sports, Software, Shoes, Pet Products, Personal Care Appliances, PC, Outdoors, Office Products, Musical Instruments, Music, Mobile_Electronics, Mobile Apps, Major Appliances, Luggage, Lawn_and_Garden, Kitchen, Jewelry, Home Improvement, Home Entertainment, Home, Health Personal Care, Grocery, Gift Card, Furniture, Electronics, Digital Video_Games, Digital Video Download, Digital Software, Digital_Music_Purchase, Digital Ebook Purchase, Camera, Books, Beauty, Baby, Automotive and Apparel
+- star_rating : The number of stars given by the reviewer, between 1 and 5
+- helpful_votes : Other users can vote on the usefulness of a review. This represent the total number of positive votes
+- total_votes : This is the number of positive and negative votes combined
+- verified_purchase : If Amazon is able to check that you indeed bought this exact product, with the same price, your review will be markerd as "verified"
+review_headline : Short summary of the review
+review_body : Full content of the review
+review_date : Date the review was posted on
 
-Since the dataset is very big, we will first concentrate on books, and possibly in a second stage extend our work to other categories if time permits. Since the dataset of books is still very large, we will use a subsample of the data for prototyping.
+Since we have a lot of data (Amounting to ~20GB), our main focus will be on the reviews related to Books. We will do an in-depth analysis of these reviews, and then rapidly compare it to the other categories.
 
 ### Research Questions
 
-A list of research questions we would like to address during the project. 
+We have two main questions we will try to answer during this project 
 
-- What factors influence the amount of stars given in an amazon review (other than product quality)?
-- Is there a way to correct this bias? Should we correct this bias?
-- Eventually : Should we trust the number of stars or the review itself to know how people really liked a product ? 
+- What factors influence the amount of stars given in an amazon review (other than product quality) ? 
+- Is there a way to correct this bias, should we correct this bias ?
 
 ### Motivation
 
+**TODO**
+
 ### General Description of Data
+
+**TODO** count / mean / median / std
 
 # Effects on Rating
 
