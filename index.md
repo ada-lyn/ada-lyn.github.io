@@ -54,7 +54,7 @@ This is the number of reviews for each category
 
 This is the average rating for each category
 
-![Average rating for each category](/img/other/average_by_category.png)
+![Average rating for each category](/img/other/avg_by_category.png)
 
 # Effects on Rating
 
