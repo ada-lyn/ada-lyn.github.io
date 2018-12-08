@@ -20,18 +20,18 @@ In the past, when buying an item, one had to trust reviews in newspapers or from
 
 We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that consist multiple millions of Amazon reviews. More precisely, it contains (amongst other informations that will not be used) the following informations for each review : 
 
-- marketplace : The country "of amazon". Data is available for the United Stated, United Kingdom, France, Germany and Japan.
-- customer_id : A unique id representing the user that wrote the review
-- product_id : A unique id representing the product reviews
-- product_title : The name of the product
-- product_category : The category of the product. The following categories are available : Wireless, Watches, Video Games, Video DVD, Video, Toys, Tools, Sports, Software, Shoes, Pet Products, Personal Care Appliances, PC, Outdoors, Office Products, Musical Instruments, Music, Mobile_Electronics, Mobile Apps, Major Appliances, Luggage, Lawn_and_Garden, Kitchen, Jewelry, Home Improvement, Home Entertainment, Home, Health Personal Care, Grocery, Gift Card, Furniture, Electronics, Digital Video_Games, Digital Video Download, Digital Software, Digital_Music_Purchase, Digital Ebook Purchase, Camera, Books, Beauty, Baby, Automotive and Apparel
-- star_rating : The number of stars given by the reviewer, between 1 and 5
-- helpful_votes : Other users can vote on the usefulness of a review. This represent the total number of positive votes
-- total_votes : This is the number of positive and negative votes combined
-- verified_purchase : If Amazon is able to check that you indeed bought this exact product, with the same price, your review will be markerd as "verified"
-review_headline : Short summary of the review
-review_body : Full content of the review
-review_date : Date the review was posted on
+- `marketplace` : The "country of amazon". Data is available for the United Stated, United Kingdom, France, Germany and Japan.
+- `customer_id` : A unique id representing the user that wrote the review
+- `product_id` : A unique id representing the product reviews
+- `product_title` : The name of the product
+- `product_category` : The category of the product. The following categories are available : *Wireless, Watches, Video Games, Video DVD, Video, Toys, Tools, Sports, Software, Shoes, Pet Products, Personal Care Appliances, PC, Outdoors, Office Products, Musical Instruments, Music, Mobile_Electronics, Mobile Apps, Major Appliances, Luggage, Lawn_and_Garden, Kitchen, Jewelry, Home Improvement, Home Entertainment, Home, Health Personal Care, Grocery, Gift Card, Furniture, Electronics, Digital Video_Games, Digital Video Download, Digital Software, Digital_Music_Purchase, Digital Ebook Purchase, Camera, Books, Beauty, Baby, Automotive and Apparel*
+- `star_rating` : The number of stars given by the reviewer, between 1 and 5
+- `helpful_votes` : Other users can vote on the usefulness of a review. This represent the total number of positive votes
+- `total_votes` : This is the number of positive and negative votes combined
+- `verified_purchase` : If Amazon is able to check that you indeed bought this exact product, with the same price, your review will be markerd as "verified"
+- `review_headline` : Short summary of the review
+- `review_body` : Full content of the review
+- `review_date` : Date the review was posted on
 
 Since we have a lot of data (Amounting to ~20GB), our main focus will be on the reviews related to Books. We will do an in-depth analysis of these reviews, and then rapidly compare it to the other categories.
 
