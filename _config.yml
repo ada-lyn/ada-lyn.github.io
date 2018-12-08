@@ -22,7 +22,9 @@ description: CS401 Project - ADA LYN
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
-#navbar-links:
+navbar-links:
+Course Webpage: "https://dlab.epfl.ch/teaching/fall2018/cs401/"
+GitHub Link: "https://github.com/Billotais/cs_401_project"
 ##  About Me: "aboutme"
 #  Resources:
  #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
