@@ -52,17 +52,21 @@ We have two main questions we will try to answer during this project
 
 # Effects on Rating
 
+Lorem ipsum
+
 ### By Product Category
+
+Lorem ipsum
 
 ####  Analysis of some features
 
-BLABLA
+Lorem ipsum
 
 **Analysis of the `verified_purchase` feature**
 
 This might have an influence, since non-verified purchases won't be as reliable since poeple might not have actually bought the product. ... **explain by date**
 
-![alt text][/img/other/verified_by_year.png)]
+![alt text](/img/other/verified_by_year.png)
 
 We can clearly see, with a 95% confidence interval, that the average rating is higher for verified reviews in recent years. This is difficult to guess what could have caused it to change along the years, possibly one or more modifications in the condition to be a verified purchase. It would be good to ignore all unverified reviews, to have more reliable ratings.
 
@@ -71,16 +75,29 @@ It is clear that a lot of data is missing in the 2000's if we limit ourselves to
 
 **Analysis of the `helpful_votes` and `total_votes` features**
 
+Lorem ipsum
+
 **Analysis of the `review_date` feature**
+
+Lorem ipsum
 
 **Analysis of the number of reviews per product**
 
+Lorem ipsum
+
 **Analysis of the `review_headline` and `review_body` features**
+
+Lorem ipsum
 
 #### Importance of the features for the bias correction
 
+Lorem ipsum
+
 #### Comparaison with other categories
 
+Lorem ipsum
+
+Lorem ipsum
 
 ### By Country
 
