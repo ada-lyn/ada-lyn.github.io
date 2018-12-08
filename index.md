@@ -39,43 +39,43 @@ A list of research questions we would like to address during the project.
 
 # Effects on Rating
 
-## By Product Category
+### By Product Category
 
 - Interesting effects observed (dates, helpful, ...) for Books
 	- Interpretation
 	- Importance for bias correction
 - Comparasion with other categories
 
-## By Country
+### By Country
 
 - Difference between countries
 	- Herding
 
-## By User
+### By User
 
 - by category 
 
 # Bias Correction
 
-## Decisions
+### Decisions
 
-## Correction by Date
+### Correction by Date
 
 and other factors seen in previous observations
 
-## Correction by User History
+### Correction by User History
 
 (using the formula)
 
 # Conclusion
 
-## Summary
+### Summary
 
-## Further Possible Work
+### Further Possible Work
 
-## Usefulness
+### Usefulness
 
 (ethics, applicable, for whom, ...)
 
-## Comparaison with Other Studies
+### Comparaison with Other Studies
 
