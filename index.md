@@ -48,7 +48,13 @@ We have two main questions we will try to answer during this project
 
 ### General Description of Data
 
-**TODO** count / mean / median / std
+This is the number of reviews for each category
+
+![Number of review for each category](/img/other/n_by_category.png)
+
+This is the average rating for each category
+
+![Average rating for each category](/img/other/average_by_category.png)
 
 # Effects on Rating
 
@@ -66,7 +72,7 @@ Lorem ipsum
 
 This might have an influence, since non-verified purchases won't be as reliable since poeple might not have actually bought the product. ... **explain by date**
 
-![alt text](/img/other/verified_by_year.png)
+![Number of verified reviews for each year](/img/other/verified_by_year.png)
 
 We can clearly see, with a 95% confidence interval, that the average rating is higher for verified reviews in recent years. This is difficult to guess what could have caused it to change along the years, possibly one or more modifications in the condition to be a verified purchase. It would be good to ignore all unverified reviews, to have more reliable ratings.
 
