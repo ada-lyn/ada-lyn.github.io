@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: minimal
 title: Applied Data Analysis - Project
 subtitle: By ADA-LYN
 use-site-title: true
