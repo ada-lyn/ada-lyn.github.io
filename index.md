@@ -2,7 +2,7 @@
 layout: page
 title: Detecting Bias in Amazon reviews
 subtitle: By ADA-LYN
-
+published: true
 ---
 
 # Introduction
@@ -44,7 +44,7 @@ We have two main questions we will try to answer during this project
 
 ### Motivation
 
-**TODO**
+**TODO** Why we want to do this
 
 ### General Description of Data
 
@@ -131,4 +131,3 @@ and other factors seen in previous observations
 (ethics, applicable, for whom, ...)
 
 ### Comparaison with Other Studies
-
