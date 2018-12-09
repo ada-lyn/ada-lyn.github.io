@@ -48,13 +48,23 @@ We have two main questions we will try to answer during this project
 
 ### General Description of Data
 
-This is the number of reviews for each category
+Before focusing our study on Books only, we will take a quick look at the complete dataset, and see if we can see any intersting effect. We will, for each of the available category, look at the number of reviews available. Not however that this might not be entirely representative of the true repartition of the categories, since we do not know what process Amazon used to select those reviews. 
 
 ![Number of review for each category](/img/other/n_by_category.png)
 
-This is the average rating for each category
+Notice that we are using a logratihmic scale, so the proportion are distorded. Indeed, some of the smallest categories (Digital Software, Major Appliance, Personnal Care Appliance for instance) have so few reviews compared to the larger ones (Books, Ebooks, Wireless) that they would be invisible on a linear scale. The results are mostly expected, although some categories are ranked higher than one might expect them to be (e.g. *Video DVD*, when they mostly have been replaced by streaming services, or *Wireless* that is ranked way higher than *Electronics*, even if it's only a subcategory of **the other / NOT SURE ABOUT THE PHRASING**) 
+
+We also took a quick look at the average rating (the number of stars given by the reviewers) of each castegory. 
 
 ![Average rating for each category](/img/other/avg_by_category.png)
+
+As you can see, there is quite a non negligible difference between the highest and lowest rated category. The rating for the top three categories (*Gift Card*, *Digital Music* and *Music*) is expected, since it is quite hard to find negative points about a gift card (it cannot really differ from the promised product, unless there is some kind of error with the card, where you have been sent a damaged one). And for the Music categories, people usually know what artist they like, and they probably won't be surprised by the quality of the product.
+
+We can also find some logical explanations for the lowest ranked categories. *Software* and "Digital Software* are clearly more niche products, often with a higher price tag, intended for businesses or professional individuals. Because of the type of product, it is also way harder to know exactly what to expect (You will not be able to judge the quality of a software by looking at screenshots, notably you won't see any bugs that might affect your experience negatively). You will more frequently be disappointed when your expensive software doesn't work as expected, and you can not just use the warranty to exchange it with a better one. 
+
+To answer to our main question : *Is there some bias and should we correct it ?*, we think that indeed there is some (People are clearly biased because they buy music that they know they will probably like), but it also seems that some categories (mainly *Software*) are really of worse quality than the other. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the other. 
+
+We will now, for the *Books*, take a deeper look at some of the features available.
 
 # Effects on Rating
 
