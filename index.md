@@ -20,7 +20,7 @@ In the past, when buying an item, one had to trust reviews in newspapers or from
 
 We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that consist multiple millions of Amazon reviews. More precisely, it contains (amongst other informations that will not be used) the following informations for each review: 
 
-- `marketplace` : The "country of Amazon". Data is available for the United Stated, United Kingdom, France, Germany and Japan.
+- `marketplace` : The "country of Amazon". Data is available for the United Stated, United Kingdom, France, Germany and Japan
 - `customer_id` : A unique id representing the user who wrote the review
 - `product_id` : A unique id representing the product reviews
 - `product_title` : The name of the product
@@ -28,7 +28,7 @@ We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that cons
 - `star_rating` : The number of stars given by the reviewer, between 1 and 5
 - `helpful_votes` : Other users can vote on the usefulness of a review (either positive or negative). This represents the total number of positive votes
 - `total_votes` : This is the number of positive and negative votes combined
-- `verified_purchase` : If Amazon is able to check that you indeed bought this exact product, with the same price, your review will be markerd as "verified"
+- `verified_purchase` : If Amazon is able to check that you indeed bought this exact product, with the same price, your review will be marked as "verified"
 - `review_headline` : Short summary of the review
 - `review_body` : Full content of the review
 - `review_date` : Date the review was posted on
