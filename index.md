@@ -18,7 +18,7 @@ In the past, when buying an item, one had to trust reviews in newspapers or from
 
 ### Dataset
 
-We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that consist multiple millions of Amazon reviews. More precisely, it contains (amongst other informations that will not be used) the following informations for each review: 
+We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that consist multiple millions of Amazon reviews. More precisely, it contains (amongst other information that will not be used) the following information for each review: 
 
 - `marketplace` : The "country of Amazon". Data is available for the United Stated, United Kingdom, France, Germany and Japan
 - `customer_id` : A unique id representing the user who wrote the review
@@ -37,18 +37,21 @@ Since we have a lot of data (Amounting to ~20GB), our main focus will be on the 
 
 ### Research Questions
 
-We have two main questions we will try to answer during this project 
+There are two main questions we will try to answer during this project: 
 
-- What factors influence the amount of stars given in an amazon review (other than product quality) ? 
-- Is there a way to correct this bias, should we correct this bias ?
+- What factors influence the rating given in an Amazon review (other than product quality)? 
+- Is there a way to correct this bias, should we correct this bias?
 
 ### Motivation
 
-**TODO** Why we want to do this
+Our goal is mostly to provide useful information to Amazon itself and to the products sellers. So that they can have a better idea of what a given review value really should be.
+For instance, they might receive a very bad review from someone and not understand why they had such a bad rating. But after bias correction it could be possible that the reviewer is just a 'hater' (someone who always gives bad rating to every product) and that instead of a one-two stars it could be worth a 3-4 stars. There could be other factors that influenced the rating of that review and we will try to best correct them to valuable information.
+
+We do not think it would be a good idea to correct every review and publicly change the displayed score. This could lead to many people being angry at Amazon for thinking their opinion is biased. Also once a metric is known, it becomes very easy for ill intentioned people to find a way to exploit it. They could then always increase/decrease as they want by carefully using the bias correction in the other way. 
 
 ### General Description of Data
 
-Before focusing our study on Books only, we will take a quick look at the complete dataset, and see if we can see any intersting effect. We will, for each of the available category, look at the number of reviews available. Not however that this might not be entirely representative of the true repartition of the categories, since we do not know what process Amazon used to select those reviews. 
+Before focusing our study on Books only, we will take a quick look at the complete dataset, and see if we can see any interesting effect. We will, for each of the available category, look at the number of reviews available. Not however that this might not be entirely representative of the true repartition of the categories, since we do not know what process Amazon used to select those reviews. 
 
 ![Number of review for each category](/img/other/n_by_category.png)
 
