@@ -81,16 +81,18 @@ First, we will analyse some of the features (`verified_purchase`, `helpful_votes
 
 **Analysis of the `verified_purchase` feature**
 
-This might have an influence, since non-verified purchases won't be as reliable since poeple might not have actually bought the product. We have splited the dataset into verified and non verified purchases, and for each category we plot the average rating per year, and the number of reviews per year.
+This feature might have an influence, since non-verified purchases might not be as reliable since poeple might not have actually bought the product. We have splited the dataset into verified and non-verified purchases, and for each category we plot the average rating per year, and the number of reviews per year.
 
 <p float="left">
   <img src="/img/other/verified_by_year.png" width="99%" />
 </p>
 
-We can clearly see, with a 95% confidence interval, that the average rating is higher for verified reviews in recent years. This is difficult to guess what could have caused it to change along the years, possibly one or more modifications in the condition to be a verified purchase. It would be good to ignore all unverified reviews, to have more reliable ratings.
+We can clearly see, with a 95% confidence interval (in light blue), that the average rating is higher for verified reviews in recent years. It is difficult to guess what could have caused it to change along the years, possibly one or more changes in the condition to be a verified purchase. It would be good to ignore all unverified reviews, to have more reliable ratings.
 
-There is however a problem with that. By looking at the evolution of the number of reviews over the years (graph on the right just above), we realized that in the earliest years there are almost no verified reviews. This is probably due to the fact that this functionality was added quite late, or that maybe it used to be harder to be a verified review. Hence, we decided, despite the difference of rating, to keep all reviews, in order to avoid losing so much data for the earliest years.
-It is clear that a lot of data is missing in the 2000's if we limit ourselves to the verified reviews. From now on, we will use all the data.
+There is however a problem with this approach. By looking at the evolution of the number of reviews over the years, we realize that in the earliest years there are almost no verified reviews. This might be correlated to the fact that this functionality was added quite late, or that maybe it used to be harder to be a verified review. Hence, we decided, despite the difference of rating, to keep all reviews, in order to avoid losing most of the data for the earliest years.
+It is clear that we would miss a big share of the data from the 2000's if we limit ourselves to the verified reviews. From now on, we will use all the data.
+
+Since we are keeping this feature, and we saw it is not negligable, it will be taken into account when applying our bias correction later on.
 
 **Analysis of the `helpful_votes` and `total_votes` features**
 
