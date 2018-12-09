@@ -60,7 +60,7 @@ We also took a quick look at the average rating (the number of stars given by th
 
 As you can see, there is quite a non negligible difference between the highest and lowest rated category. The rating for the top three categories (*Gift Card*, *Digital Music* and *Music*) is expected, since it is quite hard to find negative points about a gift card (it cannot really differ from the promised product, unless there is some kind of error with the card, where you have been sent a damaged one). And for the Music categories, people usually know what artist they like, and they probably won't be surprised by the quality of the product.
 
-We can also find some logical explanations for the lowest ranked categories. *Software* and "Digital Software* are clearly more niche products, often with a higher price tag, intended for businesses or professional individuals. Because of the type of product, it is also way harder to know exactly what to expect (You will not be able to judge the quality of a software by looking at screenshots, notably you won't see any bugs that might affect your experience negatively). You will more frequently be disappointed when your expensive software doesn't work as expected, and you can not just use the warranty to exchange it with a better one. 
+We can also find some logical explanations for the lowest ranked categories. *Software* and *Digital Software* are clearly more niche products, often with a higher price tag, intended for businesses or professional individuals. Because of the type of product, it is also way harder to know exactly what to expect (You will not be able to judge the quality of a software by looking at screenshots, notably you won't see any bugs that might affect your experience negatively). You will more frequently be disappointed when your expensive software doesn't work as expected, and you can not just use the warranty to exchange it with a better one. 
 
 To answer to our main question : *Is there some bias and should we correct it ?*, we think that indeed there is some (People are clearly biased because they buy music that they know they will probably like), but it also seems that some categories (mainly *Software*) are really of worse quality than the other. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the other. 
 
@@ -68,19 +68,17 @@ We will now, for the *Books*, take a deeper look at some of the features availab
 
 # Effects on Rating
 
-Lorem ipsum
+This part will be separated in two. We will first do an analysis by category (as said before in depth for the *Books*, and then compared to other categories), and then by country. 
 
 ### By Product Category
 
-Lorem ipsum
+First, we will analyse some of the features (`verified_purchase`, `helpful_votes`, `total_votes`, `review_date`, numbe of reviews per product, `review_headline` and `review_body`), then we are going to discuss their potential influence in the bias, and if they shopuld be considered, and finally we will compare the results with the other categories.
 
 ####  Analysis of some features
 
-Lorem ipsum
-
 **Analysis of the `verified_purchase` feature**
 
-This might have an influence, since non-verified purchases won't be as reliable since poeple might not have actually bought the product. ... **explain by date**
+This might have an influence, since non-verified purchases won't be as reliable since poeple might not have actually bought the product. We have splited the dataset into verified and non verified purchases, and for each category we plot the average rating per year, and the number of reviews per year.
 
 ![Number of verified reviews for each year](/img/other/verified_by_year.png)
 
