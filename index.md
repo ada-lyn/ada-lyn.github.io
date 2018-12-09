@@ -152,11 +152,58 @@ For the day of the month, the confidence bands are almost too big to draw signif
 
 **Analysis of the number of reviews per product**
 
-Lorem ipsum
+We want here to see if there is any trend going on between the total number of reviews on a product and the rating of that product. e decided to only keep products with more than 2 reviews, since it is reasonable to assume that the average rating of products with a small amount of reviews might not be that reliable as an indication of the true quality of the product.
+
+
+<p float="left">
+  <img src="/img/products/rating_vs_reviews_Books.png" width="49.5%" />
+  <img src="/img/products/number_vs_reviews_Books.png" width="49.5%" /> 
+</p>
+
+There seems to be a trend between the two, but as the number of reviews per product increases, we have less and less data and the confidence interval becomes larger. This makes sense, as we can expect the number of reviews to be highly positively correlated with the number of sales. It is quite intuitive that only few products are very popular and many products are not so successful. (The number of reviews is intuitively highly correlated with the numbe of sales.)
+
+So we can observe for sure a descending trend in the average rating between 3 and ~100 number of reviews per product (of about 0.05 stars, which is not negligable with so much data) but any value after that becomes too uncertain to conclude anything.
+
 
 **Analysis of the `review_headline` and `review_body` features**
 
-Lorem ipsum
+
+Another feature that may give us a hint on the rating is the review's text. A method that comes to mind would be to analyse the text with natural language processing models, especially sentiment analysis. But this analysis would not bring new insights, if we were to find a positive correlation. It would seem fairly intuitive that a more positive review will come with a higher rating. Additionnaly, these methods would be cumbersome to implement with spark and use too much processing power.
+
+We decided to go with features that are easier to extract. We chose to use text length. The reasoning would be that there is not much to say if the product is perfect, but one can explain at length why the product is not good.
+
+<p float="left">
+  <img src="/img/products/rating_vs_title_length_Books.png" width="49.5%" />
+  <img src="/img/products/number_vs_title_length_Books.png" width="49.5%" /> 
+</p>
+
+We have a huge peak for reviews with a title length of aproximatly 10 characters. This might be because a lot of people that liked their products put simple titles such as "very good", "I recommand", "best product", and so on. Reviews with very small titles have lower grades, maybe people that don't like product don't care about the title and just put the negative comment, but this there is a very low number of those reviews it is harder to tell with good confidence.
+
+Overall however, we see that the average rating increases quite a lot for longer titles (more than 0.1 stars), probably because people that liked the product take some time to make good titles that might catch the attention of other people.
+
+For the number of reviews, this result is expected. Most of the people make short title, whith very few making extremly short titles (hard to do a title in 3 letters), and few make very long title (Most people will write their opinion in the review body instead).
+
+We will look deeper at reviews with a title of length 10, in particular the 6 most common titles.
+
+| review_headline	| count   |
+|-----------------|---------|
+| Five Stars      |	1380977 |
+|	Four Stars	    | 226379  |
+|	Great book	    | 62192   |
+|	Great Book	    | 53497   |
+|	great book	    | 25645   |
+|	Excellent!	    | 16354   |
+
+This confirms our intuition. Most of the people that liked the product can put a simple adjective / the number of stars, to quickly say what they think. For negative reviews, this would be harder, at least if you want to give a constructive review.
+
+Now, for the body length
+
+<p float="left">
+  <img src="/img/products/rating_vs_review_length_Books.png" width="49.5%" />
+  <img src="/img/products/number_vs_review_length_Books.png" width="49.5%" /> 
+</p>
+
+For the body lenght however we see that the result is completly different. A short review body generaly corresponds to a higher rating, whereas a long review coresponds to a lower rating. It probably is because there is not always much to say for excellent products, whereas you can describe a lot of negative points for the less good products. That trend is very clear between 0 and 2000 characters, with a huge drop of more than 0.5 stars, but for longer reviews, it is harder to conclude anything since the confidence interval is much larger, and we can see a lot of noise.
 
 #### Importance of the features for the bias correction
 
