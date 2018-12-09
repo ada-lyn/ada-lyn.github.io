@@ -177,7 +177,9 @@ Another feature that may give us a hint on the rating is the review's text. A me
   <img src="/img/amazon_stars.jpeg" width="49.5%" />
 </p>
 
-Therefore we decided to go with features that are easier to extract. We chose to use text length. The reasoning would be that there is not much to say if the product is perfect, but one can explain at length why the product is not good.
+Therefore we decided to go with features that are easier to extract. We chose to use title and text length. The reasoning would be that there is not much to say if the product is perfect, but one can explain at length why the product is not good.
+
+Firtsly, the title length:
 
 <p float="left">
   <img src="/img/products/rating_vs_title_length_Books.png" width="49.5%" />
@@ -188,13 +190,13 @@ We have a huge peak for reviews with a title length of aproximatly 10 characters
 
 Overall however, we see that the average rating increases quite a lot for longer titles (more than 0.1 stars), probably because people that liked the product take some time to make good titles that might catch the attention of other people.
 
-For the number of reviews, this result is expected. Most of the people make short title, whith very few making extremly short titles (hard to do a title in 3 letters), and few make very long title (Most people will write their opinion in the review body instead).
+For the number of reviews, this result is expected. Most of the people make short title, whith very few making extremly short titles (hard to do a title in 3 letters), and few make very long title. (Most "normal" people will write their opinion in the review body instead, those that write essays as their titles might be the same that don't understand how stars work.)
 
-We will look deeper at reviews with a title of length 10, in particular the 6 most common titles.
+If we look deeper at reviews with a title of length 10, in particular the 6 most common titles, we see something extepected:
 
 | review_headline	| count   |
-|-----------------|---------|
-| Five Stars      |	1380977 |
+|-------------------|---------|
+|   Five Stars      | 1380977 |
 |	Four Stars	    | 226379  |
 |	Great book	    | 62192   |
 |	Great Book	    | 53497   |
@@ -203,7 +205,7 @@ We will look deeper at reviews with a title of length 10, in particular the 6 mo
 
 This confirms our intuition. Most of the people that liked the product can put a simple adjective / the number of stars, to quickly say what they think. For negative reviews, this would be harder, at least if you want to give a constructive review.
 
-Now, for the body length
+Now, for the review body length:
 
 <p float="left">
   <img src="/img/products/rating_vs_review_length_Books.png" width="49.5%" />
