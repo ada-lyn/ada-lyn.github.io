@@ -154,6 +154,8 @@ We can see that here, the confidence bands are wider. Notably, we have a spike i
 
 For the day of the month, the confidence bands are almost too big to draw significant conclusions. We could however argue that people usually receive their salary at the end of the month, therefore are more happy and give better ratings in the following days, with their happiness decreasing until the next payday. The Number of reviews is very low on the 31. This is not something worth interpreting, as almost all months have at least 30 days, but only a few have 31. The slight decrease in the number of reviews over the month might be connected to the previous argument of payday happiness, where people might spend more money to buy products on Amazon at the beginning of the month, hence give more reviews. The effect on the average rating we observe is about 0.02.
 
+As all these phenomenas seem to be due to bias in humor or change of trend in the users' way of rating along the years, we will try to correct them.
+
 **Analysis of the number of reviews per product**
 
 We want here to see if there is any trend going on between the total number of reviews on a product and the rating of that product. We decided to only keep products with more than 2 reviews, since it is reasonable to assume that the average rating of products with a small amount of reviews might not be that reliable as an indication of the true quality of the product.
@@ -166,7 +168,7 @@ We want here to see if there is any trend going on between the total number of r
 
 There seems to be a trend between the two, but as the number of reviews per product increases, we have less and less data and the confidence interval becomes larger. This makes sense, as we can expect the number of reviews to be highly positively correlated with the number of sales. It is quite intuitive that only few products are very popular and many products are not so successful (the number of reviews is intuitively highly correlated with the number of sales).
 
-So we can observe for sure a descending trend in the average rating between 3 and ~100 number of reviews per product (of about 0.05 stars, which is not negligable with so much data) but any value after that becomes too uncertain to conclude anything.
+So we can observe for sure a descending trend in the average rating between 3 and ~100 number of reviews per product (of about 0.05 stars, which is not negligable with so much data) but any value after that becomes too uncertain to conclude anything. This is hard to come with a good explanation for this phenomena, so we will not try to correct this value as we cannot identify if this a bias to be corrected or due to other factors.
 
 **Analysis of the `review_headline` and `review_body` features**
 
