@@ -171,9 +171,13 @@ So we can observe for sure a descending trend in the average rating between 3 an
 
 **Analysis of the `review_headline` and `review_body` features**
 
-Another feature that may give us a hint on the rating is the review's text. A method that comes to mind would be to analyse the text with natural language processing models, especially sentiment analysis. But this analysis would not bring new insights, if we were to find a positive correlation. It would seem fairly intuitive that a more positive review will come with a higher rating. Additionnaly, these methods would be cumbersome to implement with spark and use too much processing power.
+Another feature that may give us a hint on the rating is the review's text. A method that comes to mind would be to analyse the text with natural language processing models, especially sentiment analysis. But this analysis would not bring new insights, if we were to find a positive correlation. It would seem fairly intuitive that a more positive review will come with a higher rating. This would also be too computationaly expensive considering the amount of data we have. Of course there are always exceptions, often from people that don't understand the principle of stars...
 
-We decided to go with features that are easier to extract. We chose to use text length. The reasoning would be that there is not much to say if the product is perfect, but one can explain at length why the product is not good.
+<p float="left">
+  <img src="/img/amazon_stars.jpeg" width="49.5%" />
+</p>
+
+Therefore we decided to go with features that are easier to extract. We chose to use text length. The reasoning would be that there is not much to say if the product is perfect, but one can explain at length why the product is not good.
 
 <p float="left">
   <img src="/img/products/rating_vs_title_length_Books.png" width="49.5%" />
