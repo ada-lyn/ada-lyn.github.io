@@ -94,7 +94,15 @@ It is clear that a lot of data is missing in the 2000's if we limit ourselves to
 
 ![Number of helpful reviews per ratio](/img/products/helpful_vs_number_Books.png)
 
+We can see that people tend to give more positive votes than negatives ones on reviews. Possibly as the users tend to give good reviews on *Books* (~4.3/5 on *Books* and overall good ratings on other categories as well), they will also tend to positively rate other things such as other people's reviews.
+
 ![Impact of helpful on ratings](/img/products/helpful_vs_rating_Books.png)
+
+This graph may seem a bit strange at first, wondering why people would mostly positively rate reviews with high ratings only. However it can easily be explained: on any product it makes sens to assume a user will usually give a positive vote to a review if it is somewhat close to that user opinion on the product. And since the average in *Books* is very high, most of the reviews with high ratings will be close to the product average on average, meaning the closer a review's rating is close to the general opinion (= product average), the more likely it is to get positive votes.
+The same explanation can be applied in a reversed way for reviews with lows ratings that tend to have lower helpful ratio.
+
+To try to correct bias later, we can use this helpful ratio to indicate how much a review should be trusted and less biased corrected. The higher helpful ratio it has, the more probable it gets to be what the average person thinks, hence not needing bias correction.
+
 
 **Analysis of the `review_date` feature**
 
