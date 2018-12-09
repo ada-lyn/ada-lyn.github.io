@@ -83,7 +83,9 @@ First, we will analyse some of the features (`verified_purchase`, `helpful_votes
 
 This might have an influence, since non-verified purchases won't be as reliable since poeple might not have actually bought the product. We have splited the dataset into verified and non verified purchases, and for each category we plot the average rating per year, and the number of reviews per year.
 
-![Number of verified reviews for each year](/img/other/verified_by_year.png)
+<p float="left">
+  <img src="/img/other/verified_by_year.png" width="99%" />
+</p>
 
 We can clearly see, with a 95% confidence interval, that the average rating is higher for verified reviews in recent years. This is difficult to guess what could have caused it to change along the years, possibly one or more modifications in the condition to be a verified purchase. It would be good to ignore all unverified reviews, to have more reliable ratings.
 
