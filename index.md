@@ -92,11 +92,15 @@ It is clear that a lot of data is missing in the 2000's if we limit ourselves to
 
 **Analysis of the `helpful_votes` and `total_votes` features**
 
-![Number of helpful reviews per ratio](/img/products/helpful_vs_number_Books.png)
+<p float="left">
+  <img src="/img/products/helpful_vs_number_Books.png" width="49.5%" />
+</p>
 
 We can see that people tend to give more positive votes than negatives ones on reviews. Possibly as the users tend to give good reviews on *Books* (~4.3/5 on *Books* and overall good ratings on other categories as well), they will also tend to positively rate other things such as other people's reviews.
 
-![Impact of helpful on ratings](/img/products/helpful_vs_rating_Books.png)
+<p float="left">
+  <img src="/img/products/helpful_vs_rating_Books.png" width="49.5%" />
+</p>
 
 This graph may seem a bit strange at first, wondering why people would mostly positively rate reviews with high ratings only. However it can easily be explained: on any product it makes sens to assume a user will usually give a positive vote to a review if it is somewhat close to that user opinion on the product. And since the average in *Books* is very high, most of the reviews with high ratings will be close to the product average on average, meaning the closer a review's rating is close to the general opinion (= product average), the more likely it is to get positive votes.
 The same explanation can be applied in a reversed way for reviews with lows ratings that tend to have lower helpful ratio.
@@ -105,39 +109,41 @@ To try to correct bias later, we can use this helpful ratio to indicate how much
 
 Hence the graphs of most of the categories look similar but the categories with a bad average rating (such as *Digital Software* with average ~3.55/5) will have a more flat or even reversed curve. It can be explained by the same kind of reasoning but inversed: reviews with high rating will be far from the average product rating, hence people will view the review as less accurate. Note that there probably are other unknown effects in place to explain such negativity in this case. See figure below for *Digital Software*:
 
-![Impact of helpful on ratings](/img/products/helpful_vs_rating_Digital_Software.png)
+<p float="left">
+	<img src="/img/products/helpful_vs_rating_Digital_Software.png" width="49.5%" />
+</p>
 
 **Analysis of the `review_date` feature**
 
 For this, we decided to split the data according to four different time metrics. By Year, by Month, by day of month and by day of week. 
 
-<p align="center">
-  <img src="/img/products/rating_by_month_evolution_Books.png" width="65%" />
-  <img src="/img/products/number_by_month_evolution_Books.png" width="65%" /> 
+<p float="left">
+  <img src="/img/products/rating_by_month_evolution_Books.png" width="49.5%" />
+  <img src="/img/products/number_by_month_evolution_Books.png" width="49.5%" /> 
 </p>
 
 We can observe that the confidence bands for the average rating by month are quite tight. This allows us to draw conclusions with confidence. For the total number of reviews, however, we can not draw confidence bands. The number of reviews seems to have a general correlation with holidays. There is roughly a peak in summer and one in winter. We attribute this to the fact that people have more time then, so they read more. Note however that the reviews we have range from may 1996 to july 2014. The lower values in the fall might also be partialy related to the fact the we have the data for fall 2014, but this alone shouldn't have that much influence over al the years.
 
 We also see that the ratings are higher in hollyday season. This we attribute to the people being happier then. However, it has to be noted that the effect is very small (about 0.03), but statistically significant.
 
-<p align="center">
-  <img src="/img/products/rating_by_year_evolution_Books.png" width="65%" />
-  <img src="/img/products/number_by_year_evolution_Books.png" width="65%" /> 
+<p float="left">
+  <img src="/img/products/rating_by_year_evolution_Books.png" width="49.5%" />
+  <img src="/img/products/number_by_year_evolution_Books.png" width="49.5%" /> 
 </p>
 
 Again, the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidance band widens for early years, here there are less reviews. We clearly see a decrease in the years up untill ~2003 in the ratings. Afterwards the ratings increase. We will check if this effect is present in datasets across countries and product types in the next milestone. We will have to do research in order to find out wether amazon changed their rating system somehow or why this effect may occur. The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
 
-<p align="center">
-  <img src="/img/products/rating_by_dayofweek_evolution_Books.png" width="65%" />
-  <img src="/img/products/number_by_dayofweek_evolution_Books.png" width="65%" /> 
+<p float="left">
+  <img src="/img/products/rating_by_dayofweek_evolution_Books.png" width="49.5%" />
+  <img src="/img/products/number_by_dayofweek_evolution_Books.png" width="49.5%" /> 
 </p>
 
 
 We can see that here, the confidence bands are wider. Notably, we have a spike in ratings on monday, which is surprising as we would expect people to not be the happiest on monday. The number of ratings starts high at the beginning of the week, and then steadily decreases until the weekend where it is at its lowest point. We may assume that people use / test their new products during the weekend, and give it a rating the following week after, mainly on monday because they don't have the motivation to work. Here again, the effect on the average rating is significant, but very small (in the order of 0.01).
 
-<p align="center">
-  <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="65%" />
-  <img src="/img/products/number_by_dayofmonth_evolution_Books.png" width="65%" /> 
+<p float="left">
+  <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="49.5%" />
+  <img src="/img/products/number_by_dayofmonth_evolution_Books.png" width="49.5%" /> 
 </p>
 
 For the day of the month, the confidence bands are almost too big to draw significant conclusions. We could however argue that people usually receive their salary at the end of the month, therfore are more happy and give better ratings in the following days, with their happiness decreasing until the next payday. The Number of reviews is very low on the 31. This is not something worth interpreting, as almost all months have at least 30 days, but only a few have 31. The slight decrease in the number of reviews over the month might be connected to the previous argument of payday happiness, where people might spend more money to buy products on amazon at the beggining of the month, and hence give more reviews. The effect on the average rating we observe is about 0.02.
