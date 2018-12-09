@@ -105,7 +105,7 @@ To try to correct bias later, we can use this helpful ratio to indicate how much
 
 Hence the graphs of most of the categories look similar but the categories with a bad average rating (such as *Digital Software* with average ~3.55/5) will have a more flat or even reversed curve. It can be explained by the same kind of reasoning but inversed: reviews with high rating will be far from the average product rating, hence people will the review is less accurate. See figure below for *Digital Software*:
 
-![Impact of helpful on ratings](/img/products/helpful_vs_rating_Digital Software.png)
+![Impact of helpful on ratings](/img/products/helpful_vs_rating_Digital_Software.png)
 
 **Analysis of the `review_date` feature**
 
