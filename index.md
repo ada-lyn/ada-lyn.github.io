@@ -112,15 +112,10 @@ Hence the graphs of most of the categories look similar but the categories with 
 For this, we decided to split the data according to four different time metrics. By Year, by Month, by day of month and by day of week. 
 
 <p float="left">
-  <img src="/img/products/rating_by_month_evolution_Books.png" width="100" />
-  <img src="/img/products/number_by_month_evolution_Books.png" width="100" /> 
+  <img src="/img/products/rating_by_month_evolution_Books.png" width="40%" />
+  <img src="/img/products/number_by_month_evolution_Books.png" width="40%" /> 
 </p>
 
-
-
-    d        |  d
-:-------------------------:|:-------------------------:
-![Rating by month](/img/products/rating_by_month_evolution_Books.png)  |  ![Rating by month](/img/products/number_by_month_evolution_Books.png)
 
 **Analysis of the number of reviews per product**
 
