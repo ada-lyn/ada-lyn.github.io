@@ -145,14 +145,14 @@ Again, the confidence bands are very tight for the rating, which is nice for dra
   <img src="/img/products/number_by_dayofweek_evolution_Books.png" width="49.5%" /> 
 </p>
 
-We can see that here, the confidence bands are wider. Notably, we have a spike in ratings on monday, which is surprising as we would expect people to not be at their happiest on monday. The number of ratings starts high at the beginning of the week, and then steadily decreases until the weekend where it is at its lowest point. We may assume that people use / test their new products during the weekend, and give it a rating the following week after, mainly on monday because they don't have the motivation to work. Here again, the effect on the average rating is statistically significant, but very small (in the order of 0.01).
+We can see that here, the confidence bands are wider. Notably, we have a spike in ratings on monday, which is surprising as we would expect people not to be at their happiest on mondays. The number of ratings starts high at the beginning of the week, and then steadily decreases until the weekend where it is at its lowest point. We may assume that people use / test their new products during the weekend, and give it a rating the following week after, mainly on monday because they don't have the motivation to work. Here again, the effect on the average rating is statistically significant, but very small (in the order of 0.01).
 
 <p float="left">
   <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="49.5%" />
   <img src="/img/products/number_by_dayofmonth_evolution_Books.png" width="49.5%" /> 
 </p>
 
-For the day of the month, the confidence bands are almost too big to draw significant conclusions. We could however argue that people usually receive their salary at the end of the month, therefore are more happy and give better ratings in the following days, with their happiness decreasing until the next payday. The Number of reviews is very low on the 31. This is not something worth interpreting, as almost all months have at least 30 days, but only a few have 31. The slight decrease in the number of reviews over the month might be connected to the previous argument of payday happiness, where people might spend more money to buy products on amazon at the beggining of the month, and hence give more reviews. The effect on the average rating we observe is about 0.02.
+For the day of the month, the confidence bands are almost too big to draw significant conclusions. We could however argue that people usually receive their salary at the end of the month, therefore are more happy and give better ratings in the following days, with their happiness decreasing until the next payday. The Number of reviews is very low on the 31. This is not something worth interpreting, as almost all months have at least 30 days, but only a few have 31. The slight decrease in the number of reviews over the month might be connected to the previous argument of payday happiness, where people might spend more money to buy products on Amazon at the beginning of the month, hence give more reviews. The effect on the average rating we observe is about 0.02.
 
 **Analysis of the number of reviews per product**
 
@@ -164,7 +164,7 @@ We want here to see if there is any trend going on between the total number of r
   <img src="/img/products/number_vs_reviews_Books.png" width="49.5%" /> 
 </p>
 
-There seems to be a trend between the two, but as the number of reviews per product increases, we have less and less data and the confidence interval becomes larger. This makes sense, as we can expect the number of reviews to be highly positively correlated with the number of sales. It is quite intuitive that only few products are very popular and many products are not so successful. (The number of reviews is intuitively highly correlated with the numbe of sales.)
+There seems to be a trend between the two, but as the number of reviews per product increases, we have less and less data and the confidence interval becomes larger. This makes sense, as we can expect the number of reviews to be highly positively correlated with the number of sales. It is quite intuitive that only few products are very popular and many products are not so successful (the number of reviews is intuitively highly correlated with the number of sales).
 
 So we can observe for sure a descending trend in the average rating between 3 and ~100 number of reviews per product (of about 0.05 stars, which is not negligable with so much data) but any value after that becomes too uncertain to conclude anything.
 
