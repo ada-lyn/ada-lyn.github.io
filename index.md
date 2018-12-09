@@ -92,7 +92,9 @@ It is clear that a lot of data is missing in the 2000's if we limit ourselves to
 
 **Analysis of the `helpful_votes` and `total_votes` features**
 
-Lorem ipsum
+![Number of helpful reviews per ratio](/img/products/helpful_vs_number_Books.png)
+
+![Impact of helpful on ratings](/img/products/helpful_vs_rating_Books.png)
 
 **Analysis of the `review_date` feature**
 
