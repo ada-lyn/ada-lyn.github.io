@@ -33,7 +33,7 @@ We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that cons
 - `review_body` : Full content of the review
 - `review_date` : Date the review was posted on
 
-Since we have a lot of data (Amounting to ~20GB), our main focus will be on the reviews related to the "Books" category. This is also by far the largest dataset and the one Amazon is most known for. We will do an in-depth analysis of these reviews, and then rapidly compare it to the other categories.
+Since we have a lot of data (Amounting to ~20GB), our main focus will be on the reviews related to the *Books*. This is also by far the largest dataset and the one Amazon is most known for. We will do an in-depth analysis of these reviews, and then rapidly compare it to the other categories.
 
 ### Research Questions
 
@@ -51,11 +51,11 @@ We do not think it would be a good idea to correct every review and publicly cha
 
 ### General Description of Data
 
-Before focusing our study on Books only, we will take a quick look at the complete dataset, and see if we can see any interesting effect. We will, for each of the available category, look at the number of reviews available. Note however that this might not be entirely representative of the true repartition of the categories, since we do not know what process Amazon used to select those reviews. 
+Before focusing our study on *Books* only, we will take a quick look at the complete dataset, and see if we can see any interesting effect. We will, for each of the available category, look at the number of reviews available. Note however that this might not be entirely representative of the true repartition of the categories, since we do not know what process Amazon used to select those reviews. 
 
 ![Number of review for each category](/img/other/n_by_category.png)
 
-Note that we used a logratihmic scale, so the proportions are distorded. Indeed, some of the smallest categories (Digital Software, Major Appliance, Personnal Care Appliance for instance) have so few reviews compared to the larger ones (Books, Ebooks, Wireless) that they would be invisible on a linear scale. The results are mostly expected, although some categories are ranked higher than one might expect them to be (e.g. *Video DVD*, when they mostly have been replaced by streaming services, or *Wireless* that is ranked way higher than *Electronics*, even if it's only a subcategory of **the other / NOT SURE ABOUT THE PHRASING**) 
+Note that we used a logratihmic scale, so the proportions are distorded. Indeed, some of the smallest categories (*Digital Software*, *Major Appliance*, P3ersonnal Care Appliance* for instance) have so few reviews compared to the larger ones (*Books*, *Ebooks*, *Wireless*) that they would be invisible on a linear scale. The results are mostly expected, although some categories are ranked higher than one might expect them to be (e.g. *Video DVD*, when they mostly have been replaced by streaming services, or *Wireless* that is ranked way higher than *Electronics*, even if it's only a subcategory of **the other / NOT SURE ABOUT THE PHRASING**) 
 
 We also took a quick look at the average rating (the number of stars given by the reviewers) of each category. 
 
@@ -65,7 +65,7 @@ As you can see, there is quite a non negligible difference between the highest a
 
 We can also find some logical explanations for the lowest ranked categories. *Software* and *Digital Software* are clearly more niche products, often with a higher price tag, intended for businesses or professional individuals. Because of the type of product, it is also way harder to know exactly what to expect (You will not be able to judge the quality of a software by looking at screenshots, notably you won't see any bugs that might affect your experience negatively). You will more frequently be disappointed when your expensive software does not work as expected, and you can not just use the warranty to exchange it with a better one. 
 
-To answer to our main question: *Is there some bias and should we correct it ?*, we think that indeed there is some (People are clearly biased because they buy music that they know they will probably like), but it also seems that some categories (mainly *Software*) are really of worse quality than the other. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the other. 
+To answer to our main question: *Is there some bias and should we correct it?*, we think that indeed there is some (People are clearly biased because they buy music that they know they will probably like), but it also seems that some categories (mainly *Software*) are really of worse quality than the other. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the other. 
 
 We will now, for the *Books*, take a deeper look at some of the features available.
 
