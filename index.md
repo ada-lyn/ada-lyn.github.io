@@ -111,33 +111,33 @@ Hence the graphs of most of the categories look similar but the categories with 
 
 For this, we decided to split the data according to four different time metrics. By Year, by Month, by day of month and by day of week. 
 
-<p float="left">
-  <img src="/img/products/rating_by_month_evolution_Books.png" width="45%" />
-  <img src="/img/products/number_by_month_evolution_Books.png" width="45%" /> 
+<p align="center">
+  <img src="/img/products/rating_by_month_evolution_Books.png" width="65%" />
+  <img src="/img/products/number_by_month_evolution_Books.png" width="65%" /> 
 </p>
 
 We can observe that the confidence bands for the average rating by month are quite tight. This allows us to draw conclusions with confidence. For the total number of reviews, however, we can not draw confidence bands. The number of reviews seems to have a general correlation with holidays. There is roughly a peak in summer and one in winter. We attribute this to the fact that people have more time then, so they read more. Note however that the reviews we have range from may 1996 to july 2014. The lower values in the fall might also be partialy related to the fact the we have the data for fall 2014, but this alone shouldn't have that much influence over al the years.
 
 We also see that the ratings are higher in hollyday season. This we attribute to the people being happier then. However, it has to be noted that the effect is very small (about 0.03), but statistically significant.
 
-<p float="left">
-  <img src="/img/products/rating_by_year_evolution_Books.png" width="45%" />
-  <img src="/img/products/number_by_year_evolution_Books.png" width="45%" /> 
+<p align="center">
+  <img src="/img/products/rating_by_year_evolution_Books.png" width="65%" />
+  <img src="/img/products/number_by_year_evolution_Books.png" width="65%" /> 
 </p>
 
 Again, the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidance band widens for early years, here there are less reviews. We clearly see a decrease in the years up untill ~2003 in the ratings. Afterwards the ratings increase. We will check if this effect is present in datasets across countries and product types in the next milestone. We will have to do research in order to find out wether amazon changed their rating system somehow or why this effect may occur. The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
 
-<p float="left">
-  <img src="/img/products/rating_by_dayofweek_evolution_Books.png" width="45%" />
-  <img src="/img/products/number_by_dayofweek_evolution_Books.png" width="45%" /> 
+<p align="center">
+  <img src="/img/products/rating_by_dayofweek_evolution_Books.png" width="65%" />
+  <img src="/img/products/number_by_dayofweek_evolution_Books.png" width="65%" /> 
 </p>
 
 
 We can see that here, the confidence bands are wider. Notably, we have a spike in ratings on monday, which is surprising as we would expect people to not be the happiest on monday. The number of ratings starts high at the beginning of the week, and then steadily decreases until the weekend where it is at its lowest point. We may assume that people use / test their new products during the weekend, and give it a rating the following week after, mainly on monday because they don't have the motivation to work. Here again, the effect on the average rating is significant, but very small (in the order of 0.01).
 
-<p float="left">
-  <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="45%" />
-  <img src="/img/products/number_by_dayofmonth_evolution_Books.png" width="45%" /> 
+<p align="center">
+  <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="65%" />
+  <img src="/img/products/number_by_dayofmonth_evolution_Books.png" width="65%" /> 
 </p>
 
 For the day of the month, the confidence bands are almost too big to draw significant conclusions. We could however argue that people usually receive their salary at the end of the month, therfore are more happy and give better ratings in the following days, with their happiness decreasing until the next payday. The Number of reviews is very low on the 31. This is not something worth interpreting, as almost all months have at least 30 days, but only a few have 31. The slight decrease in the number of reviews over the month might be connected to the previous argument of payday happiness, where people might spend more money to buy products on amazon at the beggining of the month, and hence give more reviews. The effect on the average rating we observe is about 0.02.
