@@ -75,7 +75,7 @@ This part will be separated in two. We will first do an analysis by category (as
 
 ### By Product Category
 
-First, we will analyse some of the features (`verified_purchase`, `helpful_votes`, `total_votes`, `review_date`, numbe of reviews per product, `review_headline` and `review_body`), then we are going to discuss their potential influence in the bias, and if they shopuld be considered, and finally we will compare the results with the other categories.
+First, we will analyse some of the features (`verified_purchase`, `helpful_votes`, `total_votes`, `review_date`, numbe of reviews per product, `review_headline` and `review_body`), then we are going to discuss their potential influence in the bias, and if they should be considered, and finally we will compare the results with the other categories.
 
 ####  Analysis of some features
 
