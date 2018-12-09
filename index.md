@@ -45,17 +45,17 @@ There are two main questions we will try to answer during this project:
 ### Motivation
 
 Our goal is mostly to provide useful information to Amazon itself and to the products sellers. So that they can have a better idea of what a given review value really should be.
-For instance, they might receive a very bad review from someone and not understand why they had such a bad rating. But after bias correction it could be possible that the reviewer is just a 'hater' (someone who always gives bad rating to every product) and that instead of a one-two stars it could be worth a 3-4 stars. There could be other factors that influenced the rating of that review and we will try to best correct them to valuable information.
+For instance, they might receive a very bad review from someone and not understand why they had such a bad rating. But after bias correction it could be possible that the reviewer is just a "hater" (someone who always gives bad rating to every product) and that instead of a one-two stars it could be worth a 3-4 stars. There could be other factors that influenced the rating of that review and we will try to best correct them to valuable information.
 
 We do not think it would be a good idea to correct every review and publicly change the displayed score. This could lead to many people being angry at Amazon for thinking their opinion is biased. Also once a metric is known, it becomes very easy for ill intentioned people to find a way to exploit it. They could then always increase/decrease as they want by carefully using the bias correction in the other way. 
 
 ### General Description of Data
 
-Before focusing our study on Books only, we will take a quick look at the complete dataset, and see if we can see any interesting effect. We will, for each of the available category, look at the number of reviews available. Not however that this might not be entirely representative of the true repartition of the categories, since we do not know what process Amazon used to select those reviews. 
+Before focusing our study on Books only, we will take a quick look at the complete dataset, and see if we can see any interesting effect. We will, for each of the available category, look at the number of reviews available. Note however that this might not be entirely representative of the true repartition of the categories, since we do not know what process Amazon used to select those reviews. 
 
 ![Number of review for each category](/img/other/n_by_category.png)
 
-Notice that we are using a logratihmic scale, so the proportion are distorded. Indeed, some of the smallest categories (Digital Software, Major Appliance, Personnal Care Appliance for instance) have so few reviews compared to the larger ones (Books, Ebooks, Wireless) that they would be invisible on a linear scale. The results are mostly expected, although some categories are ranked higher than one might expect them to be (e.g. *Video DVD*, when they mostly have been replaced by streaming services, or *Wireless* that is ranked way higher than *Electronics*, even if it's only a subcategory of **the other / NOT SURE ABOUT THE PHRASING**) 
+Note that we used a logratihmic scale, so the proportions are distorded. Indeed, some of the smallest categories (Digital Software, Major Appliance, Personnal Care Appliance for instance) have so few reviews compared to the larger ones (Books, Ebooks, Wireless) that they would be invisible on a linear scale. The results are mostly expected, although some categories are ranked higher than one might expect them to be (e.g. *Video DVD*, when they mostly have been replaced by streaming services, or *Wireless* that is ranked way higher than *Electronics*, even if it's only a subcategory of **the other / NOT SURE ABOUT THE PHRASING**) 
 
 We also took a quick look at the average rating (the number of stars given by the reviewers) of each castegory. 
 
