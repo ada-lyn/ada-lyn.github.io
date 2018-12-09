@@ -122,16 +122,16 @@ Hence the graphs of most of the categories look similar but the categories with 
 
 **Analysis of the `review_date` feature**
 
-For this, we decided to split the data according to four different time metrics. By Year, by Month, by day of month and by day of week. 
+We now would like to know if the day the review was posted on has any influence on the rating. It would moreover be interesting to look for a potential influence from the hour of the day the review was written at, but we don't have access to this information. Therefore we decided to split the data according to four different *time metrics*. By Year, by Month, by Day of Month and by Day of Week. 
 
 <p float="left">
   <img src="/img/products/rating_by_month_evolution_Books.png" width="49.5%" />
   <img src="/img/products/number_by_month_evolution_Books.png" width="49.5%" /> 
 </p>
 
-We can observe that the confidence bands for the average rating by month are quite tight. This allows us to draw conclusions with confidence. For the total number of reviews, however, we can not draw confidence bands. The number of reviews seems to have a general correlation with holidays. There is roughly a peak in summer and one in winter. We attribute this to the fact that people have more time then, so they read more. Note however that the reviews we have range from may 1996 to july 2014. The lower values in the fall might also be partialy related to the fact the we have the data for fall 2014, but this alone shouldn't have that much influence over al the years.
+We can observe that the confidence bands for the average rating by month are quite tight. This allows us to draw conclusions with confidence. For the total number of reviews, however, we can not draw confidence bands. The number of reviews seems to have a general correlation with holidays. There is roughly a peak during the summer and one in the winter. The peak in the summer can be attributed to the fact that people have more time then, so they read more. Similarly, the peak in the witner (More specificaly in january) might correspond to people rating their Christmas presents. Note however that the reviews we have range from may 1996 to july 2014. The lower values in the fall might also be partialy related to the fact the we do not have the data for fall 2014, but this alone shouldn't have that much influence over al the years.
 
-We also see that the ratings are higher in hollyday season. This we attribute to the people being happier then. However, it has to be noted that the effect is very small (about 0.03), but statistically significant.
+We also see that the ratings are higher during holiday season. This we attribute to the people being happier then. On the opposite, the lower ratings in semptember-october-november could be connected to the bad mood of people due to the autumn's bad weather. It has to be noted that the effect is very small (about 0.03), but neverthesless statistically significant considering the amount of data available.
 
 <p float="left">
   <img src="/img/products/rating_by_year_evolution_Books.png" width="49.5%" />
