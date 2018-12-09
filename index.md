@@ -103,6 +103,9 @@ The same explanation can be applied in a reversed way for reviews with lows rati
 
 To try to correct bias later, we can use this helpful ratio to indicate how much a review should be trusted and less biased corrected. The higher helpful ratio it has, the more probable it gets to be what the average person thinks, hence not needing bias correction.
 
+Hence the graphs of most of the categories look similar but the categories with a bad average rating (such as *Digital Software* with average ~3.55/5) will have a more flat or even reversed curve. It can be explained by the same kind of reasoning but inversed: reviews with high rating will be far from the average product rating, hence people will the review is less accurate. See figure below for *Digital Software*:
+
+![Impact of helpful on ratings](/img/products/helpful_vs_rating_Digital Software.png)
 
 **Analysis of the `review_date` feature**
 
