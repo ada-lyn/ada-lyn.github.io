@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Detecting Bias in Amazon reviews
-subtitle: By ADA-LYN
+subtitle: 'By Nicolas Zimmermann, Yves Rychener and Loïs Bilat'
 published: true
 ---
 
