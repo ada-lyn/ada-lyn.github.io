@@ -278,6 +278,8 @@ For some windows of number of reviews, there is a higher correlation.
 
 Now, let us show the effect in details for some specific products
 
+**IMAGES PRODUCT EXAMPLES**
+
 
 
 ### By User
