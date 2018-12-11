@@ -246,7 +246,7 @@ We will first do pairwise comparaisons, since it is the way we will have the mos
   <img src="/img/countries/average_rating_US_JP.png" width="49.5%" /> 
 </p>
 
-**TODO** Analysis
+We see that there is no significant difference of the ratings between countries. In france, germany and japan, there are products with lower average grades, but there does not seem to be a consistent bias present.
 
 #### Herding Behavior
 
@@ -257,8 +257,8 @@ Approach
 
 We will create a scatter plot, with on the x axis the first vote, on the y axis the average of the resulting votes. We exclude the first vote for the average calculation since it could affect the average. For example if it was significantly lower, and there would not be many votes, it could pull the average down.
 
-If there was no herding behaviour effect, we would expect a uniform cloud centered at $[c_{avg},c_{avg}]$, where $c_{avg}$ is the average country difference, as calculated in the previous section.
-If herding behaviour is present, we still expect a point cloud centered at $[c_{avg},c_{avg}]$, but there will be a positive correlation between the first rating and the average rating.
+If there was no herding behaviour effect, we would expect a uniform cloud centered at [c_avg,c_avg], where c_avg is the average country difference. Since we did not observe any bias in the last section, we expect this value to be roughly 0.
+If herding behaviour is present, we still expect a point cloud centered at [c_avg,c_avg], but there will be a positive correlation between the first rating and the average rating.
 
 **IMAGE HERDING GREEN**
 
@@ -288,14 +288,20 @@ Now, let us show the effect in details for some specific products
 # Bias Correction
 
 ### Decisions
+As a conclusion from the above results, we will correct for the bias of specific users and for the bias of time. We saw that herding behaviour is an important effect, however it is difficult to quantify and calculate the unbiased rating. 
 
 ### Correction by Date
 
 and other factors seen in previous observations
 
 ### Correction by User History
+We will correct the users bias using the following formula: *corrected_rating = actual_rating + alpha * (avg - x)* where *alpha=[helpful ratio] * (1-exp(-lambda * [n_reviews]))*. This will have the following effect:
 
-(using the formula)
+- We will correct a users bias. If a users average grade is higher than the average overall grade, then this user is classified as giving too high grades, therefore we will decrease the grade he gave slightly.
+- Alpha is a coefficient from 0 to 1 controlling the strength of the correction applied.
+	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
+	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
+**TODO RESULTS**
 
 # Conclusion
 
@@ -304,9 +310,22 @@ and other factors seen in previous observations
 Wonderful summary
 
 ### Further Possible Work
+There are 2 possible ways to extend this model. 
+
+Firstly, we could extend the number of features used for correction by including herding behaviour, international ratings and more text based methods to correct individual reviews based on the review text.
+Secondly, a different correction model may be used. We used a formula for correction that is based on our findings in the bias analysis, but one could try to use a learning based approach. For example a supervised learning task could  be used to predict the "true" score. The problem however would be to create the "true" responses for training. Perhaps, an expert group could be used.
 
 ### Usefulness
+We showed that amazon reviews have significant biases. We propose a method for correcting this bias. This method could be used for vendors to better understand the reviews they get. We do not recommend to use this method for correcting reviews displayed to the user. Doing so would pose two possible problems:
+
+**Ethics/User Satisfaction**
+Amazon users will be displeased if they would notice the bias correction techniques proposed here were used. They could understand the bias correction as amazon telling them "I know better what grade you would have given, your feelings are wrong". This could result in a backlash against amazon. Also, a prospect buyer will probably spend the time to read some of the reviews and would therefore notice any biased reviews (which we try to correct).Therefore for the general user this method is not really necessary. A vendor however, who wants to statistically evaluate his products and does not have the time to read the reviews could find our method useful.
+
+**Danger for abuse**
+Similar to google search optimisation, vendors and fake reviewers or haters could abuse our correction if they knew how it worked. For example if one would want to give a positive review, one could give 5 stars on a day that has a very low average review. We would then correct this daily "bias" and make the review even higher. Also, our user correction could be abused. To get very high reviews, one has to vote 1 star on many products in order to bring the users average rating down, and rate 5 start on our product. The bias correction algorithm would increase the grade as the user usually gives low reviews. <br>
+The inverse tactics can be used to give very low reviews. 
 
 (ethics, applicable, for whom, ...)
 
 ### Comparaison with Other Studies
+Yves did not find any
