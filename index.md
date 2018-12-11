@@ -295,7 +295,7 @@ As a conclusion from the above results, we will correct for the bias of specific
 and other factors seen in previous observations
 
 ### Correction by User History
-We will correct the users bias using the following formula: *corrected_rating = actual_rating + alpha * (avg - x)* where *alpha=[helpful ratio] * (1-exp(-lambda * [n_reviews]))*. This will have the following effect:
+We will correct the users bias using the following formula: *corrected_rating = actual_rating + alpha * (avg - x)* where *alpha= 1 - [helpful ratio] * (1-exp(-lambda * [n_reviews]))*. This will have the following effect:
 
 - We will correct a users bias. If a users average grade is higher than the average overall grade, then this user is classified as giving too high grades, therefore we will decrease the grade he gave slightly.
 - Alpha is a coefficient from 0 to 1 controlling the strength of the correction applied.
