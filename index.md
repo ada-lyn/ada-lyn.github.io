@@ -229,6 +229,19 @@ Lorem ipsum
 
 ### By Country
 
+In this part, we want to see if there are any differences between the way people rate articles in differents countries.
+
+To be able to correcly compare ratings between countries, we will have to limit our dataset to products that are available in both regions. Moreover, we will only keep reviews given during the same time period, since we saw earlier that the year of the review had quite a big impact on the rating.
+
+*e.g. If for a given article we have reviews from 2001 to 2015 in the US, but only from 2005 to 2015 in the UK, we will discard all reviews in the us before 2005.*
+
+We will first do pairwise comparaisons, since it is the way we will have the most common data. 
+
+<p float="left">
+  <img src="/img/products/rating_vs_review_length_Books.png" width="49.5%" />
+  <img src="/img/products/number_vs_review_length_Books.png" width="49.5%" /> 
+</p>
+
 - Difference between countries
 	- Herding
 
