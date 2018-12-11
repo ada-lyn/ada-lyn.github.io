@@ -260,6 +260,24 @@ We will create a scatter plot, with on the x axis the first vote, on the y axis 
 If there was no herding behaviour effect, we would expect a uniform cloud centered at $[c_{avg},c_{avg}]$, where $c_{avg}$ is the average country difference, as calculated in the previous section.
 If herding behaviour is present, we still expect a point cloud centered at $[c_{avg},c_{avg}]$, but there will be a positive correlation between the first rating and the average rating.
 
+**IMAGE HERDING GREEN**
+
+We see that there are some samples where the first vote is not a whole number. This is because the date does not contain hour and minute, so sometimes there are multiple ratings occuring on the first date. Our algorithm calculates the average of those.
+
+In order to avoid this, we filter our resulting dataset to only contain integer first votes. (Sometimes we will probably include datapoints where the multiple first-day votes average to a whole number, but this is very unlikely with increasing number of first day votes)
+
+**IMAGE HERDING BLUE**
+
+Visual inspection of the regression slope shows that it is strictly positive. The confidence bands of the seaborn plot do not include a line $f(x) = c$, so we can conclude that there is herding behaviour.
+
+Does it change if we use different bounds ?
+
+**IMAGE HERDING OTHER BOUNDS**
+
+For some windows of number of reviews, there is a higher correlation.
+
+Now, let us show the effect in details for some specific products
+
 
 
 ### By User
