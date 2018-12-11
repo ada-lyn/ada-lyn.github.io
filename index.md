@@ -238,8 +238,12 @@ To be able to correcly compare ratings between countries, we will have to limit 
 We will first do pairwise comparaisons, since it is the way we will have the most common data. 
 
 <p float="left">
-  <img src="/img/products/rating_vs_review_length_Books.png" width="49.5%" />
-  <img src="/img/products/number_vs_review_length_Books.png" width="49.5%" /> 
+  <img src="/img/countries/average_rating_US_UK.png" width="49.5%" />
+  <img src="/img/countries/average_rating_US_FR.png" width="49.5%" /> 
+</p>
+<p float="left">
+  <img src="/img/countries/average_rating_US_DE.png" width="49.5%" />
+  <img src="/img/countries/average_rating_US_JP.png" width="49.5%" /> 
 </p>
 
 - Difference between countries
