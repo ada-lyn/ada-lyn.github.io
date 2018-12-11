@@ -281,7 +281,6 @@ Now, let us show the effect in details for some specific products
 **IMAGES PRODUCT EXAMPLES**
 
 
-
 ### By User
 
 - by category 
