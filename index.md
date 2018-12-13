@@ -148,12 +148,18 @@ We also see that the ratings are higher during holiday season. This we attribute
 
 For analysing the effect of the year, again, the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidence bands widen for early years, here there are less reviews. We clearly see a decrease in the years up until ~2003 in the ratings. Afterwards the ratings increase. `TODO (We will check if this effect is present in datasets across countries and product types in the next milestone. We will have to do research in order to find out wether amazon changed their rating system somehow or why this effect may occur.)` The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
 
+When comparing the evolution of the rating with the year for the other catgeories, we do observe a similar effect. 
+
+*TODO* Gif for year
+
 <p float="left">
   <img src="/img/products/rating_by_dayofweek_evolution_Books.png" width="99%" />
   <img src="/img/products/number_by_dayofweek_evolution_Books.png" width="99%" /> 
 </p>
 
 For the days of the week, we can see that here, the confidence bands are wider. It has to be noted that in the weekday-system used here, the week starts at Sunday. Notably, we have a spike in ratings on monday, which is surprising as we would expect people not to be at their happiest on mondays. The number of ratings starts high at the beginning of the week, and then steadily decreases until the weekend where it is at its lowest point. We may assume that people use / test their new products during the weekend, and give it a rating the following week after, mainly on monday because they don't have the motivation to work. Here again, the effect on the average rating is statistically significant, but very small (in the order of 0.01).
+
+However, when we compare this with the other categories, it becomes harder to validate our theory, since it isn't present in all of them
 
 <p float="left">
   <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="99%" />
