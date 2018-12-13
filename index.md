@@ -156,7 +156,7 @@ We also see that the ratings are higher during holiday season. This we attribute
   <img src="/img/products/number_by_year_evolution_Books.png" width="99%" /> 
 </p>
 
-For analysing the effect of the year, again, the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidence bands widen for early years, here there are less reviews. We clearly see a decrease in the years up until ~2003 in the ratings. Afterwards the ratings increase. An second smaller drop can also be seen in ~2007. `TODO (We will check if this effect is present in datasets across countries and product types in the next milestone. We will have to do research in order to find out wether amazon changed their rating system somehow or why this effect may occur.)` The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
+For analysing the effect of the year, again, the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidence bands widen for early years, here there are less reviews. We clearly see a decrease in the years up until ~2003 in the ratings. Afterwards the ratings increase. An second smaller drop can also be seen in ~2007. The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
 
 When comparing the evolution of the rating with the year for the other catgeories, we do observe a similar effect. 
 
@@ -164,7 +164,7 @@ When comparing the evolution of the rating with the year for the other catgeorie
 	<img src="/img/gif/rating_vs_year.gif" width="99%" />
 </p>
 
-For some of the categories, the effect is harder to see due to the larger scale caused by the first few uncertain year, but we can still recognize the drop in rating in 2004-2005 before climbing again, followed by a second smaller drop in 2007-2008, and then a tendancy to increase. However, we could not identify any outlier to this trend with enough evidence, those that had some variation often didn't had a lot of products, making the results uncertain.
+For some of the categories, the effect is harder to see due to the larger scale caused by the first few uncertain years, but we can still recognize the drop in rating in 2004-2005 before climbing again, followed by a second smaller drop in 2007-2008, and then a tendancy to increase. However, we could not identify any outlier to this trend with enough evidence, those that had some variation often didn't had a lot of products, making the results uncertain.
 
 When looking at the number of reviews, a similar result can been seen with most of the categories; an almost exponetial growth, with at the end for some categories a little drop / flat, due to the year not being over. 
 
@@ -172,7 +172,7 @@ When looking at the number of reviews, a similar result can been seen with most 
 	<img src="/img/gif/number_vs_year.gif" width="99%" />
 </p>
 
-There are however a few notable exceptions. We can see a drop after ~2014 for *digital music* and *digital video games*, probably due to the rise of concurent platforms (Spotify for the music, and Steam for video games) **EXPLAIN OTHER CATEGORIES
+There are however a few notable exceptions. We can see a drop after ~2014 for *digital music* and *digital video games*, probably due to the rise of concurent platforms (Spotify for the music, and Steam for video games) **EXPLAIN OTHER CATEGORIES**
 
 <p float="left">
 	<img src="/img/gif/number_vs_year_exceptions.gif" width="99%" />
@@ -225,7 +225,7 @@ Another feature that may give us a hint on the rating is the review's text. A me
 
 Therefore we decided to go with features that are easier to extract. We chose to use title and text length. The reasoning would be that there is not much to say if the product is perfect, but one can explain at length why the product is not good.
 
-Firtsly, the title length:
+Firstly, the title length:
 
 <p float="left">
   <img src="/img/products/rating_vs_title_length_Books.png" width="99%" />
@@ -266,11 +266,6 @@ While being an interesting analysis, it shows that these results will not result
 
 Lorem ipsum
 
-#### Comparaison with other categories
-
-Lorem ipsum
-
-Lorem ipsum
 
 ### By Country
 
@@ -291,7 +286,7 @@ We will first do pairwise comparaisons, since it is the way we will have the mos
   <img src="/img/countries/average_rating_US_JP.png" width="99%" /> 
 </p>
 
-We see that there is no significant difference of the ratings between countries. In france, germany and japan, there are products with lower average grades, but there does not seem to be a consistent bias present.
+We see that there is no significant difference of the ratings between countries. Our boxplots show that there is indeed a difference in the median, but the intervals are too large to confidently conclude anything. In france, germany and japan, there are products with lower average grades, but there does not seem to be a consistent bias present.
 
 #### Herding Behavior
 
