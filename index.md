@@ -114,10 +114,17 @@ A similar explanation can be applied in a reversed way for reviews with lows rat
 
 To try to correct bias later, we can use this helpful ratio to indicate how much a review should be trusted and less biased corrected. The higher helpful ratio it has, the more probable it gets to be what the average person thinks, hence not needing bias correction.
 
-Hence the graphs of most of the categories look similar but the categories with a bad average rating (such as *Digital Software* with average ~3.55/5) will have a more flat or even reversed curve. It can be explained by the same kind of reasoning but inversed: reviews with high rating will be far from the average product rating, hence people will view the review as less accurate. Note that there probably are other unknown effects in place to explain such negativity in this case. See figure below for *Digital Software*:
+When looking at the graphs of the other categories, we observe a similar trend for almost all of them. For each category in the above graphe, we indeed have a positive slope, similar to *Books*. For some of them the confidence interval is quite big, but not too much too be able to draw these conclusions. 
 
 <p float="left">
-	<img src="/img/products/helpful_vs_rating_Digital Software.png" width="99%" />
+  <img src="/img/gif/rating_vs_helpful.gif" width="99%%" />
+</p>
+
+
+However, the categories with a bad average rating (such as *Digital Software* with average ~3.55/5 and *Software*) will have a more flat or even reversed curve. It can be explained by the same kind of reasoning but inversed: reviews with high rating will be far from the average product rating, hence people will view the review as less accurate. Note that there probably are other unknown effects in place to explain such negativity in this case. See figure below for *Digital Software* and *Software*:
+
+<p float="left">
+	<img src="/img/gif/rating_vs_helpful_exceptions.gif" width="99%" />
 </p>
 
 **Analysis of the `review_date` feature**
@@ -138,7 +145,13 @@ We also see that the ratings are higher during holiday season. This we attribute
   <img src="/img/products/number_by_year_evolution_Books.png" width="99%" /> 
 </p>
 
-For analysing the effect of the year, again, the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidence bands widen for early years, here there are less reviews. We clearly see a decrease in the years up until ~2003 in the ratings. Afterwards the ratings increase. `TODO (We will check if this effect is present in datasets across countries and product types in the next milestone. We will have to do research in order to find out wether amazon changed their rating system somehow or why this effect may occur.)` The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
+For analysing the effect of the year, again, the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidence bands widen for early years, here there are less reviews. We clearly see a decrease in the years up until ~2003 in the ratings. Afterwards the ratings increase. An second smaller drop can also be seen in ~2007. `TODO (We will check if this effect is present in datasets across countries and product types in the next milestone. We will have to do research in order to find out wether amazon changed their rating system somehow or why this effect may occur.)` The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
+
+When comparing the evolution of the rating with the year for the other catgeories, we do observe a similar effect. 
+
+*TODO* Gif for year
+
+For some of the categories, the effect is harder to see due to the larger scale caused by the first few uncertain year, but we can still recognize the drop in rating in 2004-2005 before climbing again, followed by a second smaller drop in 2007-2008, and then a tendancy to increase.
 
 <p float="left">
   <img src="/img/products/rating_by_dayofweek_evolution_Books.png" width="99%" />
@@ -146,6 +159,8 @@ For analysing the effect of the year, again, the confidence bands are very tight
 </p>
 
 For the days of the week, we can see that here, the confidence bands are wider. It has to be noted that in the weekday-system used here, the week starts at Sunday. Notably, we have a spike in ratings on monday, which is surprising as we would expect people not to be at their happiest on mondays. The number of ratings starts high at the beginning of the week, and then steadily decreases until the weekend where it is at its lowest point. We may assume that people use / test their new products during the weekend, and give it a rating the following week after, mainly on monday because they don't have the motivation to work. Here again, the effect on the average rating is statistically significant, but very small (in the order of 0.01).
+
+However, when we compare this with the other categories, it becomes harder to validate our theory, since it isn't present in all of them. 
 
 <p float="left">
   <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="99%" />
