@@ -343,9 +343,6 @@ and other factors seen in previous observations
 
 ### Correction by User History
 
-test latex 
-
-*corrected_rating = actual_rating + $\alpha$ * (avg - x)* where *alpha= 1 - [helpful ratio] * (1-exp(-lambda * [n_reviews]))*
 
 We will correct the users bias using the following formula: *corrected_rating = actual_rating + alpha * (avg - x)* where *alpha= 1 - [helpful ratio] * (1-exp(-lambda * [n_reviews]))*. This will have the following effect:
 
@@ -353,6 +350,7 @@ We will correct the users bias using the following formula: *corrected_rating = 
 - Alpha is a coefficient from 0 to 1 controlling the strength of the correction applied.
 	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
+    
 **TODO RESULTS**
 
 <a name="conclusion"></a>
