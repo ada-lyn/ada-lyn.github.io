@@ -178,6 +178,7 @@ There are however a few notable exceptions. We can see a drop after ~2014 for *d
 	<img src="/img/gif/number_vs_year_exceptions.gif" width="99%" />
 </p>
 
+---
 
 
 Now, let's look at the rating and number of reviews comapred to the day of the week
