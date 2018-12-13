@@ -7,13 +7,12 @@ published: true
 
 
 # Table of Contents
-1. [Introduction](#intro)
-2. [Effects on Rating](#effect-rating)
+1. [Introduction](#Introduction)
+2. [Effects on Rating](#Effects-on-Rating)
 
 
 
-# Introduction [](#){name=intro}
-
+# Introduction 
 
 ### Abstract
 
