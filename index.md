@@ -117,7 +117,7 @@ To try to correct bias later, we can use this helpful ratio to indicate how much
 When looking at the graphs of the other categories, we observe a similar trend for almsot all of them. 
 
 <p float="left">
-  <img src="/img/gif/rating_vs_helpful.gif.png" width="99%%" />
+  <img src="/img/gif/rating_vs_helpful.gif" width="99%%" />
 </p>
 
 FOr each category in the above graphe, we indeed have a positive slope, similaur to *Books*
@@ -125,7 +125,7 @@ FOr each category in the above graphe, we indeed have a positive slope, similaur
 However, the categories with a bad average rating (such as *Digital Software* with average ~3.55/5 and *Software*) will have a more flat or even reversed curve. It can be explained by the same kind of reasoning but inversed: reviews with high rating will be far from the average product rating, hence people will view the review as less accurate. Note that there probably are other unknown effects in place to explain such negativity in this case. See figure below for *Digital Software* and *Software*:
 
 <p float="left">
-	<img src="/img/products/helpful_vs_rating_Digital Software.png" width="99%" />
+	<img src="/img/gif/rating_vs_helpful_exceptions.gif" width="99%" />
 </p>
 
 **Analysis of the `review_date` feature**
