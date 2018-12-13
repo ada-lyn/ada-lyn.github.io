@@ -292,25 +292,34 @@ We see that there is no significant difference of the ratings between countries.
 
 One of the bias that might  effect the ratings is what is called the Herding Behavior. Basically, for the same product, depending on the first review given to it, other reviews will vary. If the first review is very positive, other reviewers might have a tendency to also put a higher grade. The same is true for a first negative rating. If we want to make some analysis and give some hypotheses about this, we will need enough data, i.e. enough common products with a non negligable rating difference between the two countries. We have 29507 common reviews between the US and UK, which isn't that much compared to the size of previous data, but we think it is still enough to see if this effect is indeed real.
 
-
-Approach
+*Approach*
 
 We will create a scatter plot, with on the x axis the first vote, on the y axis the average of the resulting votes. We exclude the first vote for the average calculation since it could affect the average. For example if it was significantly lower, and there would not be many votes, it could pull the average down.
 
 If there was no herding behaviour effect, we would expect a uniform cloud centered at [c_avg,c_avg], where c_avg is the average country difference. Since we did not observe any bias in the last section, we expect this value to be roughly 0.
 If herding behaviour is present, we still expect a point cloud centered at [c_avg,c_avg], but there will be a positive correlation between the first rating and the average rating.
 
-**IMAGE HERDING GREEN**
+<p float="left">
+  <img src="/img/herding/float_steps_corr.png" width="99%" />
+  
+</p>
 
 We see that there are some samples where the first vote is not a whole number. This is because the date does not contain hour and minute, so sometimes there are multiple ratings occuring on the first date. Our algorithm calculates the average of those.
 
 In order to avoid this, we filter our resulting dataset to only contain integer first votes. (Sometimes we will probably include datapoints where the multiple first-day votes average to a whole number, but this is very unlikely with increasing number of first day votes)
 
-**IMAGE HERDING BLUE**
+<p float="left">
+  <img src="/img/herding/int_steps_corr.png" width="99%" />
+  
+</p>
 
 Visual inspection of the regression slope shows that it is strictly positive. The confidence bands of the seaborn plot do not include a line $f(x) = c$, so we can conclude that there is herding behaviour.
 
 Does it change if we use different bounds ?
+
+<p float="left">
+  <img src="/img/herding/int_100_300_steps_corr.png" width="99%" />
+</p>
 
 **IMAGE HERDING OTHER BOUNDS**
 
