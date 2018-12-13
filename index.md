@@ -145,11 +145,13 @@ We also see that the ratings are higher during holiday season. This we attribute
   <img src="/img/products/number_by_year_evolution_Books.png" width="99%" /> 
 </p>
 
-For analysing the effect of the year, again, the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidence bands widen for early years, here there are less reviews. We clearly see a decrease in the years up until ~2003 in the ratings. Afterwards the ratings increase. `TODO (We will check if this effect is present in datasets across countries and product types in the next milestone. We will have to do research in order to find out wether amazon changed their rating system somehow or why this effect may occur.)` The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
+For analysing the effect of the year, again, the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidence bands widen for early years, here there are less reviews. We clearly see a decrease in the years up until ~2003 in the ratings. Afterwards the ratings increase. An second smaller drop can also be seen in ~2007. `TODO (We will check if this effect is present in datasets across countries and product types in the next milestone. We will have to do research in order to find out wether amazon changed their rating system somehow or why this effect may occur.)` The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
 
 When comparing the evolution of the rating with the year for the other catgeories, we do observe a similar effect. 
 
 *TODO* Gif for year
+
+For some of the categories, the effect is harder to see due to the larger scale caused by the first few uncertain year, but we can still recognize the drop in rating in 2004-2005 before climbing again, followed by a second smaller drop in 2007-2008, and then a tendancy to increase.
 
 <p float="left">
   <img src="/img/products/rating_by_dayofweek_evolution_Books.png" width="99%" />
