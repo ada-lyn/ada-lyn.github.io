@@ -321,8 +321,6 @@ Does it change if we use different bounds ?
   <img src="/img/herding/int_100_300_steps_corr.png" width="99%" />
 </p>
 
-**IMAGE HERDING OTHER BOUNDS**
-
 For some windows of number of reviews, there is a higher correlation.
 
 Now, let us show the effect in details for some specific products
