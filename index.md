@@ -99,13 +99,13 @@ Since we are keeping this feature, and we saw it is not negligable, it will be t
 We want to see if the upvoted ratio on reviews in correlated to the rating given by the review. For the helpful ratio to make some sence, and for it to be representative enough of the quality of a review, we decided to only keep the reviews with at least 10 votes. 
 
 <p float="left">
-  <img src="/img/products/helpful_vs_number_Books.png" width="49.5%" />
+  <img src="/img/products/helpful_vs_number_Books.png" width="99%" />
 </p>
 
 We can see that people tend to give more positive votes than negatives ones on reviews. Possibly as the users tend to give good reviews on *Books* (~4.3/5 on *Books* and overall good ratings on other categories as well), they will also tend to positively rate other things such as other people's reviews. One could also interprete this as people's lazyness, who only rate reviews when they find them useful, and not otherwise. 
 
 <p float="left">
-  <img src="/img/products/helpful_vs_rating_Books.png" width="49.5%" />
+  <img src="/img/products/helpful_vs_rating_Books.png" width="99%%" />
 </p>
 
 This graph may seem a bit strange at first, wondering why people would mostly positively rate reviews with high ratings only. However it can easily be explained: on any product it makes sense to assume a user will usually give a positive vote to a review if it is somewhat close to that user opinion on the product. And since the average in *Books* is very high, most of the reviews with high ratings will be close to the product average on average, meaning the closer a review's rating is close to the general opinion (= product average), the more likely it is to get positive votes.
@@ -117,7 +117,7 @@ To try to correct bias later, we can use this helpful ratio to indicate how much
 Hence the graphs of most of the categories look similar but the categories with a bad average rating (such as *Digital Software* with average ~3.55/5) will have a more flat or even reversed curve. It can be explained by the same kind of reasoning but inversed: reviews with high rating will be far from the average product rating, hence people will view the review as less accurate. Note that there probably are other unknown effects in place to explain such negativity in this case. See figure below for *Digital Software*:
 
 <p float="left">
-	<img src="/img/products/helpful_vs_rating_Digital Software.png" width="49.5%" />
+	<img src="/img/products/helpful_vs_rating_Digital Software.png" width="99%" />
 </p>
 
 **Analysis of the `review_date` feature**
@@ -125,8 +125,8 @@ Hence the graphs of most of the categories look similar but the categories with 
 We now would like to know if the day the review was posted on has any influence on the rating. Moreover, it would be interesting to look for a potential influence from the hour of the day the review was written at, but we don't have access to this information. Therefore we decided to split the data according to four different *time metrics*: by Year, by Month, by Day of Month and by Day of Week. 
 
 <p float="left">
-  <img src="/img/products/rating_by_month_evolution_Books.png" width="49.5%" />
-  <img src="/img/products/number_by_month_evolution_Books.png" width="49.5%" /> 
+  <img src="/img/products/rating_by_month_evolution_Books.png" width="99%" />
+  <img src="/img/products/number_by_month_evolution_Books.png" width="99%" /> 
 </p>
 
 We can observe that the confidence bands for the average rating by month are quite tight. This allows us to draw conclusions with confidence. For the total number of reviews, however, we can not draw confidence bands. The number of reviews seems to have a general correlation with holidays. There is roughly a peak during the summer and one in the winter. The peak in the summer can be attributed to the fact that people have more time then, so they read more. Similarly, the peak in the winter (More specificaly in january) might correspond to people rating their Christmas presents. Note however that the reviews of the dataset range from may 1996 to july 2014. The lower values in the fall might also be partialy related to the fact that we do not have the data for fall 2014, but this alone should not have that much influence over all the years.
@@ -134,22 +134,22 @@ We can observe that the confidence bands for the average rating by month are qui
 We also see that the ratings are higher during holiday season. This we attribute to the people being happier then. On the opposite, the lower ratings in semptember-october-november could be connected to the bad mood of people due to the autumn's bad weather. It has to be noted that the effect is very small (about 0.03), but neverthesless statistically significant considering the amount of data available.
 
 <p float="left">
-  <img src="/img/products/rating_by_year_evolution_Books.png" width="49.5%" />
-  <img src="/img/products/number_by_year_evolution_Books.png" width="49.5%" /> 
+  <img src="/img/products/rating_by_year_evolution_Books.png" width="99%" />
+  <img src="/img/products/number_by_year_evolution_Books.png" width="99%" /> 
 </p>
 
 For analysing the effect of the year, again, the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidence bands widen for early years, here there are less reviews. We clearly see a decrease in the years up until ~2003 in the ratings. Afterwards the ratings increase. `TODO (We will check if this effect is present in datasets across countries and product types in the next milestone. We will have to do research in order to find out wether amazon changed their rating system somehow or why this effect may occur.)` The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
 
 <p float="left">
-  <img src="/img/products/rating_by_dayofweek_evolution_Books.png" width="49.5%" />
-  <img src="/img/products/number_by_dayofweek_evolution_Books.png" width="49.5%" /> 
+  <img src="/img/products/rating_by_dayofweek_evolution_Books.png" width="99%" />
+  <img src="/img/products/number_by_dayofweek_evolution_Books.png" width="99%" /> 
 </p>
 
 For the days of the week, we can see that here, the confidence bands are wider. It has to be noted that in the weekday-system used here, the week starts at Sunday. Notably, we have a spike in ratings on monday, which is surprising as we would expect people not to be at their happiest on mondays. The number of ratings starts high at the beginning of the week, and then steadily decreases until the weekend where it is at its lowest point. We may assume that people use / test their new products during the weekend, and give it a rating the following week after, mainly on monday because they don't have the motivation to work. Here again, the effect on the average rating is statistically significant, but very small (in the order of 0.01).
 
 <p float="left">
-  <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="49.5%" />
-  <img src="/img/products/number_by_dayofmonth_evolution_Books.png" width="49.5%" /> 
+  <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="99%" />
+  <img src="/img/products/number_by_dayofmonth_evolution_Books.png" width="99%" /> 
 </p>
 
 For the day of the month, the confidence bands are almost too big to draw significant conclusions. We could however argue that people usually receive their salary at the end of the month, therefore are more happy and give better ratings in the following days, with their happiness decreasing until the next payday. The Number of reviews is very low on the 31. This is not something worth interpreting, as almost all months have at least 30 days, but only a few have 31. The slight decrease in the number of reviews over the month might be connected to the previous argument of payday happiness, where people might spend more money to buy products on Amazon at the beginning of the month, hence give more reviews. The effect on the average rating we observe is about 0.02.
@@ -162,8 +162,8 @@ Here, we want to see if there is any trend between the total number of reviews o
 
 
 <p float="left">
-  <img src="/img/products/rating_vs_reviews_Books.png" width="49.5%" />
-  <img src="/img/products/number_vs_reviews_Books.png" width="49.5%" /> 
+  <img src="/img/products/rating_vs_reviews_Books.png" width="99%" />
+  <img src="/img/products/number_vs_reviews_Books.png" width="99%" /> 
 </p>
 
 There seems to be a trend between the two, but as the number of reviews per product increases, we have less and less data and the confidence interval becomes larger. This makes sense, as we can expect the number of reviews to be highly positively correlated with the number of sales. It is quite intuitive that only few products are very popular and many products are not so successful (the number of reviews is intuitively highly correlated with the number of sales).
@@ -175,7 +175,7 @@ So we can observe for sure a descending trend in the average rating between 3 an
 Another feature that may give us a hint on the rating is the review's text. A method that comes to mind would be to analyse the text with natural language processing models, especially sentiment analysis. But this analysis would not bring new insights, if we were to find a positive correlation. It would seem fairly intuitive that a more positive review will come with a higher rating. This would also be too computationaly expensive considering the amount of data we have. Of course there are always exceptions, often from people that don't understand the principle of stars...
 
 <p float="left">
-  <img src="/img/amazon_stars.jpeg" width="49.5%" />
+  <img src="/img/amazon_stars.jpeg" width="99%" />
 </p>
 
 Therefore we decided to go with features that are easier to extract. We chose to use title and text length. The reasoning would be that there is not much to say if the product is perfect, but one can explain at length why the product is not good.
@@ -183,8 +183,8 @@ Therefore we decided to go with features that are easier to extract. We chose to
 Firtsly, the title length:
 
 <p float="left">
-  <img src="/img/products/rating_vs_title_length_Books.png" width="49.5%" />
-  <img src="/img/products/number_vs_title_length_Books.png" width="49.5%" /> 
+  <img src="/img/products/rating_vs_title_length_Books.png" width="99%" />
+  <img src="/img/products/number_vs_title_length_Books.png" width="99%" /> 
 </p>
 
 We have a huge peak for reviews with a title length of aproximatly 10 characters. This might be because a lot of people that liked their products put simple titles such as "very good", "I recommand", "best product", and so on (or even possibly default titles proposed by Amazon). Reviews with very small titles have lower grades, maybe people that don't like product don't care about the title and just put the negative comment, but this there is a very low number of those reviews it is harder to tell with good confidence.
@@ -209,8 +209,8 @@ This confirms our intuition. Most of the people that liked the product can put a
 Now, for the review body length:
 
 <p float="left">
-  <img src="/img/products/rating_vs_review_length_Books.png" width="49.5%" />
-  <img src="/img/products/number_vs_review_length_Books.png" width="49.5%" /> 
+  <img src="/img/products/rating_vs_review_length_Books.png" width="99%" />
+  <img src="/img/products/number_vs_review_length_Books.png" width="99%" /> 
 </p>
 
 For the body length however, we see that the result is completly different. A short review body generaly corresponds to a higher rating, whereas a long review coresponds to a lower rating. It probably is because there is not always much to say for excellent products, whereas you can describe a lot of negative points for the less good products. That trend is very clear between 0 and 2000 characters, with a huge drop of more than 0.5 stars, but for longer reviews, it is harder to conclude anything since the confidence interval is much larger, and we can see a lot of noise. That is obvisously due to the small quantity of reviews with more than 5000 characters (people rarelly will spend so much time writting reviews).
@@ -238,12 +238,12 @@ To be able to correcly compare ratings between countries, we will have to limit 
 We will first do pairwise comparaisons, since it is the way we will have the most common data. 
 
 <p float="left">
-  <img src="/img/countries/average_rating_US_UK.png" width="49.5%" />
-  <img src="/img/countries/average_rating_US_FR.png" width="49.5%" /> 
+  <img src="/img/countries/average_rating_US_UK.png" width="99%" />
+  <img src="/img/countries/average_rating_US_FR.png" width="99%" /> 
 </p>
 <p float="left">
-  <img src="/img/countries/average_rating_US_DE.png" width="49.5%" />
-  <img src="/img/countries/average_rating_US_JP.png" width="49.5%" /> 
+  <img src="/img/countries/average_rating_US_DE.png" width="99%" />
+  <img src="/img/countries/average_rating_US_JP.png" width="99%" /> 
 </p>
 
 We see that there is no significant difference of the ratings between countries. In france, germany and japan, there are products with lower average grades, but there does not seem to be a consistent bias present.
