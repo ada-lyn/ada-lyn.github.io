@@ -342,6 +342,11 @@ As a conclusion from the above results, we will correct for the bias of specific
 and other factors seen in previous observations
 
 ### Correction by User History
+
+test latex 
+
+*corrected_rating = actual_rating + $\alpha$ * (avg - x)* where *alpha= 1 - [helpful ratio] * (1-exp(-lambda * [n_reviews]))*
+
 We will correct the users bias using the following formula: *corrected_rating = actual_rating + alpha * (avg - x)* where *alpha= 1 - [helpful ratio] * (1-exp(-lambda * [n_reviews]))*. This will have the following effect:
 
 - We will correct a users bias. If a users average grade is higher than the average overall grade, then this user is classified as giving too high grades, therefore we will decrease the grade he gave slightly.
