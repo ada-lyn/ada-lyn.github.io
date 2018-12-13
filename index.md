@@ -164,7 +164,7 @@ When looking at the number of reviews, *TODOD*
 Whith some exceptions
 
 <p float="left">
-	<img src="/img/gif/number_vs_year_excpetions.gif" width="99%" />
+	<img src="/img/gif/number_vs_year_exceptions.gif" width="99%" />
 </p>
 
 **TODO**
