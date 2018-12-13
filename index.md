@@ -149,9 +149,25 @@ For analysing the effect of the year, again, the confidence bands are very tight
 
 When comparing the evolution of the rating with the year for the other catgeories, we do observe a similar effect. 
 
-*TODO* Gif for year
+<p float="left">
+	<img src="/img/gif/rating_vs_year.gif" width="99%" />
+</p>
 
-For some of the categories, the effect is harder to see due to the larger scale caused by the first few uncertain year, but we can still recognize the drop in rating in 2004-2005 before climbing again, followed by a second smaller drop in 2007-2008, and then a tendancy to increase.
+For some of the categories, the effect is harder to see due to the larger scale caused by the first few uncertain year, but we can still recognize the drop in rating in 2004-2005 before climbing again, followed by a second smaller drop in 2007-2008, and then a tendancy to increase. However, we could not identify any outlier to this trend with enough evidence, those that had some variation often didn't had a lot of products, making the results uncertain.
+
+When looking at the number of reviews, *TODOD*
+
+<p float="left">
+	<img src="/img/gif/number_vs_year.gif" width="99%" />
+</p>
+
+Whith some exceptions
+
+<p float="left">
+	<img src="/img/gif/number_vs_year_excpetions.gif" width="99%" />
+</p>
+
+**TODO**
 
 <p float="left">
   <img src="/img/products/rating_by_dayofweek_evolution_Books.png" width="99%" />
