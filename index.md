@@ -5,6 +5,13 @@ subtitle: 'By Nicolas Zimmermann, Yves Rychener and Loïs Bilat'
 published: true
 ---
 
+
+# Table of Contents
+1. [Introduction](#Introduction)
+2. [Effects on Rating](#Effects on Rating)
+
+
+
 # Introduction
 
 ### Abstract
