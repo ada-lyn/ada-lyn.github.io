@@ -332,6 +332,8 @@ Now, let us show the effect in details for some specific products
   <img src="/img/herding/B00LMFWMH6.png" width="99%" />
 </p>
 
+**SOME COMMENTS**
+
 
 ### By User
 
