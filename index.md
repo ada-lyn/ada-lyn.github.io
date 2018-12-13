@@ -114,13 +114,12 @@ A similar explanation can be applied in a reversed way for reviews with lows rat
 
 To try to correct bias later, we can use this helpful ratio to indicate how much a review should be trusted and less biased corrected. The higher helpful ratio it has, the more probable it gets to be what the average person thinks, hence not needing bias correction.
 
-When looking at the graphs of the other categories, we observe a similar trend for almsot all of them. 
+When looking at the graphs of the other categories, we observe a similar trend for almost all of them. For each category in the above graphe, we indeed have a positive slope, similar to *Books*. For some of them the confidence interval is quite big, but not too much too be able to draw these conclusions. 
 
 <p float="left">
   <img src="/img/gif/rating_vs_helpful.gif" width="99%%" />
 </p>
 
-FOr each category in the above graphe, we indeed have a positive slope, similaur to *Books*
 
 However, the categories with a bad average rating (such as *Digital Software* with average ~3.55/5 and *Software*) will have a more flat or even reversed curve. It can be explained by the same kind of reasoning but inversed: reviews with high rating will be far from the average product rating, hence people will view the review as less accurate. Note that there probably are other unknown effects in place to explain such negativity in this case. See figure below for *Digital Software* and *Software*:
 
@@ -159,7 +158,7 @@ When comparing the evolution of the rating with the year for the other catgeorie
 
 For the days of the week, we can see that here, the confidence bands are wider. It has to be noted that in the weekday-system used here, the week starts at Sunday. Notably, we have a spike in ratings on monday, which is surprising as we would expect people not to be at their happiest on mondays. The number of ratings starts high at the beginning of the week, and then steadily decreases until the weekend where it is at its lowest point. We may assume that people use / test their new products during the weekend, and give it a rating the following week after, mainly on monday because they don't have the motivation to work. Here again, the effect on the average rating is statistically significant, but very small (in the order of 0.01).
 
-However, when we compare this with the other categories, it becomes harder to validate our theory, since it isn't present in all of them
+However, when we compare this with the other categories, it becomes harder to validate our theory, since it isn't present in all of them. 
 
 <p float="left">
   <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="99%" />
