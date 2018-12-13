@@ -9,10 +9,9 @@ published: true
 # Table of Contents
 1. [Introduction](#introduction)
 2. [Effects on Rating](#effects-on-rating)
-2. [Bias Correction](#bias-correction)
-2. [Conclusion](#conclusion)
+3. [Bias Correction](#bias-correction)
+4. [Conclusion](#conclusion) <a name="introduction"></a>
 
-<a name="introduction"></a>
 
 # Introduction 
 
@@ -76,9 +75,10 @@ We can also find some logical explanations for the lowest ranked categories. *So
 
 To answer to our main question: *Is there some bias and should we correct it?*, we think that indeed there is some (People are clearly biased because they buy music that they know they will probably like), but it also seems that some categories (mainly *Software*) are really of worse quality than the other. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the other. 
 
+<a name="effects-on-rating"></a>
+
 We will now, for the *Books*, take a deeper look at some of the features available.
 
-<a name="effects-on-rating"></a>
 
 # Effects on Rating 
 
@@ -327,7 +327,10 @@ Now, let us show the effect in details for some specific products
 
 - by category 
 
+
 <a name="bias-correction"></a>
+
+"Final line"
 
 # Bias Correction
 
@@ -348,6 +351,8 @@ We will correct the users bias using the following formula: *corrected_rating = 
 **TODO RESULTS**
 
 <a name="conclusion"></a>
+
+"Final line"
 
 # Conclusion
 
