@@ -9,10 +9,12 @@ published: true
 # Table of Contents
 1. [Introduction](#introduction)
 2. [Effects on Rating](#effects-on-rating)
+2. [Bias Correction](#bias-correction)
+2. [Conclusion](#conclusion)
 
+<a name="introduction"></a>
 
-
-# Introduction <a name="introduction"></a>
+# Introduction 
 
 ### Abstract
 
@@ -76,7 +78,9 @@ To answer to our main question: *Is there some bias and should we correct it?*, 
 
 We will now, for the *Books*, take a deeper look at some of the features available.
 
-# Effects on Rating <a name="effects-on-rating"></a>
+<a name="effects-on-rating"></a>
+
+# Effects on Rating 
 
 This part will be separated in two. We will first do an analysis by category (as said before in depth for the *Books*, and then compared to other categories), and then by country. 
 
@@ -323,6 +327,8 @@ Now, let us show the effect in details for some specific products
 
 - by category 
 
+<a name="bias-correction"></a>
+
 # Bias Correction
 
 ### Decisions
@@ -340,6 +346,8 @@ We will correct the users bias using the following formula: *corrected_rating = 
 	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
 **TODO RESULTS**
+
+<a name="conclusion"></a>
 
 # Conclusion
 
