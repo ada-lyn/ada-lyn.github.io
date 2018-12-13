@@ -7,12 +7,13 @@ published: true
 
 
 # Table of Contents
-1. [Introduction](#Introduction)
-2. [Effects on Rating](#Effects on Rating)
+1. [Introduction](#intro)
+2. [Effects on Rating](#effect-rating)
 
 
 
-# Introduction
+# Introduction [](#){name=intro}
+
 
 ### Abstract
 
@@ -76,7 +77,7 @@ To answer to our main question: *Is there some bias and should we correct it?*, 
 
 We will now, for the *Books*, take a deeper look at some of the features available.
 
-# Effects on Rating
+# Effects on Rating [](#){name=effect-rating}
 
 This part will be separated in two. We will first do an analysis by category (as said before in depth for the *Books*, and then compared to other categories), and then by country. 
 
