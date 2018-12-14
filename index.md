@@ -367,7 +367,18 @@ As a conclusion from the above results, we will correct for the bias of specific
 
 ### Correction by Date
 
-and other factors seen in previous observations
+<p float="left">
+  <img src="/img/time_correction/N1.png" width="99%" />
+</p>
+<p float="left">
+  <img src="/img/time_correction/N2.png" width="99%" />
+</p>
+<p float="left">
+  <img src="/img/time_correction/N3.png" width="99%" />
+</p>
+<p float="left">
+  <img src="/img/time_correction/N4.png" width="99%" />
+</p>
 
 ### Correction by User History
 
