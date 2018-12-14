@@ -326,10 +326,9 @@ For some windows of number of reviews, there is a higher correlation.
 Now, let us show the effect in details for some specific products
 
 <p float="left">
-  <img src="/img/herding/B0001KZM3O.png" width="99%" />
-  <img src="/img/herding/B002VPE1XE.png" width="99%" />
-  <img src="/img/herding/B008YW5RH2.png" width="99%" />
   <img src="/img/herding/B00LMFWMH6.png" width="99%" />
+  <img src="/img/herding/B008KL2ITW.png" width="99%" />
+  <img src="/img/herding/B00000427L.png" width="99%" />
 </p>
 
 **SOME COMMENTS**
