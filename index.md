@@ -10,9 +10,9 @@ custom-javascript-list:
 
 # Table of Contents
 1. [Introduction](#introduction_)
-2. [Effects on Rating](#effects-on-rating)<a name="introduction_" />
-3. [Bias Correction](#bias-correction)
-4. [Conclusion](#conclusion) 
+2. [Effects on Rating](#effects_)<a name="introduction_" />
+3. [Bias Correction](#bias_)
+4. [Conclusion](#conclusion_) 
 
 
 # 1. Introduction 
@@ -75,6 +75,8 @@ As you can see, there is quite a non negligible difference between the highest a
 We can also find some logical explanations for the lowest ranked categories. *Software* and *Digital Software* are clearly more niche products, often with a higher price tag, intended for businesses or professional individuals. Because of the type of product, it is also way harder to know exactly what to expect (You will not be able to judge the quality of a software by looking at screenshots, notably you won't see any bugs that might affect your experience negatively). You will more frequently be disappointed when your expensive software does not work as expected, and you can not just use the warranty to exchange it with a better one. 
 
 To answer to our main question: *Is there some bias and should we correct it?*, we think that indeed there is some (People are clearly biased because they buy music that they know they will probably like), but it also seems that some categories (mainly *Software*) are really of worse quality than the other. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the other.<a name="effects-on-rating"></a> 
+
+<a name="effects_" />
 
 We will now, for the *Books*, take a deeper look at some of the features available.
 
@@ -352,7 +354,7 @@ Overall we can say that there is indeed a herding behavior with Amazon reviews. 
 
 ### By User
 
-- by category <a name="bias-correction"></a>
+- by category <a name="bias_"></a>
 
 # 3. Bias Correction
 
@@ -508,7 +510,7 @@ We will correct the users bias using the following formula:<br>
 | 5.000           | 5.136               | 5.629                        |
 | 5.000           | 5.134               | 5.303                        |
 | 5.000           | 4.834               | 4.890                        |
-| *Total product average*                                              |<a name="conclusion"></a>
+| *Total product average*                                              |<a name="conclusion_"></a>
 | 4.750           | 4.739               | 4.819                        |
 
 # 4. Conclusion
