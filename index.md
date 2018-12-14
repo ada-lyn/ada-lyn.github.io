@@ -381,7 +381,7 @@ We will correct the users bias using the following formula: *corrected_rating = 
     
 | Original rating | Time bias corrected | User (& time) bias corrected |
 |-----------------|---------------------|------------------------------|
-| *Individual Product's reviews*                                       |
+| *Individual product reviews*                                         |
 | 5.000           | 4.943               | 4.500                        |
 | 5.000           | 5.096               | 4.933                        |
 | 5.000           | 4.861               | 4.793                        |
@@ -402,7 +402,7 @@ We will correct the users bias using the following formula: *corrected_rating = 
 | 4.000           | 3.930               | 4.153                        |
 | 4.000           | 3.919               | 3.809                        |
 | 5.000           | 4.935               | 4.714                        |
-| *Total Product average*                                              |
+| *Total product average*                                              |
 | 4.800           | 4.711               | 4.485                        |
 
 
