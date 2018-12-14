@@ -367,6 +367,8 @@ As a conclusion from the above results, we will correct for the bias of specific
 
 ### Correction by Date
 
+As discussed previously, we will try to remove time related bias. To do that, we will correct each rating by increasing/decreasing its value depending of which time period it has been made (how far from the average rating it is). We correct the reviews according to the 4 types of time period seen before; by year, by month, by day of the month and by day of the week. The results shown are after having corrected all of these 4 biases.
+
 <p float="left">
   <img src="/img/time_correction/N1.png" width="99%" />
 </p>
