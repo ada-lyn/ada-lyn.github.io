@@ -372,9 +372,13 @@ As discussed previously, we will try to remove time related bias. To do that, we
 <p float="left">
   <img src="/img/time_correction/N1.png" width="99%" />
 </p>
+The correction by years seems to be able to fix really well the biases, note that it was also where the biggest biases where seen so even if further results of other types of time period do not give such good results, this bias correction will still have been very significant! Also, be carefull comparing the graphs as y squale is not the same on the corrected graphs.
+
 <p float="left">
   <img src="/img/time_correction/N2.png" width="99%" />
 </p>
+The bias stayed pretty similar in terms of range (about 0.04) but not on the same month anymore. It may be due to a high correlation between the year and month and that correcting year biases 
+
 <p float="left">
   <img src="/img/time_correction/N3.png" width="99%" />
 </p>
