@@ -3,6 +3,8 @@ layout: page
 title: Detecting Bias in Amazon reviews
 subtitle: 'By Nicolas Zimmermann, Yves Rychener and Loïs Bilat'
 published: true
+custom-javascript-list:
+  - 'https://ada-lyn.github.io/js/collapse.js'
 ---
 
 
@@ -394,22 +396,7 @@ We will correct the users bias using the following formula:<br>
 	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
     
-<script type="text/javascript">
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>    
+  
 <button class="collapsible">Open Collapsible</button>
 <div class="content">
   <p>Lorem ipsum...</p>
