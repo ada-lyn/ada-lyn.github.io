@@ -377,14 +377,19 @@ The correction by years seems to be able to fix really well the biases, note tha
 <p float="left">
   <img src="/img/time_correction/N2.png" width="99%" />
 </p>
-The bias stayed pretty similar in terms of range (about 0.04) but not on the same month anymore. It may be due to a high correlation between the year and month and that correcting year biases 
+The bias stayed pretty similar in terms of range (about 0.04) but not on the same month anymore. It may be due to a high correlation between the year and month and that correcting year biases changed the month biases. So at least we did not made the bias worse.
 
 <p float="left">
   <img src="/img/time_correction/N3.png" width="99%" />
 </p>
+The range of the bias went down from about 0.025 to 0.012. So even though the bias was quite low we made a small improvement.
+
 <p float="left">
   <img src="/img/time_correction/N4.png" width="99%" />
 </p>
+Almost no change in the range of the bias, maybe a tiny bit smaller. But the bias was really small here.
+
+This correction seems to have worked well, correction the biggest biases in the years analysis and doing little or no change on the other time scales. Hence we can say it is quite conclusive.
 
 ### Correction by User History
 
