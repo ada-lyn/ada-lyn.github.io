@@ -367,7 +367,29 @@ As a conclusion from the above results, we will correct for the bias of specific
 
 ### Correction by Date
 
-and other factors seen in previous observations
+As discussed previously, we will try to remove time related bias. To do that, we will correct each rating by increasing/decreasing its value depending of which time period it has been made (how far from the average rating it is). We correct the reviews according to the 4 types of time period seen before; by year, by month, by day of the month and by day of the week. The results shown are after having corrected all of these 4 biases.
+
+<p float="left">
+  <img src="/img/time_correction/N1.png" width="99%" />
+</p>
+The correction by years seems to be able to fix really well the biases, note that it was also where the biggest biases where seen so even if further results of other types of time period do not give such good results, this bias correction will still have been very significant! Also, be carefull comparing the graphs as y squale is not the same on the corrected graphs.
+
+<p float="left">
+  <img src="/img/time_correction/N2.png" width="99%" />
+</p>
+The bias stayed pretty similar in terms of range (about 0.04) but not on the same month anymore. It may be due to a high correlation between the year and month and that correcting year biases changed the month biases. So at least we did not made the bias worse.
+
+<p float="left">
+  <img src="/img/time_correction/N3.png" width="99%" />
+</p>
+The range of the bias went down from about 0.025 to 0.012. So even though the bias was quite low we made a small improvement.
+
+<p float="left">
+  <img src="/img/time_correction/N4.png" width="99%" />
+</p>
+Almost no change in the range of the bias, maybe a tiny bit smaller. But the bias was really small here.
+
+This correction seems to have worked well, correction the biggest biases in the years analysis and doing little or no change on the other time scales. Hence we can say it is quite conclusive.
 
 ### Correction by User History
 
