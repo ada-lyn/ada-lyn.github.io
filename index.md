@@ -394,7 +394,7 @@ We will correct the users bias using the following formula:<br>
 	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
     
-<script>
+<script type="text/javascript">
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
