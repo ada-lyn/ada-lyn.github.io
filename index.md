@@ -478,10 +478,7 @@ We will correct the users bias using the following formula: *corrected_rating = 
 | *Total product average*                                              |
 | 4.750           | 4.739               | 4.819                        |
 
-
 <a name="conclusion"></a>
-
-"Final line"
 
 # 4. Conclusion
 
