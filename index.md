@@ -28,7 +28,7 @@ In the past, when buying an item, one had to trust reviews in newspapers or from
 
 We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that consist multiple millions of Amazon reviews. More precisely, it contains (amongst other information that will not be used) the following information for each review: 
 
-- `marketplace` : The "country of Amazon". Data is available for the United Stated, United Kingdom, France, Germany and Japan
+- `marketplace` : The "country of Amazon". Data is available for the United States, United Kingdom, France, Germany and Japan
 - `customer_id` : A unique id representing the user who wrote the review
 - `product_id` : A unique id representing the product reviews
 - `product_title` : The name of the product
@@ -269,7 +269,7 @@ Lorem ipsum
 
 ### By Country
 
-In this part, we want to see if there are any differences between the way people rate articles in differents countries.
+In this part, we want to see if there are any differences between the way people rate articles in differents countries. As a reminde, we have data for the United States, the United Kingdom, France, Germany and Japan
 
 To be able to correcly compare ratings between countries, we will have to limit our dataset to products that are available in both regions. Moreover, we will only keep reviews given during the same time period, since we saw earlier that the year of the review had quite a big impact on the rating.
 
@@ -286,7 +286,9 @@ We will first do pairwise comparaisons, since it is the way we will have the mos
   <img src="/img/countries/average_rating_US_JP.png" width="99%" /> 
 </p>
 
-We see that there is no significant difference of the ratings between countries. Our boxplots show that there is indeed a difference in the median, but the intervals are too large to confidently conclude anything. In france, germany and japan, there are products with lower average grades, but there does not seem to be a consistent bias present.
+**TODO CREATE A BETTER GRAPH WITH ALL IN ONE**
+
+We see that there is no significant difference of the ratings between countries. Our boxplots show that there is indeed a difference in the median, but the intervals are too large to confidently conclude anything. In france, germany and japan, there are products with lower average grades, but there does not seem to be a consistent bias present. We will therefore ignore this bias for the rest of our analysis.
 
 #### Herding Behavior
 
@@ -294,9 +296,9 @@ One of the bias that might  effect the ratings is what is called the Herding Beh
 
 *Approach*
 
-We will create a scatter plot, with on the x axis the first vote, on the y axis the average of the resulting votes. We exclude the first vote for the average calculation since it could affect the average. For example if it was significantly lower, and there would not be many votes, it could pull the average down.
+We will create a scatter plot, with on the x axis the first vote, on the y axis the average of the resulting votes. We exclude the first vote for the average calculation since it could affect the average. For example if it was significantly lower, and there would not be many votes, it could pull the average down. We will also only include products with at least 5 reviews, since we want to exlude any potential randomness due to such a low amount of reviews.
 
-If there was no herding behaviour effect, we would expect a uniform cloud centered at [c_avg,c_avg], where c_avg is the average country difference. Since we did not observe any bias in the last section, we expect this value to be roughly 0.
+If there was no herding behaviour effect, we would expect a uniform cloud centered at [c_avg,c_avg], where c_avg is the average country difference. Since we did not observe any signifcant bias in the last section, we expect this value to be roughly 0.
 If herding behaviour is present, we still expect a point cloud centered at [c_avg,c_avg], but there will be a positive correlation between the first rating and the average rating.
 
 <p float="left">
@@ -313,21 +315,29 @@ In order to avoid this, we filter our resulting dataset to only contain integer 
   
 </p>
 
-Visual inspection of the regression slope shows that it is strictly positive. The confidence bands of the seaborn plot do not include a line $f(x) = c$, so we can conclude that there is herding behaviour.
+Visual inspection of the regression slope shows that it is strictly positive. The confidence bands of the seaborn plot do not include a line $f(x) = c$, so we can conclude that there is herding behaviour. Moreover, we see that we have a Pearson's correlation coefficient of ~0.145, which is quite low, but significant and expected. If it was bigger, for instance 0.8, it might actually really problematic for Amazon, and woulnd mean that the vast majority of people would just look at older reviews, without giving their own opinion at all. Hence this is a good thing to have guite a low correlation. 
 
-Does it change if we use different bounds ?
+One question that follows from this is if this correlation also depends on the number o reviews for a product.
 
 <p float="left">
   <img src="/img/herding/int_100_300_steps_corr.png" width="99%" />
 </p>
 
-For some windows of number of reviews, there is a higher correlation.
+Jere, we only used products that have between 100 and 300 reviews. We can clearly see a higher correlation, with a Pearson coeeficient of 0.323. There is more incertitude, due to the smaller amount of data, but we can confidently say that the effect is greater. We thought that it might be correlated to the number of reviews for a product, but after more experiments for higher (and lower) amounts of products, we could not find any relation. 
 
-Now, let us show the effect in details for some specific products
+To better understand what is really happending, we looker deeper into a few products. 
+For each of them, we plotted the commulative average of the reviews written in both the US and UK, relative to the date. The first review was excluded in this cummulative average.
 
 <p float="left">
   <img src="/img/herding/B00LMFWMH6.png" width="99%" />
+</p>
+
+Here, we see that the first review has a huge difference of 4 stars between the countries. The average difference then shrinks substantially, but even after a lot of reviews the difference is still of ~0.3 stars. The first few bad rating in the UK are quickly compensated by the next reviews, but those reviews are nevertheless pulled down by the first one. The next ones will then be pulled by the previous grades, and so on, so the averages might never converge, or only after a very long time.
+
+<p float="left">
   <img src="/img/herding/B008KL2ITW.png" width="99%" />
+</p>
+<p float="left">
   <img src="/img/herding/B00000427L.png" width="99%" />
 </p>
 
