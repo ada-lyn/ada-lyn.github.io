@@ -276,15 +276,10 @@ To be able to correcly compare ratings between countries, we will have to limit 
 
 *e.g. If for a given article we have reviews from 2001 to 2015 in the US, but only from 2005 to 2015 in the UK, we will discard all reviews in the us before 2005.*
 
-We will first do pairwise comparaisons, since it is the way we will have the most common data. 
+We did pairwise comparaisons, since it is the way we will have the most common data. 
 
 <p float="left">
-  <img src="/img/countries/average_rating_US_UK.png" width="99%" />
-  <img src="/img/countries/average_rating_US_FR.png" width="99%" /> 
-</p>
-<p float="left">
-  <img src="/img/countries/average_rating_US_DE.png" width="99%" />
-  <img src="/img/countries/average_rating_US_JP.png" width="99%" /> 
+  <img src="/img/countries/us_vs.gif" width="99%" />
 </p>
 
 **TODO CREATE A BETTER GRAPH WITH ALL IN ONE**
@@ -348,8 +343,6 @@ Finally, it is important ot note that these "nice" examples are quite rare (henc
 Here we can see that the averages keep moving up and down, and that the initial difference is of the opposite sign than the final product average. Note that the time range is really large, so it might have an effect. 
 
 Overall we can say that there is indeed a herding behavior with Amazon reviews. It is quite small, which as explained before make sense, but since there is so much variation from one product to the other, and many dfferent factors other than the herding behavior that might affect the average. We found for instance a DVD that had 4.7 stars in the US and 2.1 stars in the UK; The herding effect was clear, since the first rating also had that difference, but the bad rating was actually due to the fact that the DVD wasn't compatible with Britsh TVs (=> The PAL vs NTSC video format encoding was the problem.). That makes it harder to know if the effect is actually due to the herding behavior, or just to the worse quality of the product in one of the country (as well as any other unkown factors). For all of these reasons, we decided not to use the effect in our bias correction.
-
-**SOME COMMENTS**
 
 
 ### By User
