@@ -3,17 +3,19 @@ layout: page
 title: Detecting Bias in Amazon reviews
 subtitle: 'By Nicolas Zimmermann, Yves Rychener and Loïs Bilat'
 published: true
+custom-javascript-list:
+  - 'https://ada-lyn.github.io/js/collapse.js'
 ---
 
 
 # Table of Contents
-1. [Introduction](#introduction)
-2. [Effects on Rating](#effects-on-rating)
-3. [Bias Correction](#bias-correction)
-4. [Conclusion](#conclusion) <a name="introduction"></a>
+1. [Introduction](#introduction_)
+2. [Effects on Rating](#effects_)<a name="introduction_" />
+3. [Bias Correction](#bias_)
+4. [Conclusion](#conclusion_) 
 
 
-# Introduction 
+# 1. Introduction 
 
 ### Abstract
 
@@ -28,7 +30,7 @@ In the past, when buying an item, one had to trust reviews in newspapers or from
 
 We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that consist multiple millions of Amazon reviews. More precisely, it contains (amongst other information that will not be used) the following information for each review: 
 
-- `marketplace` : The "country of Amazon". Data is available for the United Stated, United Kingdom, France, Germany and Japan
+- `marketplace` : The "country of Amazon". Data is available for the United States, United Kingdom, France, Germany and Japan
 - `customer_id` : A unique id representing the user who wrote the review
 - `product_id` : A unique id representing the product reviews
 - `product_title` : The name of the product
@@ -46,7 +48,6 @@ Since we have a lot of data (Amounting to ~20GB), our main focus will be on the 
 ### Research Questions
 
 There are two main questions we will try to answer during this project: 
-
 - What factors influence the rating given in an Amazon review (other than product quality)? 
 - Is there a way to correct this bias, should we correct this bias?
 
@@ -55,7 +56,7 @@ There are two main questions we will try to answer during this project:
 Our goal is mostly to provide useful information to Amazon itself and to the products sellers. So that they can have a better idea of what a given review value really should be.
 For instance, they might receive a very bad review from someone and not understand why they had such a bad rating. But after bias correction it could be possible that the reviewer is just a "hater" (someone who always gives bad rating to every product) and that instead of a one-two stars it could be worth a 3-4 stars. There could be other factors that influenced the rating of that review and we will try to best correct them to valuable information.
 
-We do not think it would be a good idea to correct every review and publicly change the displayed score. This could lead to many people being angry at Amazon for thinking their opinion is biased. Also once a metric is known, it becomes very easy for ill intentioned people to find a way to exploit it. They could then always increase/decrease as they want by carefully using the bias correction in the other way. 
+See more about that in the [Usefulness](#usefulness_) section at the end of the webpage.
 
 ### General Description of Data
 
@@ -73,14 +74,14 @@ As you can see, there is quite a non negligible difference between the highest a
 
 We can also find some logical explanations for the lowest ranked categories. *Software* and *Digital Software* are clearly more niche products, often with a higher price tag, intended for businesses or professional individuals. Because of the type of product, it is also way harder to know exactly what to expect (You will not be able to judge the quality of a software by looking at screenshots, notably you won't see any bugs that might affect your experience negatively). You will more frequently be disappointed when your expensive software does not work as expected, and you can not just use the warranty to exchange it with a better one. 
 
-To answer to our main question: *Is there some bias and should we correct it?*, we think that indeed there is some (People are clearly biased because they buy music that they know they will probably like), but it also seems that some categories (mainly *Software*) are really of worse quality than the other. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the other. 
+To answer to our main question: *Is there some bias and should we correct it?*, we think that indeed there is some (People are clearly biased because they buy music that they know they will probably like), but it also seems that some categories (mainly *Software*) are really of worse quality than the other. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the other.<a name="effects-on-rating"></a> 
 
-<a name="effects-on-rating"></a>
+<a name="effects_" />
 
 We will now, for the *Books*, take a deeper look at some of the features available.
 
 
-# Effects on Rating 
+# 2. Effects on Rating 
 
 This part will be separated in two. We will first do an analysis by category (as said before in depth for the *Books*, and then compared to other categories), and then by country. 
 
@@ -110,13 +111,13 @@ Since we are keeping this feature, and we saw it is not negligable, it will be t
 We want to see if the upvoted ratio on reviews in correlated to the rating given by the review. For the helpful ratio to make some sence, and for it to be representative enough of the quality of a review, we decided to only keep the reviews with at least 10 votes. 
 
 <p float="left">
-  <img src="/img/products/helpful_vs_number_Books.png" width="99%" />
+  <img src="/img/products/helpful_vs_number_Books.png" width="90%" />
 </p>
 
 We can see that people tend to give more positive votes than negatives ones on reviews. Possibly as the users tend to give good reviews on *Books* (~4.3/5 on *Books* and overall good ratings on other categories as well), they will also tend to positively rate other things such as other people's reviews. One could also interprete this as people's lazyness, who only rate reviews when they find them useful, and not otherwise. 
 
 <p float="left">
-  <img src="/img/products/helpful_vs_rating_Books.png" width="99%%" />
+  <img src="/img/products/helpful_vs_rating_Books.png" width="90%" />
 </p>
 
 This graph may seem a bit strange at first, wondering why people would mostly positively rate reviews with high ratings only. However it can easily be explained: on any product it makes sense to assume a user will usually give a positive vote to a review if it is somewhat close to that user opinion on the product. And since the average in *Books* is very high, most of the reviews with high ratings will be close to the product average on average, meaning the closer a review's rating is close to the general opinion (= product average), the more likely it is to get positive votes.
@@ -269,24 +270,21 @@ Lorem ipsum
 
 ### By Country
 
-In this part, we want to see if there are any differences between the way people rate articles in differents countries.
+In this part, we want to see if there are any differences between the way people rate articles in differents countries. As a reminde, we have data for the United States, the United Kingdom, France, Germany and Japan
 
 To be able to correcly compare ratings between countries, we will have to limit our dataset to products that are available in both regions. Moreover, we will only keep reviews given during the same time period, since we saw earlier that the year of the review had quite a big impact on the rating.
 
 *e.g. If for a given article we have reviews from 2001 to 2015 in the US, but only from 2005 to 2015 in the UK, we will discard all reviews in the us before 2005.*
 
-We will first do pairwise comparaisons, since it is the way we will have the most common data. 
+We did pairwise comparaisons, since it is the way we have the most common data. You can see here the repartition of ratings in the US (on the left) versus the other countries (on the right). Pairwise comparaison between the other countries are available on the git repository. 
 
 <p float="left">
-  <img src="/img/countries/average_rating_US_UK.png" width="99%" />
-  <img src="/img/countries/average_rating_US_FR.png" width="99%" /> 
-</p>
-<p float="left">
-  <img src="/img/countries/average_rating_US_DE.png" width="99%" />
-  <img src="/img/countries/average_rating_US_JP.png" width="99%" /> 
+  <img src="/img/countries/us_vs.gif" width="99%" />
 </p>
 
-We see that there is no significant difference of the ratings between countries. Our boxplots show that there is indeed a difference in the median, but the intervals are too large to confidently conclude anything. In france, germany and japan, there are products with lower average grades, but there does not seem to be a consistent bias present.
+**TODO CREATE A BETTER GRAPH WITH ALL IN ONE**
+
+We see that there is no significant difference of the ratings between countries. Our boxplots show that there is indeed a difference in the median, but the intervals are too large to confidently conclude anything. In france, germany and japan, there are products with lower average grades, but there does not seem to be a consistent bias present. We will therefore ignore this bias for the rest of our analysis.
 
 #### Herding Behavior
 
@@ -294,9 +292,9 @@ One of the bias that might  effect the ratings is what is called the Herding Beh
 
 *Approach*
 
-We will create a scatter plot, with on the x axis the first vote, on the y axis the average of the resulting votes. We exclude the first vote for the average calculation since it could affect the average. For example if it was significantly lower, and there would not be many votes, it could pull the average down.
+We will create a scatter plot, with on the x axis the first vote, on the y axis the average of the resulting votes. We exclude the first vote for the average calculation since it could affect the average. For example if it was significantly lower, and there would not be many votes, it could pull the average down. We will also only include products with at least 5 reviews, since we want to exlude any potential randomness due to such a low amount of reviews.
 
-If there was no herding behaviour effect, we would expect a uniform cloud centered at [c_avg,c_avg], where c_avg is the average country difference. Since we did not observe any bias in the last section, we expect this value to be roughly 0.
+If there was no herding behaviour effect, we would expect a uniform cloud centered at [c_avg,c_avg], where c_avg is the average country difference. Since we did not observe any signifcant bias in the last section, we expect this value to be roughly 0.
 If herding behaviour is present, we still expect a point cloud centered at [c_avg,c_avg], but there will be a positive correlation between the first rating and the average rating.
 
 <p float="left">
@@ -313,62 +311,202 @@ In order to avoid this, we filter our resulting dataset to only contain integer 
   
 </p>
 
-Visual inspection of the regression slope shows that it is strictly positive. The confidence bands of the seaborn plot do not include a line $f(x) = c$, so we can conclude that there is herding behaviour.
+Visual inspection of the regression slope shows that it is strictly positive. The confidence bands of the seaborn plot do not include a line $f(x) = c$, so we can conclude that there is herding behaviour. Moreover, we see that we have a Pearson's correlation coefficient of ~0.145, which is quite low, but significant and expected. If it was bigger, for instance 0.8, it might actually really problematic for Amazon, and woulnd mean that the vast majority of people would just look at older reviews, without giving their own opinion at all. Hence this is a good thing to have guite a low correlation. 
 
-Does it change if we use different bounds ?
+One question that follows from this is if this correlation also depends on the number of reviews for a product.
 
 <p float="left">
   <img src="/img/herding/int_100_300_steps_corr.png" width="99%" />
 </p>
 
-For some windows of number of reviews, there is a higher correlation.
+Here, we only used products that have between 100 and 300 reviews. We can clearly see a higher correlation, with a Pearson coeeficient of 0.323. There is more incertitude, due to the smaller amount of data, but we can confidently say that the effect is greater. We thought that it might be correlated to the number of reviews for a product, but after more experiments for higher (and lower) amounts of products, we could not find any relation. 
 
-Now, let us show the effect in details for some specific products
+To better understand what is really happending, we looker deeper into a few products. 
+For each of them, we plotted the commulative average of the reviews written in both the US and UK, relative to the date. The first review was excluded in this cummulative average.
 
 <p float="left">
   <img src="/img/herding/B00LMFWMH6.png" width="99%" />
+</p>
+
+Here, we see that the first review has a huge difference of 4 stars between the countries. The average difference then shrinks substantially, but even after a lot of reviews the difference is still of ~0.3 stars. The first few bad rating in the UK are quickly compensated by the next reviews, but those reviews are nevertheless pulled down by the first one. The next ones will then be pulled by the previous grades, and so on, so the averages might never converge, or only after a very long time.
+
+<p float="left">
   <img src="/img/herding/B008KL2ITW.png" width="99%" />
+</p>
+
+Finally, it is important ot note that these "nice" examples are quite rare (hence the 0.145 as the correlation). For most of the product, either we don't have any clear separation of the averages, or it is actually the opposite effect that is observed. 
+
+<p float="left">
   <img src="/img/herding/B00000427L.png" width="99%" />
 </p>
 
-**SOME COMMENTS**
+Here we can see that the averages keep moving up and down, and that the initial difference is of the opposite sign than the final product average. Note that the time range is really large, so it might have an effect. 
+
+Overall we can say that there is indeed a herding behavior with Amazon reviews. It is quite small, which as explained before make sense, but since there is so much variation from one product to the other, and many dfferent factors other than the herding behavior that might affect the average. We found for instance a DVD that had 4.7 stars in the US and 2.1 stars in the UK; The herding effect was clear, since the first rating also had that difference, but the bad rating was actually due to the fact that the DVD wasn't compatible with Britsh TVs (=> The PAL vs NTSC video format encoding was the problem.). That makes it harder to know if the effect is actually due to the herding behavior, or just to the worse quality of the product in one of the country (as well as any other unkown factors). For all of these reasons, we decided not to use the effect in our bias correction.
 
 
 ### By User
 
-- by category 
+- by category <a name="bias_"></a>
 
-
-<a name="bias-correction"></a>
-
-"Final line"
-
-# Bias Correction
+# 3. Bias Correction
 
 ### Decisions
 As a conclusion from the above results, we will correct for the bias of specific users and for the bias of time. We saw that herding behaviour is an important effect, however it is difficult to quantify and calculate the unbiased rating. 
 
 ### Correction by Date
 
-and other factors seen in previous observations
+As discussed previously, we will try to remove time related bias. To do that, we will correct each rating by increasing/decreasing its value depending of which time period it has been made (how far from the average rating it is). We correct the reviews according to the 4 types of time period seen before; by year, by month, by day of the month and by day of the week. The results shown are after having corrected all of these 4 biases.
+
+<p float="left">
+  <img src="/img/time_correction/N1.png" width="99%" />
+</p>
+The correction by years seems to be able to fix really well the biases, note that it was also where the biggest biases where seen so even if further results of other types of time period do not give such good results, this bias correction will still have been very significant! Also, be carefull comparing the graphs as y squale is not the same on the corrected graphs.
+
+<p float="left">
+  <img src="/img/time_correction/N2.png" width="99%" />
+</p>
+The bias stayed pretty similar in terms of range (about 0.04) but not on the same month anymore. It may be due to a high correlation between the year and month and that correcting year biases changed the month biases. So at least we did not made the bias worse.
+
+<p float="left">
+  <img src="/img/time_correction/N3.png" width="99%" />
+</p>
+The range of the bias went down from about 0.025 to 0.012. So even though the bias was quite low we made a small improvement.
+
+<p float="left">
+  <img src="/img/time_correction/N4.png" width="99%" />
+</p>
+Almost no change in the range of the bias, maybe a tiny bit smaller. But the bias was really small here.
+
+Overall, the time correction seems to have worked well, correcting the biggest biases in the years analysis and doing little or no change on the other time scales where the bias was way smaller anyways. Hence we can say it is quite conclusive.
 
 ### Correction by User History
 
 
-We will correct the users bias using the following formula: *corrected_rating = actual_rating + alpha * (avg - x)* where *alpha= 1 - [helpful ratio] * (1-exp(-lambda * [n_reviews]))*. This will have the following effect:
+We will correct the users bias using the following formula:<br>
+*corrected_rating = actual_rating + alpha * (avg - x)* where *alpha= 1 - [helpful ratio] * (1-exp(-lambda * [total_votes]))*.<br>This will have the following effect:
 
 - We will correct a users bias. If a users average grade is higher than the average overall grade, then this user is classified as giving too high grades, therefore we will decrease the grade he gave slightly.
 - Alpha is a coefficient from 0 to 1 controlling the strength of the correction applied.
 	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
     
-**TODO RESULTS**
+  
+<button class="collapsible">Open Collapsible</button>
+<div class="content">
+  <p>Lorem ipsum...</p>
+</div>
 
-<a name="conclusion"></a>
+<style>
+  /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
-"Final line"
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
 
-# Conclusion
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+
+
+| Original rating | Time bias corrected | User (& time) bias corrected |
+|-----------------|---------------------|------------------------------|
+| *Individual product reviews*                                         |
+| 5.000           | 4.943               | 4.500                        |
+| 5.000           | 5.096               | 4.933                        |
+| 5.000           | 4.861               | 4.793                        |
+| 4.000           | 3.849               | 3.698                        |
+| 5.000           | 4.862               | 4.517                        |
+| 5.000           | 4.851               | 4.908                        |
+| 5.000           | 4.873               | 4.821                        |
+| 5.000           | 4.934               | 4.490                        |
+| 5.000           | 4.850               | 4.407                        |
+| 5.000           | 4.833               | 4.667                        |
+| 5.000           | 4.930               | 4.487                        |
+| 5.000           | 4.854               | 4.411                        |
+| 5.000           | 4.868               | 4.425                        |
+| 4.000           | 3.864               | 3.754                        |
+| 5.000           | 5.041               | 4.775                        |
+| 5.000           | 5.088               | 4.934                        |
+| 5.000           | 4.839               | 4.494                        |
+| 4.000           | 3.930               | 4.153                        |
+| 4.000           | 3.919               | 3.809                        |
+| 5.000           | 4.935               | 4.714                        |
+| *Total product average*                                              |
+| 4.800           | 4.711               | 4.485                        |
+
+| Original rating | Time bias corrected | User (& time) bias corrected |
+|-----------------|---------------------|------------------------------|
+| *Individual product reviews*                                         |
+| 3.000           | 2.833               | 3.038                        |
+| 2.000           | 1.864               | 1.964                        |
+| 5.000           | 4.852               | 4.909                        |
+| 4.000           | 3.917               | 4.073                        |
+| 5.000           | 4.916               | 4.472                        |
+| 4.000           | 3.938               | 3.965                        |
+| 5.000           | 4.863               | 4.420                        |
+| 5.000           | 5.064               | 5.021                        |
+| 5.000           | 5.091               | 4.735                        |
+| 2.000           | 2.021               | 2.053                        |
+| 5.000           | 5.040               | 4.695                        |
+| 5.000           | 4.934               | 4.885                        |
+| 5.000           | 4.882               | 4.920                        |
+| 5.000           | 5.120               | 4.866                        |
+| 3.000           | 2.849               | 4.406                        |
+| 5.000           | 4.923               | 5.301                        |
+| 5.000           | 5.013               | 4.823                        |
+| 5.000           | 4.917               | 5.274                        |
+| 2.000           | 2.021               | 2.330                        |
+| 5.000           | 4.832               | 4.889                        |
+| *Total product average*                                              |
+| 4.250           | 4.195               | 4.252                        |
+
+| Original rating | Time bias corrected | User (& time) bias corrected |
+|-----------------|---------------------|------------------------------|
+| *Individual product reviews*                                         |
+| 5.000           | 5.080               | 5.499                        |
+| 5.000           | 5.126               | 4.979                        |
+| 5.000           | 4.887               | 4.760                        |
+| 5.000           | 4.930               | 4.859                        |
+| 5.000           | 5.104               | 5.007                        |
+| 5.000           | 4.869               | 4.524                        |
+| 5.000           | 4.861               | 4.418                        |
+| 2.000           | 1.931               | 3.582                        |
+| 5.000           | 4.932               | 4.488                        |
+| 5.000           | 5.125               | 5.103                        |
+| 5.000           | 4.959               | 5.582                        |
+| 5.000           | 5.105               | 5.372                        |
+| 5.000           | 5.229               | 5.000                        |
+| 3.000           | 2.860               | 3.667                        |
+| 5.000           | 4.911               | 4.468                        |
+| 5.000           | 4.920               | 4.843                        |
+| 5.000           | 4.847               | 4.403                        |
+| 5.000           | 5.136               | 5.629                        |
+| 5.000           | 5.134               | 5.303                        |
+| 5.000           | 4.834               | 4.890                        |
+| *Total product average*                                              |<a name="conclusion_"></a>
+| 4.750           | 4.739               | 4.819                        |
+
+# 4. Conclusion
 
 ### Summary
 
@@ -378,7 +516,7 @@ Wonderful summary
 There are 2 possible ways to extend this model. 
 
 Firstly, we could extend the number of features used for correction by including herding behaviour, international ratings and more text based methods to correct individual reviews based on the review text.
-Secondly, a different correction model may be used. We used a formula for correction that is based on our findings in the bias analysis, but one could try to use a learning based approach. For example a supervised learning task could  be used to predict the "true" score. The problem however would be to create the "true" responses for training. Perhaps, an expert group could be used.
+Secondly, a different correction model may be used. We used a formula for correction that is based on our findings in the bias analysis, but one could try to use a learning based approach. For example a supervised learning task could  be used to predict the "true" score.<a name="usefulness_" /> The problem however would be to create the "true" responses for training. Perhaps, an expert group could be used.
 
 ### Usefulness
 We showed that amazon reviews have significant biases. We propose a method for correcting this bias. This method could be used for vendors to better understand the reviews they get. We do not recommend to use this method for correcting reviews displayed to the user. Doing so would pose two possible problems:
