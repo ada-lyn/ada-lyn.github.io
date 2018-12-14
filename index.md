@@ -379,7 +379,28 @@ We will correct the users bias using the following formula: *corrected_rating = 
 	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
     
-**TODO RESULTS**
+| Original rating | Time bias corrected | User (& time) bias corrected |
+|-----------------|---------------------|------------------------------|
+| 5.000           | 4.943               | 4.500                        |
+| 5.000           | 5.096               | 4.933                        |
+| 5.000           | 4.861               | 4.793                        |
+| 4.000           | 3.849               | 3.698                        |
+| 5.000           | 4.862               | 4.517                        |
+| 5.000           | 4.851               | 4.908                        |
+| 5.000           | 4.873               | 4.821                        |
+| 5.000           | 4.934               | 4.490                        |
+| 5.000           | 4.850               | 4.407                        |
+| 5.000           | 4.833               | 4.667                        |
+| 5.000           | 4.930               | 4.487                        |
+| 5.000           | 4.854               | 4.411                        |
+| 5.000           | 4.868               | 4.425                        |
+| 4.000           | 3.864               | 3.754                        |
+| 5.000           | 5.041               | 4.775                        |
+| 5.000           | 5.088               | 4.934                        |
+| 5.000           | 4.839               | 4.494                        |
+| 4.000           | 3.930               | 4.153                        |
+| 4.000           | 3.919               | 3.809                        |
+| 5.000           | 4.935               | 4.714                        |
 
 <a name="conclusion"></a>
 
