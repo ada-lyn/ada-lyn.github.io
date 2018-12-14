@@ -8,9 +8,9 @@ published: true
 
 # Table of Contents
 1. [Introduction](#introduction)
-2. [Effects on Rating](#effects-on-rating)
+2. [Effects on Rating](#effects-on-rating)<a name="introduction"></a>
 3. [Bias Correction](#bias-correction)
-4. [Conclusion](#conclusion) <a name="introduction"></a>
+4. [Conclusion](#conclusion) 
 
 
 # Introduction 
