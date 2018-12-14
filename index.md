@@ -468,8 +468,8 @@ We will correct the users bias using the following formula: *corrected_rating = 
 | 5.000           | 5.136               | 5.629                        |
 | 5.000           | 5.134               | 5.303                        |
 | 5.000           | 4.834               | 4.890                        |
-| *Total product average*                                              |
-| 4.750           | 4.739               | 4.819                        |<a name="conclusion"></a>
+| *Total product average*                                              |<a name="conclusion"></a>
+| 4.750           | 4.739               | 4.819                        |
 
 # 4. Conclusion
 
