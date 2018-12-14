@@ -276,7 +276,7 @@ To be able to correcly compare ratings between countries, we will have to limit 
 
 *e.g. If for a given article we have reviews from 2001 to 2015 in the US, but only from 2005 to 2015 in the UK, we will discard all reviews in the us before 2005.*
 
-We did pairwise comparaisons, since it is the way we will have the most common data. 
+We did pairwise comparaisons, since it is the way we have the most common data. You can see here the repartition of ratings in the US (on the left) versus the other countries (on the right). Pairwise comparaison between the other countries are available on the git repository. 
 
 <p float="left">
   <img src="/img/countries/us_vs.gif" width="99%" />
