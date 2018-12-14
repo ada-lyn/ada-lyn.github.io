@@ -13,7 +13,7 @@ published: true
 4. [Conclusion](#conclusion) 
 
 
-# Introduction 
+# 1. Introduction 
 
 ### Abstract
 
@@ -54,8 +54,7 @@ There are two main questions we will try to answer during this project:
 
 Our goal is mostly to provide useful information to Amazon itself and to the products sellers. So that they can have a better idea of what a given review value really should be.
 For instance, they might receive a very bad review from someone and not understand why they had such a bad rating. But after bias correction it could be possible that the reviewer is just a "hater" (someone who always gives bad rating to every product) and that instead of a one-two stars it could be worth a 3-4 stars. There could be other factors that influenced the rating of that review and we will try to best correct them to valuable information.
-
-We do not think it would be a good idea to correct every review and publicly change the displayed score. This could lead to many people being angry at Amazon for thinking their opinion is biased. Also once a metric is known, it becomes very easy for ill intentioned people to find a way to exploit it. They could then always increase/decrease as they want by carefully using the bias correction in the other way. 
+See more about that in the [Usefulness](#usefulness_) section at the end of the webpage.
 
 ### General Description of Data
 
@@ -80,7 +79,7 @@ To answer to our main question: *Is there some bias and should we correct it?*, 
 We will now, for the *Books*, take a deeper look at some of the features available.
 
 
-# Effects on Rating 
+# 2. Effects on Rating 
 
 This part will be separated in two. We will first do an analysis by category (as said before in depth for the *Books*, and then compared to other categories), and then by country. 
 
@@ -360,7 +359,7 @@ Overall we can say that there is indeed a herding behavior with Amazon reviews. 
 
 "Final line"
 
-# Bias Correction
+# 3. Bias Correction
 
 ### Decisions
 As a conclusion from the above results, we will correct for the bias of specific users and for the bias of time. We saw that herding behaviour is an important effect, however it is difficult to quantify and calculate the unbiased rating. 
@@ -389,7 +388,7 @@ The range of the bias went down from about 0.025 to 0.012. So even though the bi
 </p>
 Almost no change in the range of the bias, maybe a tiny bit smaller. But the bias was really small here.
 
-This correction seems to have worked well, correction the biggest biases in the years analysis and doing little or no change on the other time scales. Hence we can say it is quite conclusive.
+Overall, the time correction seems to have worked well, correcting the biggest biases in the years analysis and doing little or no change on the other time scales where the bias was way smaller anyways. Hence we can say it is quite conclusive.
 
 ### Correction by User History
 
@@ -400,7 +399,7 @@ We will correct the users bias using the following formula: *corrected_rating = 
 - Alpha is a coefficient from 0 to 1 controlling the strength of the correction applied.
 	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
-    
+
 | Original rating | Time bias corrected | User (& time) bias corrected |
 |-----------------|---------------------|------------------------------|
 | *Individual product reviews*                                         |
@@ -484,7 +483,7 @@ We will correct the users bias using the following formula: *corrected_rating = 
 
 "Final line"
 
-# Conclusion
+# 4. Conclusion
 
 ### Summary
 
@@ -494,7 +493,7 @@ Wonderful summary
 There are 2 possible ways to extend this model. 
 
 Firstly, we could extend the number of features used for correction by including herding behaviour, international ratings and more text based methods to correct individual reviews based on the review text.
-Secondly, a different correction model may be used. We used a formula for correction that is based on our findings in the bias analysis, but one could try to use a learning based approach. For example a supervised learning task could  be used to predict the "true" score. The problem however would be to create the "true" responses for training. Perhaps, an expert group could be used.
+Secondly, a different correction model may be used. We used a formula for correction that is based on our findings in the bias analysis, but one could try to use a learning based approach. For example a supervised learning task could  be used to predict the "true" score.<a name="usefulness_" /> The problem however would be to create the "true" responses for training. Perhaps, an expert group could be used.
 
 ### Usefulness
 We showed that amazon reviews have significant biases. We propose a method for correcting this bias. This method could be used for vendors to better understand the reviews they get. We do not recommend to use this method for correcting reviews displayed to the user. Doing so would pose two possible problems:
