@@ -398,7 +398,7 @@ This will have the following effect:
 
 With the date bias and user bias correction implemented, we were ready to try our algorithm. We run it on a few articles, you can see right here some of the results. 
 
-Product 1 : *NAME OF PRODUCT*
+Product 1 : *NAME OF PRODUCT* in depth
 
 
 | Original rating | Time bias corrected | User bias corrected |
@@ -426,6 +426,8 @@ Product 1 : *NAME OF PRODUCT*
 | 5.000           | 4.935               | 4.714               |
 | *Total product average*                                     |
 | 4.800           | 4.711               | 4.485               |
+
+or 
 
 | Original rating | Time bias corrected | User (& time) bias corrected |
 |-----------------|---------------------|------------------------------|
@@ -479,6 +481,19 @@ Product 1 : *NAME OF PRODUCT*
 | *Total product average*                                              |<a name="conclusion_"></a>
 | 4.750           | 4.739               | 4.819                        |
 
+
+A few more examples:
+
+|Product name | Product id | Original score | After time bias corrections | After use bias correction |
+|--|--|--|--|--|
+|ShowTime  Popular: Level 2A (Showtime Piano) | 1616770430 | 4.800 | 4.711 | 4.485 |
+|Mad for Decades: 50 Years of Forgettable Humor from MAD Magazine | 1435101286 | 4.250 | 4.195 | 4.252 |
+|Hands-On Chemistry Activities with Real-Life Applications: Easy-to-Use Labs and Demonstrations for Grades 8-12 | 0876282621 | 4.750 | 4.739 | 4.819 |
+|Pearson Nurse's Drug Guide 2011 | 0132149265 | 4.450 | 4.484 | 4.570 |
+|Not a Suicide Pact: The Constitution in a Time of National Emergency (Inalienable Rights) | 0195304276 | 3.750 | 3.851 | 4.289 |
+|A Darwinian Left: Politics, Evolution, and Cooperation'] | 0300083238 | 3.700 | 3.816 | 4.049 |
+ 
+ 
 # 4. Conclusion
 
 ### Summary
