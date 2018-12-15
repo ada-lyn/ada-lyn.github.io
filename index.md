@@ -199,7 +199,9 @@ However, when we compare this with the other categories, it becomes harder to va
 
 For the day of the month, the confidence bands are almost too big to draw significant conclusions. We could however argue that people usually receive their salary at the end of the month, therefore are more happy and give better ratings in the following days, with their happiness decreasing until the next payday. The Number of reviews is very low on the 31. This is not something worth interpreting, as almost all months have at least 30 days, but only a few have 31. The slight decrease in the number of reviews over the month might be connected to the previous argument of payday happiness, where people might spend more money to buy products on Amazon at the beginning of the month, hence give more reviews. The effect on the average rating we observe is about 0.02.
 
-As all these phenomenas seem to be due to bias in humor or change of trend in the users' way of rating along the years, we will try to correct them.
+When comparing with the other categories, it is once again hard to trust this theory, since the effect varies a lot from one category to the other. 
+
+Nevertheless, wether those biases are due to minor randomness, changes in humor or changes of trend in the users' way of rating along the years, we will try to correct them.
 
 **Analysis of the number of reviews per product**
 
