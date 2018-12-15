@@ -74,7 +74,7 @@ As you can see, there is quite a non negligible difference between the highest a
 
 We can also find some logical explanations for the lowest ranked categories. *Software* and *Digital Software* are clearly more niche products, often with a higher price tag, intended for businesses or professional individuals. Because of the type of product, it is also way harder to know exactly what to expect (you will not be able to judge the quality of a software by looking at screenshots, notably you will not see any bugs that might affect your experience negatively). You will more frequently be disappointed when your expensive software does not work as expected, and you can not just use the warranty to exchange it with a better one. 
 
-To answer to our main question: *Is there some bias and should we correct it?*, we think that indeed there is some (people are clearly biased because they buy music that they know they will probably like), but it also seems possible that some categories (mainly *Software*) are really of worse quality than others. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the others.<a name="effects-on-rating"></a> 
+To answer to our main question: *Is there some bias and should we correct it?*, we think that indeed there is some (people are clearly biased because they buy music that they know they will probably like), but it also seems possible that some categories (mainly *Software*) are really of worse quality than others. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the others. 
 
 <a name="effects_" />
 
