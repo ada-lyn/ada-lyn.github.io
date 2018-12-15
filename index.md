@@ -393,7 +393,7 @@ where
 
 \\[ \alpha = 1 - (helpful\\_ratio \cdot (1 - \\exp(-lambda \cdot total\\_votes)) \\ \\  (2)\\]
 
-if the review is not verified, we change alpha to be
+and if the review is not verified, we change alpha to be
 
 \\[ \alpha = \alpha + (1 - \alpha) * 0.5 \\ \\  (3)\\]
 
