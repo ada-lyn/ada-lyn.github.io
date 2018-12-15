@@ -19,16 +19,16 @@ custom-javascript-list:
 
 ### Abstract
 
-In the past, when buying an item, one had to trust reviews in newspapers or from friends. In today's age, with online shopping, we have to tap into the minds of thousands of people who have purchased the product we are thinking about. With the help of Amazon reviews and their star-system, we can easily analyse how good the product likely is. But while a newspaper or professional reviewer is generally working hard for consistency and unbiasedness, these facts are not given for a general public reviewer writing a comment. With help of the Amazon dataset, we will try to find bias in the reviews, in order to possibly give an idea on whether or not, and if so how, to correct a bias. We will be especially interested in the influence of the following factors on the number of stars given:
+In the past, when buying an item, one had to trust reviews in newspapers or from friends. In today's age, with online shopping, we have to tap into the minds of thousands of people who have purchased the product we are thinking about. With the help of Amazon reviews and their star-system, we can easily analyse how good the product likely is. But while a newspaper or professional reviewer is generally working hard for consistency and unbiasedness, these facts are not given for a general public reviewer writing a comment. With the help of the Amazon review dataset, we will try to find bias in the reviews, in order to possibly give an idea on whether or not, and if so how, to correct a bias. We will be especially interested in the influence of the following factors on the number of stars given:
 
-- The date the review was written on?
-- The category of the product the review was written for?
+- The date the review was written on
+- The category of the product the review was written for
 - The country of residence of the buyer (for instance, was the product bought on Amazon US or Amazon UK?)
-- Past ratings from the reviewer
+- The past ratings from the reviewer
 
 ### Dataset
 
-We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that consist multiple millions of Amazon reviews. More precisely, it contains (amongst other information that will not be used) the following information for each review: 
+We will use the [Amazon Customer Reviews Dataset](https://s3.amazonaws.com/amazon-reviews-pds/readme.html) that consist of many millions of Amazon reviews. More precisely, it contains (amongst other information that will not be used) the following information for each review: 
 
 - `marketplace` : The "country of Amazon". Data is available for the United States, United Kingdom, France, Germany and Japan
 - `customer_id` : A unique id representing the user who wrote the review
@@ -49,7 +49,7 @@ Since we have a lot of data (Amounting to ~20GB), our main focus will be on the 
 
 There are two main questions we will try to answer during this project: 
 - What factors influence the rating given in an Amazon review (other than product quality)? 
-- Is there a way to correct this bias, should we correct this bias?
+- Is there a way to correct this bias, and should we correct this bias?
 
 ### Motivation
 
@@ -503,6 +503,4 @@ Amazon users will be displeased if they would notice the bias correction techniq
 Similar to google search optimisation, vendors and fake reviewers or haters could abuse our correction if they knew how it worked. For example if one would want to give a positive review, one could give 5 stars on a day that has a very low average review. We would then correct this daily "bias" and make the review even higher. Also, our user correction could be abused. To get very high reviews, one has to vote 1 star on many products in order to bring the users average rating down, and rate 5 start on our product. The bias correction algorithm would increase the grade as the user usually gives low reviews. <br>
 The inverse tactics can be used to give very low reviews. 
 
-
-### Comparaison with Other Studies
-Yves did not find any
+**FINAL SENTENCE**
