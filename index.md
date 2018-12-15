@@ -43,7 +43,7 @@ We will use the [Amazon Customer Reviews Dataset](https://s3.amazonaws.com/amazo
 - `review_body` : Full content of the review
 - `review_date` : Date the review was posted on
 
-Since we have a lot of data (Amounting to ~20GB), our main focus will be on the reviews related to the *Books*. This is also by far the largest dataset and the one Amazon is most known for. We will do an in-depth analysis of these reviews, and then rapidly compare it to the other categories.
+Since we have a lot of data (amounting to ~20GB), our main focus will be on the reviews related to the *Books*. This is also by far the largest dataset and the one Amazon is most known for. We will do an in-depth analysis of these reviews, and then rapidly compare it to the other categories.
 
 ### Research Questions
 
