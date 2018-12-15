@@ -173,7 +173,7 @@ When looking at the number of reviews, a similar result can been seen with most 
 	<img src="/img/gif/number_vs_year.gif" width="99%" />
 </p>
 
-There are however a few notable exceptions. We can see a drop after ~2014 for *digital music* and *digital video games*, probably due to the rise of concurent platforms (Spotify for the music, and Steam for video games) **EXPLAIN OTHER CATEGORIES**
+There are however a few exceptions. The most notable ones are *Music*, *Video* and *Mobile App*. The rise in Music sales started earlier than most of the other categories (in ~1999), **WHY**, but was quickly stopped a year later. We could imagine that this was due to the Launch of *iTunes* around that time **BUT NOT SURE**. **TO COMPLETE**
 
 <p float="left">
 	<img src="/img/gif/number_vs_year_exceptions.gif" width="99%" />
@@ -263,11 +263,6 @@ For the body length however, we see that the result is completly different. A sh
 
 While being an interesting analysis, it shows that these results will not result in bias correction as the title and body length are naturally correlated with the ratings and it makes perfect sense.
 
-#### Importance of the features for the bias correction
-
-Lorem ipsum
-
-
 ### By Country
 
 In this part, we want to see if there are any differences between the way people rate articles in differents countries. As a reminde, we have data for the United States, the United Kingdom, France, Germany and Japan
@@ -276,13 +271,12 @@ To be able to correcly compare ratings between countries, we will have to limit 
 
 *e.g. If for a given article we have reviews from 2001 to 2015 in the US, but only from 2005 to 2015 in the UK, we will discard all reviews in the us before 2005.*
 
-We did pairwise comparaisons, since it is the way we have the most common data. You can see here the repartition of ratings in the US (on the left) versus the other countries (on the right). Pairwise comparaison between the other countries are available on the git repository. 
+We did pairwise comparaisons, since it is the way we have the most common data. You can see here the repartition of ratings in the US (on the left) versus the other countries (on the right). 
 
 <p float="left">
   <img src="/img/countries/us_vs.gif" width="80%" />
 </p>
 
-**TODO CREATE A BETTER GRAPH WITH ALL IN ONE**
 
 We see that there is no significant difference of the ratings between countries. Our boxplots show that there is indeed a difference in the median, but the intervals are too large to confidently conclude anything. In france, germany and japan, there are products with lower average grades, but there does not seem to be a consistent bias present. We will therefore ignore this bias for the rest of our analysis.
 
@@ -344,10 +338,7 @@ Here we can see that the averages keep moving up and down, and that the initial 
 
 Overall we can say that there is indeed a herding behavior with Amazon reviews. It is quite small, which as explained before make sense, but since there is so much variation from one product to the other, and many dfferent factors other than the herding behavior that might affect the average. We found for instance a DVD that had 4.7 stars in the US and 2.1 stars in the UK; The herding effect was clear, since the first rating also had that difference, but the bad rating was actually due to the fact that the DVD wasn't compatible with Britsh TVs (=> The PAL vs NTSC video format encoding was the problem.). That makes it harder to know if the effect is actually due to the herding behavior, or just to the worse quality of the product in one of the country (as well as any other unkown factors). For all of these reasons, we decided not to use the effect in our bias correction.
 
-
-### By User
-
-- by category <a name="bias_"></a>
+<a name="bias_"></a>
 
 # 3. Bias Correction
 
@@ -361,21 +352,25 @@ As discussed previously, we will try to remove time related bias. To do that, we
 <p float="left">
   <img src="/img/time_correction/N1.png" width="99%" />
 </p>
+
 The correction by years seems to be able to fix really well the biases, note that it was also where the biggest biases where seen so even if further results of other types of time period do not give such good results, this bias correction will still have been very significant! Also, be carefull comparing the graphs as y squale is not the same on the corrected graphs.
 
 <p float="left">
   <img src="/img/time_correction/N2.png" width="99%" />
 </p>
+
 The bias stayed pretty similar in terms of range (about 0.04) but not on the same month anymore. It may be due to a high correlation between the year and month and that correcting year biases changed the month biases. So at least we did not made the bias worse.
 
 <p float="left">
   <img src="/img/time_correction/N3.png" width="99%" />
 </p>
+
 The range of the bias went down from about 0.025 to 0.012. So even though the bias was quite low we made a small improvement.
 
 <p float="left">
   <img src="/img/time_correction/N4.png" width="99%" />
 </p>
+
 Almost no change in the range of the bias, maybe a tiny bit smaller. But the bias was really small here.
 
 Overall, the time correction seems to have worked well, correcting the biggest biases in the years analysis and doing little or no change on the other time scales where the bias was way smaller anyways. Hence we can say it is quite conclusive.
@@ -384,75 +379,53 @@ Overall, the time correction seems to have worked well, correcting the biggest b
 
 
 We will correct the users bias using the following formula:<br>
-*corrected_rating = actual_rating + alpha * (avg - x)* where *alpha= 1 - [helpful ratio] * (1-exp(-lambda * [total_votes]))*.<br>This will have the following effect:
 
-- We will correct a users bias. If a users average grade is higher than the average overall grade, then this user is classified as giving too high grades, therefore we will decrease the grade he gave slightly.
-- Alpha is a coefficient from 0 to 1 controlling the strength of the correction applied.
+\\[ corrected\\_rating = actual\\_rating + \alpha \cdot (avg - x) \\ \\ (1)\\]
+
+where 
+
+\\[ \alpha = 1 - (helpful\\_ratio \cdot (1 - \\exp(-lambda \cdot total\\_votes)) \\ \\  (2)\\]
+
+*x* is the average rating for the user that wrote the review and *avg* is the median of all the users' average rating
+
+This will have the following effect:
+
+1. We will correct a users bias. If a users average grade is higher than the average overall grade, then this user is classified as giving too high grades, therefore we will decrease the grade he gave slightly. This is computed by *(avg - x)*.
+2. *alpha* is a coefficient from 0 to 1 controlling the strength of the correction applied.
 	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
-    
-  
-<button class="collapsible">Open Collapsible</button>
-<div class="content">
-  <p>Lorem ipsum...</p>
-</div>
-
-<style>
-  /* Style the button that is used to open and close the collapsible content */
-.collapsible {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  background-color: #ccc;
-}
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-</style>
 
 
-| Original rating | Time bias corrected | User (& time) bias corrected |
-|-----------------|---------------------|------------------------------|
-| *Individual product reviews*                                         |
-| 5.000           | 4.943               | 4.500                        |
-| 5.000           | 5.096               | 4.933                        |
-| 5.000           | 4.861               | 4.793                        |
-| 4.000           | 3.849               | 3.698                        |
-| 5.000           | 4.862               | 4.517                        |
-| 5.000           | 4.851               | 4.908                        |
-| 5.000           | 4.873               | 4.821                        |
-| 5.000           | 4.934               | 4.490                        |
-| 5.000           | 4.850               | 4.407                        |
-| 5.000           | 4.833               | 4.667                        |
-| 5.000           | 4.930               | 4.487                        |
-| 5.000           | 4.854               | 4.411                        |
-| 5.000           | 4.868               | 4.425                        |
-| 4.000           | 3.864               | 3.754                        |
-| 5.000           | 5.041               | 4.775                        |
-| 5.000           | 5.088               | 4.934                        |
-| 5.000           | 4.839               | 4.494                        |
-| 4.000           | 3.930               | 4.153                        |
-| 4.000           | 3.919               | 3.809                        |
-| 5.000           | 4.935               | 4.714                        |
-| *Total product average*                                              |
-| 4.800           | 4.711               | 4.485                        |
+With the date bias and user bias correction implemented, we were ready to try our algorithm. We run it on a few articles, you can see right here some of the results. 
+
+Product 1 : *NAME OF PRODUCT*
+
+
+| Original rating | Time bias corrected | User bias corrected |
+|:---------------:|:-------------------:|:-------------------:|
+| *Individual product reviews*                                |
+| 5.000           | 4.943               | 4.500               |
+| 5.000           | 5.096               | 4.933               |
+| 5.000           | 4.861               | 4.793               |
+| 4.000           | 3.849               | 3.698               |
+| 5.000           | 4.862               | 4.517               |
+| 5.000           | 4.851               | 4.908               |
+| 5.000           | 4.873               | 4.821               |
+| 5.000           | 4.934               | 4.490               |
+| 5.000           | 4.850               | 4.407               |
+| 5.000           | 4.833               | 4.667               |
+| 5.000           | 4.930               | 4.487               |
+| 5.000           | 4.854               | 4.411               |
+| 5.000           | 4.868               | 4.425               |
+| 4.000           | 3.864               | 3.754               |
+| 5.000           | 5.041               | 4.775               |
+| 5.000           | 5.088               | 4.934               |
+| 5.000           | 4.839               | 4.494               |
+| 4.000           | 3.930               | 4.153               |
+| 4.000           | 3.919               | 3.809               |
+| 5.000           | 4.935               | 4.714               |
+| *Total product average*                                     |
+| 4.800           | 4.711               | 4.485               |
 
 | Original rating | Time bias corrected | User (& time) bias corrected |
 |-----------------|---------------------|------------------------------|
@@ -515,8 +488,10 @@ Wonderful summary
 ### Further Possible Work
 There are 2 possible ways to extend this model. 
 
-Firstly, we could extend the number of features used for correction by including herding behaviour, international ratings and more text based methods to correct individual reviews based on the review text.
+Firstly, we could extend the number of features used for correction by including herding behaviour, international ratings and more text based methods to correct individual reviews based on the review text. We could also have used some features, such as the product price, the product image or the "also bought" list, by getting them from Amazon ourselves. 
+
 Secondly, a different correction model may be used. We used a formula for correction that is based on our findings in the bias analysis, but one could try to use a learning based approach. For example a supervised learning task could  be used to predict the "true" score.<a name="usefulness_" /> The problem however would be to create the "true" responses for training. Perhaps, an expert group could be used.
+
 
 ### Usefulness
 We showed that amazon reviews have significant biases. We propose a method for correcting this bias. This method could be used for vendors to better understand the reviews they get. We do not recommend to use this method for correcting reviews displayed to the user. Doing so would pose two possible problems:
@@ -528,7 +503,6 @@ Amazon users will be displeased if they would notice the bias correction techniq
 Similar to google search optimisation, vendors and fake reviewers or haters could abuse our correction if they knew how it worked. For example if one would want to give a positive review, one could give 5 stars on a day that has a very low average review. We would then correct this daily "bias" and make the review even higher. Also, our user correction could be abused. To get very high reviews, one has to vote 1 star on many products in order to bring the users average rating down, and rate 5 start on our product. The bias correction algorithm would increase the grade as the user usually gives low reviews. <br>
 The inverse tactics can be used to give very low reviews. 
 
-(ethics, applicable, for whom, ...)
 
 ### Comparaison with Other Studies
 Yves did not find any
