@@ -398,7 +398,8 @@ This will have the following effect:
 1. We will correct a users bias. If a users average grade is higher than the average overall grade, then this user is classified as giving too high grades, therefore we will decrease the grade he gave slightly. This is computed by *(avg - x)*.
 2. *alpha* is a coefficient from 0 to 1 controlling the strength of the correction applied.
 	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
-	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
+	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well.
+3. If the review is not verified, we increase the alpha as the review should be less trusted and hence given less importance. This increase will be of 0.5 if alpha was 0 beforehand and linearly decrease to be of 0 if alpha already was at its max value of 1.
 
 
 With the date bias and user bias correction implemented, we were ready to try our algorithm. We run it on a few articles, you can see right here some of the results. For the first product, we show the average rating, as well as all the individual ratings. 
