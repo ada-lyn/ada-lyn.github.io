@@ -394,22 +394,20 @@ This will have the following effect:
 2. *alpha* is a coefficient from 0 to 1 controlling the strength of the correction applied.
 	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
-    
-  
-<button class="collapsible">Open Collapsible</button>
-<div class="content">
-  <p>Lorem ipsum...</p>
-</div>
+
 
 With the date bias and user bias correction implemented, we were ready to try our algorithm. We run it on a few articles, you can see right here some of the results. 
 
 Product 1 : *NAME OF PRODUCT*
 
 
-| Original rating | 5.000 | 5.000 | 5.000 | 4.000 | 5.000 | 5.000 | 5.000 | 5.000 | 5.000 | 5.000 | 5.000 | 5.000 | 5.000 | 4.000 | 5.000 | 5.000 | 5.000 | 4.000 | 4.000 | 5.000 |
-| Time bias corrected | 4.943 | 5.096 | 4.861 | 3.849 | 4.862 | 4.851 | 4.873 | 4.934 | 4.850 | 4.833 | 4.930 | 4.854 | 4.868 | 3.864 | 5.041 | 5.088 | 4.839 | 3.930 | 3.919 | 4.935 | 
-| User (and time) bias corrected | 4.500 | 4.933 | 4.793 | 3.698 | 4.517 | 4.908 | 4.821 | 4.490 | 4.407 | 4.667 | 4.487 | 4.411 | 4.425 | 3.754 | 4.775 | 4.934 | 4.494 | 4.153 | 3.809 | 4.714 | 
+| Original rating | 5.000 | 5.000 | 5.000 | 4.000 | 5.000 | 5.000 | 5.000 | 5.000 | 
+| Time bias corrected | 4.943 | 5.096 | 4.861 | 3.849 | 4.862 | 4.851 | 4.873 | 4.934 | 
+| User (and time) bias corrected | 4.500 | 4.933 | 4.793 | 3.698 | 4.517 | 4.908 | 4.821 | 4.490 | 
 
+5.000 | 5.000 | 5.000 | 5.000 | 5.000 | 4.000 | 5.000 | 5.000 | 5.000 | 4.000 | 4.000 | 5.000 |
+4.850 | 4.833 | 4.930 | 4.854 | 4.868 | 3.864 | 5.041 | 5.088 | 4.839 | 3.930 | 3.919 | 4.935 | 
+4.407 | 4.667 | 4.487 | 4.411 | 4.425 | 3.754 | 4.775 | 4.934 | 4.494 | 4.153 | 3.809 | 4.714 | 
  
 |--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
 | Original rating | Time bias corrected | User (& time) bias corrected |
