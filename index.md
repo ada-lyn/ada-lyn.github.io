@@ -173,7 +173,7 @@ When looking at the number of reviews, a similar result can been seen with most 
 	<img src="/img/gif/number_vs_year.gif" width="99%" />
 </p>
 
-There are however a few exceptions. The most notable ones are *Music*, *Video* and *Mobile App*. The rise in Music sales started earlier than most of the other categories (in ~1999), **WHY**, but was quickly stopped a year later. We could imagine that this was due to the Launch of *iTunes* around that time **BUT NOT SURE**. **TO COMPLETE**
+There are however a few exceptions. The most notable ones are *Music* and *Video*. The rise in Music sales started earlier than most of the other categories (in ~1999), **WHY**, but was quickly stopped a year later. We could imagine that this was due to the Launch of *iTunes* around that time **BUT NOT SURE**. **TO COMPLETE**
 
 <p float="left">
 	<img src="/img/gif/number_vs_year_exceptions.gif" width="99%" />
