@@ -173,7 +173,7 @@ When looking at the number of reviews, a similar result can been seen with most 
 	<img src="/img/gif/number_vs_year.gif" width="99%" />
 </p>
 
-There are however a few exceptions. The most notable ones are *Music* and *Video*. The rise in Music sales started earlier than most of the other categories (in ~1999), **WHY**, but was quickly stopped a year later. We could imagine that this was due to the Launch of *iTunes* around that time **BUT NOT SURE**. **TO COMPLETE**
+There are however a few exceptions. The most notable ones are *Music* and *Video*. The rise in Music sales started earlier than most of the other categories (in ~1999), but was quickly stopped a year later. We could imagine that this was due to the Launch of *iTunes* around that time or the rise and fall of the dotcom bubble.
 
 <p float="left">
 	<img src="/img/gif/number_vs_year_exceptions.gif" width="99%" />
@@ -289,8 +289,8 @@ One of the bias that might affect the ratings is what is called the Herding Beha
 
 We will create a scatter plot, with on the x axis the difference between the first rating in both markets, and on the y axis the difference in average of all ratings. We exclude the first vote for the average calculation since it could affect the average. For example if it was significantly lower, and there would not be many votes, it could pull the average down. We will also only include products with at least 5 reviews, since we want to exlude any potential randomness due to such a low amount of reviews.
 
-If there was no herding behaviour effect, we would expect a uniform cloud centered at [c_avg,c_avg], where c_avg is the average country difference. Since we did not observe any signifcant bias in the last section, we expect this value to be roughly 0.
-If herding behaviour is present, we still expect a point cloud centered at [c_avg,c_avg], but there will be a positive correlation between the first rating and the average rating.
+If there was no herding behaviour effect, we would expect a uniform cloud centered at $[c_{avg},c_{avg}]$, where $c_{avg}$ is the average country difference. Since we did not observe any signifcant bias in the last section, we expect this value to be roughly 0.
+If herding behaviour is present, we still expect a point cloud centered at $[c_{avg},c_{avg}]$, but there will be a positive correlation between the first rating and the average rating.
 
 <p float="left">
   <img src="/img/herding/float_steps_corr.png" width="99%" />
@@ -395,9 +395,9 @@ where
 
 and if the review is not verified, we change alpha to be
 
-\\[ \alpha = \alpha + (1 - \alpha) \cdot 0.5 \\ \\  (3)\\]
+\\[ \alpha_{new} = \alpha + (1 - \alpha) \cdot 0.5 \\ \\  (3)\\]
 
-***x*** is the average rating for the user that wrote the review and ***avg*** is the median of all the users' average rating
+***x*** is the average rating for the user that wrote the review and ***avg*** is the median of all the users' average rating, ***lambda*** is a tuning parameter that we set to 0.25.
 
 This will have the following effect:
 
