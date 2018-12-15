@@ -47,7 +47,7 @@ Since we have a lot of data (amounting to ~20GB), our main focus will be on the 
 
 ### Research Questions
 
-There are two main questions we will try to answer during this project: 
+There are two main questions we will try to answer during this project:<br>
 - What factors influence the rating given in an Amazon review (other than product quality)? 
 - Is there a way to correct this bias, and should we correct this bias?
 
