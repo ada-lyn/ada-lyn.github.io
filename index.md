@@ -380,11 +380,11 @@ Overall, the time correction seems to have worked well, correcting the biggest b
 
 We will correct the users bias using the following formula:<br>
 
-\\[ corrected\_rating = actual\_rating + \alpha \cdot (avg - x) \\]
+\\[ corrected\\_rating = actual\\_rating + \alpha \cdot (avg - x) \\]
 
 where 
 
-\\[ \alpha = 1 - (helpful\ ratio \cdot (1 - exp(-lambda \cdot total_votes)) \\]
+\\[ \alpha = 1 - (helpful\\_ratio \cdot (1 - exp(-lambda \cdot total\\_votes)) \\]
 
 .<br>This will have the following effect:
 
