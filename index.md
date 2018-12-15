@@ -149,7 +149,7 @@ We now would like to know if the day the review was posted on has any influence 
   <img src="/img/products/number_by_year_evolution_Books.png" width="99%" /> 
 </p>
 
-For analysing the effect of the year, again, the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidence bands widen for early years, here there are less reviews. We clearly see a decrease in the years up until ~2003 in the ratings. Afterwards the ratings increase. An second smaller drop can also be seen in ~2007. The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
+For analysing the effect of the year the confidence bands are very tight for the rating, which is nice for drawing conclusions. We can see that the confidence bands widen for early years, here there are less reviews. We clearly see a decrease in the years up until ~2003 in the ratings. Afterwards the ratings increase. An second smaller drop can also be seen in ~2007. The number of reviews per year is clearly increasing, which is not surprising since amazon has been growing steadily. We observe a slight decrease after the year 2000, this may be attributed to a decrease in interest in internet companies after the dotcom bubble. The last drop around 2014-2015 is simply due to the missing data after july 2014.
 
 When comparing the evolution of the rating with the year for the other catgeories, we do observe a similar effect. 
 
@@ -170,6 +170,8 @@ There are however a few exceptions. The most notable ones are *Music* and *Video
 <p float="left">
 	<img src="/img/gif/number_vs_year_exceptions.gif" width="99%" />
 </p>
+
+Now, let's look at the months!
 
 <p float="left">
   <img src="/img/products/rating_by_month_evolution_Books.png" width="99%" />
