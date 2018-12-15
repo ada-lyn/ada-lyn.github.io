@@ -476,4 +476,4 @@ Amazon users will be displeased if they would notice the bias correction techniq
 Similar to google search optimisation, vendors and fake reviewers or haters could abuse our correction if they knew how it worked. For example if one would want to give a positive review, one could give 5 stars on a day that has a very low average review. We would then correct this daily "bias" and make the review even higher. Also, our user correction could be abused. To get very high reviews, one has to vote 1 star on many products in order to bring the users average rating down, and rate 5 start on our product. The bias correction algorithm would increase the grade as the user usually gives low reviews. <br>
 The inverse tactics can be used to give very low reviews. 
 
-**FINAL SENTENCE**
+Our bias correction system would indeed be useful, but it should be used with caution.
