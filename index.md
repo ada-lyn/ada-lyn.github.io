@@ -179,7 +179,6 @@ There are however a few exceptions. The most notable ones are *Music*, *Video* a
 	<img src="/img/gif/number_vs_year_exceptions.gif" width="99%" />
 </p>
 
----
 
 
 Now, let's look at the rating and number of reviews comapred to the day of the week
