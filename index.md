@@ -16,19 +16,19 @@ custom-javascript-list:
 
 
 # 1. Introduction 
-
+ 
 ### Abstract
 
-In the past, when buying an item, one had to trust reviews in newspapers or from friends. In today's age, with online shopping, we have to tap into the minds of thousands of people who have purchased the product we are thinking about. With the help of Amazon reviews and their star-system, we can easily analyse how good the product likely is. But while a newspaper or professional reviewer is generally working hard for consistency and unbiasedness, these facts are not given for a general public reviewer writing a comment. With help of the Amazon dataset, we will try to find bias in the reviews, in order to possibly give an idea on whether or not, and if so how, to correct a bias. We will be especially interested in the influence of the following factors on the number of stars given:
+In the past, when buying an item, one had to trust reviews in newspapers or from friends. In today's age, with online shopping, we have to tap into the minds of thousands of people who have purchased the product we are thinking about. With the help of Amazon reviews and their star-system, we can easily analyse how good the product likely is. But while a newspapers or professional reviewer is generally working hard for consistency and unbiasedness, these facts are not given for a general public reviewer writing a comment. With the help of the Amazon review dataset, we will try to find bias in the reviews, in order to possibly give an idea on whether or not, and if so how, to correct a bias. We will be especially interested in the influence of the following factors on the number of stars given:
 
-- The date the review was written on?
-- The category of the product the review was written for?
+- The date the review was written on
+- The category of the product the review was written for
 - The country of residence of the buyer (for instance, was the product bought on Amazon US or Amazon UK?)
-- Past ratings from the reviewer
+- The past ratings from the reviewer
 
 ### Dataset
 
-We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that consist multiple millions of Amazon reviews. More precisely, it contains (amongst other information that will not be used) the following information for each review: 
+We will use the [Amazon Customer Reviews Dataset](https://s3.amazonaws.com/amazon-reviews-pds/readme.html) that consist of many millions of Amazon reviews. More precisely, it contains (amongst other information that will not be used) the following information for each review: 
 
 - `marketplace` : The "country of Amazon". Data is available for the United States, United Kingdom, France, Germany and Japan
 - `customer_id` : A unique id representing the user who wrote the review
@@ -43,17 +43,17 @@ We will use an [Amazon Dataset](http://jmcauley.ucsd.edu/data/amazon/) that cons
 - `review_body` : Full content of the review
 - `review_date` : Date the review was posted on
 
-Since we have a lot of data (Amounting to ~20GB), our main focus will be on the reviews related to the *Books*. This is also by far the largest dataset and the one Amazon is most known for. We will do an in-depth analysis of these reviews, and then rapidly compare it to the other categories.
+Since we have a lot of data (amounting to ~20GB), our main focus will be on the reviews related to the *Books*. This is also by far the largest dataset and the one Amazon is most known for. We will do an in-depth analysis of these reviews, and then rapidly compare it to the other categories.
 
 ### Research Questions
 
-There are two main questions we will try to answer during this project: 
+There are two main questions we will try to answer during this project:<br>
 - What factors influence the rating given in an Amazon review (other than product quality)? 
-- Is there a way to correct this bias, should we correct this bias?
+- Is there a way to correct this bias, and should we correct this bias?
 
 ### Motivation
 
-Our goal is mostly to provide useful information to Amazon itself and to the products sellers. So that they can have a better idea of what a given review value really should be.
+Our goal is mostly to provide useful information to Amazon itself and to the products sellers. So that they can have a better idea of what a given review's rating should really be.
 For instance, they might receive a very bad review from someone and not understand why they had such a bad rating. But after bias correction it could be possible that the reviewer is just a "hater" (someone who always gives bad rating to every product) and that instead of a one-two stars it could be worth a 3-4 stars. There could be other factors that influenced the rating of that review and we will try to best correct them to valuable information.
 
 See more about that in the [Usefulness](#usefulness_) section at the end of the webpage.
@@ -64,17 +64,17 @@ Before focusing our study on *Books* only, we will take a quick look at the comp
 
 ![Number of review for each category](/img/other/n_by_category.png)
 
-Note that we used a logratihmic scale, so the proportions are distorded. Indeed, some of the smallest categories (*Digital Software*, *Major Appliance*, *Personnal Care Appliance* for instance) have so few reviews compared to the larger ones (*Books*, *Ebooks*, *Wireless*) that they would be invisible on a linear scale. The results are mostly expected, although some categories are ranked higher than one might expect them to be (e.g. *Video DVD*, when they mostly have been replaced by streaming services, or *Wireless* that is ranked way higher than *Electronics*, even if it's only a subcategory of **the other / NOT SURE ABOUT THE PHRASING OR is it mobile phones?**) 
+Note that we used a logratihmic scale, so the proportions are distorded. Indeed, some of the smallest categories (*Digital Software*, *Major Appliance*, *Personnal Care Appliance* for instance) have so few reviews compared to the larger ones (*Books*, *Ebooks*, *Wireless*) that they would be invisible on a linear scale. The results are mostly expected, although some categories are ranked higher than one might expect them to be (e.g. *Video DVD*, when they mostly have been replaced by streaming services, or *Wireless* that is ranked way higher than *Electronics*, even if it should not if the true proportions were respected since Wireless is clearly a more specific category, with less products.
 
 We also took a quick look at the average rating (the number of stars given by the reviewers) of each category. 
 
 ![Average rating for each category](/img/other/avg_by_category.png)
 
-As you can see, there is quite a non negligible difference between the highest and lowest rated category. The rating for the top three categories (*Gift Card*, *Digital Music* and *Music*) is expected, since it is quite hard to find negative points about a gift card (it cannot really differ from the promised product, unless there is some kind of error with the card, like having been sent a damaged one). And for the Music categories, people usually know what artist they like, and they probably won't be surprised by the quality of the product.
+As you can see, there is quite a non negligible difference between the highest and lowest rated category. The rating for the top three categories (*Gift Card*, *Digital Music* and *Music*) is expected, since it is quite hard to find negative points about a gift card (it cannot really differ from the promised product, unless there is some kind of error with the card, like having been sent a damaged one). And for the Music categories, people usually know what artist they like, and they probably will not be surprised by the quality of the product.
 
-We can also find some logical explanations for the lowest ranked categories. *Software* and *Digital Software* are clearly more niche products, often with a higher price tag, intended for businesses or professional individuals. Because of the type of product, it is also way harder to know exactly what to expect (You will not be able to judge the quality of a software by looking at screenshots, notably you won't see any bugs that might affect your experience negatively). You will more frequently be disappointed when your expensive software does not work as expected, and you can not just use the warranty to exchange it with a better one. 
+We can also find some logical explanations for the lowest ranked categories. *Software* and *Digital Software* are clearly more niche products, often with a higher price tag, intended for businesses or professional individuals. Because of the type of product, it is also way harder to know exactly what to expect (you will not be able to judge the quality of a software by looking at screenshots, notably you will not see any bugs that might affect your experience negatively). You will more frequently be disappointed when your expensive software does not work as expected, and you can not just use the warranty to exchange it with a better one. 
 
-To answer to our main question: *Is there some bias and should we correct it?*, we think that indeed there is some (People are clearly biased because they buy music that they know they will probably like), but it also seems that some categories (mainly *Software*) are really of worse quality than the other. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the other.<a name="effects-on-rating"></a> 
+To answer to our main question: *Is there some bias and should we correct it?*, we think that indeed there is some (people are clearly biased because they buy music that they know they will probably like), but it also seems possible that some categories (mainly *Software*) are really of worse quality than others. For this reason, when we will try to correct bias later, we will only do it for one category, independently from the others. 
 
 <a name="effects_" />
 
@@ -87,7 +87,7 @@ This part will be separated in two. We will first do an analysis by category (as
 
 ### By Product Category
 
-First, we will analyse some of the features (`verified_purchase`, `helpful_votes`, `total_votes`, `review_date`, numbe of reviews per product, `review_headline` and `review_body`), then we are going to discuss their potential influence in the bias, and if they should be considered, and finally we will compare the results with the other categories.
+First, we will analyse some of the features (`verified_purchase`, `helpful_votes`, `total_votes`, `review_date`, number of reviews per product, `review_headline` and `review_body`), then we are going to discuss their potential influence in the bias, and if they should be considered, and finally we will compare the results with the other categories.
 
 ####  Analysis of some features
 
@@ -108,16 +108,16 @@ Since we are keeping this feature, and we saw it is not negligable, it will be t
 
 **Analysis of the `helpful_votes` and `total_votes` features**
 
-We want to see if the upvoted ratio on reviews in correlated to the rating given by the review. For the helpful ratio to make some sence, and for it to be representative enough of the quality of a review, we decided to only keep the reviews with at least 10 votes. 
+We want to see if the upvoted ratio on reviews in correlated to the rating given by the review. For the helpful ratio to make some sense, and for it to be representative enough of the quality of a review, we decided to only keep the reviews with at least 10 votes. 
 
 <p float="left">
-  <img src="/img/products/helpful_vs_number_Books.png" width="90%" />
+  <img src="/img/products/helpful_vs_rating_Books.png" width="90%" />
 </p>
 
 We can see that people tend to give more positive votes than negatives ones on reviews. Possibly as the users tend to give good reviews on *Books* (~4.3/5 on *Books* and overall good ratings on other categories as well), they will also tend to positively rate other things such as other people's reviews. One could also interprete this as people's lazyness, who only rate reviews when they find them useful, and not otherwise. 
 
 <p float="left">
-  <img src="/img/products/helpful_vs_rating_Books.png" width="90%" />
+  <img src="/img/products/helpful_vs_number_Books.png" width="90%" />
 </p>
 
 This graph may seem a bit strange at first, wondering why people would mostly positively rate reviews with high ratings only. However it can easily be explained: on any product it makes sense to assume a user will usually give a positive vote to a review if it is somewhat close to that user opinion on the product. And since the average in *Books* is very high, most of the reviews with high ratings will be close to the product average on average, meaning the closer a review's rating is close to the general opinion (= product average), the more likely it is to get positive votes.
@@ -179,10 +179,9 @@ There are however a few exceptions. The most notable ones are *Music*, *Video* a
 	<img src="/img/gif/number_vs_year_exceptions.gif" width="99%" />
 </p>
 
----
 
 
-Now, let's look at the rating and number of reviews comapred to the day of the week
+Now, let's look at the rating and number of reviews compared to the day of the week
 
 <p float="left">
   <img src="/img/products/rating_by_dayofweek_evolution_Books.png" width="99%" />
@@ -191,16 +190,18 @@ Now, let's look at the rating and number of reviews comapred to the day of the w
 
 For the days of the week, we can see that here, the confidence bands are wider. It has to be noted that in the weekday-system used here, the week starts at Sunday. Notably, we have a spike in ratings on monday, which is surprising as we would expect people not to be at their happiest on mondays. The number of ratings starts high at the beginning of the week, and then steadily decreases until the weekend where it is at its lowest point. We may assume that people use / test their new products during the weekend, and give it a rating the following week after, mainly on monday because they don't have the motivation to work. Here again, the effect on the average rating is statistically significant, but very small (in the order of 0.01).
 
-However, when we compare this with the other categories, it becomes harder to validate our theory, since it isn't present in all of them. 
+However, when we compare this with the other categories, it becomes harder to validate our theory, since it is not present in all of them, which makes us think that the efect is more due to randomness than to any real factor.
 
 <p float="left">
   <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="99%" />
   <img src="/img/products/number_by_dayofmonth_evolution_Books.png" width="99%" /> 
 </p>
 
-For the day of the month, the confidence bands are almost too big to draw significant conclusions. We could however argue that people usually receive their salary at the end of the month, therefore are more happy and give better ratings in the following days, with their happiness decreasing until the next payday. The Number of reviews is very low on the 31. This is not something worth interpreting, as almost all months have at least 30 days, but only a few have 31. The slight decrease in the number of reviews over the month might be connected to the previous argument of payday happiness, where people might spend more money to buy products on Amazon at the beginning of the month, hence give more reviews. The effect on the average rating we observe is about 0.02.
+For the day of the month, the confidence bands are almost too big to draw significant conclusions. We could however argue that people usually receive their salary at the end of the month, therefore are more happy and give better ratings in the following days, with their happiness decreasing until the next payday. The number of reviews is very low on the 31. This is not something worth interpreting, as almost all months have at least 30 days, but only a few have 31. The slight decrease in the number of reviews over the month might be connected to the previous argument of payday happiness, where people might spend more money to buy products on Amazon at the beginning of the month, hence give more reviews. The effect on the average rating we observe is about 0.02.
 
-As all these phenomenas seem to be due to bias in humor or change of trend in the users' way of rating along the years, we will try to correct them.
+When comparing with the other categories, it is once again hard to trust this theory, since the effect varies a lot from one category to the other. 
+
+Nevertheless, wether those biases are due to minor randomness, changes in humor or changes of trend in the users' way of rating along the years, we will try to correct them.
 
 **Analysis of the number of reviews per product**
 
@@ -282,7 +283,7 @@ We see that there is no significant difference of the ratings between countries.
 
 #### Herding Behavior
 
-One of the bias that might  effect the ratings is what is called the Herding Behavior. Basically, for the same product, depending on the first review given to it, other reviews will vary. If the first review is very positive, other reviewers might have a tendency to also put a higher grade. The same is true for a first negative rating. If we want to make some analysis and give some hypotheses about this, we will need enough data, i.e. enough common products with a non negligable rating difference between the two countries. We have 29507 common reviews between the US and UK, which isn't that much compared to the size of previous data, but we think it is still enough to see if this effect is indeed real.
+One of the bias that might  effect the ratings is what is called the Herding Behavior. Basically, for the same product, depending on the first review given to it, other reviews will vary. If the first review is very positive, other reviewers might have a tendency to also put a higher grade. The same is true for a first negative rating. If we want to make some analysis and give some hypotheses about this, we will need enough data, i.e. enough common products with a non negligable rating difference between the two countries. We have 29507 common reviews between the US and UK, which is not that much compared to the size of previous data, but we think it is still enough to see if this effect is indeed real.
 
 *Approach*
 
@@ -396,62 +397,9 @@ This will have the following effect:
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
 
 
-With the date bias and user bias correction implemented, we were ready to try our algorithm. We run it on a few articles, you can see right here some of the results. 
+With the date bias and user bias correction implemented, we were ready to try our algorithm. We run it on a few articles, you can see right here some of the results. For the first product, we show the average rating, as well as all the individual ratings. 
 
-Product 1 : *NAME OF PRODUCT*
-
-
-| Original rating | Time bias corrected | User bias corrected |
-|:---------------:|:-------------------:|:-------------------:|
-| *Individual product reviews*                                |
-| 5.000           | 4.943               | 4.500               |
-| 5.000           | 5.096               | 4.933               |
-| 5.000           | 4.861               | 4.793               |
-| 4.000           | 3.849               | 3.698               |
-| 5.000           | 4.862               | 4.517               |
-| 5.000           | 4.851               | 4.908               |
-| 5.000           | 4.873               | 4.821               |
-| 5.000           | 4.934               | 4.490               |
-| 5.000           | 4.850               | 4.407               |
-| 5.000           | 4.833               | 4.667               |
-| 5.000           | 4.930               | 4.487               |
-| 5.000           | 4.854               | 4.411               |
-| 5.000           | 4.868               | 4.425               |
-| 4.000           | 3.864               | 3.754               |
-| 5.000           | 5.041               | 4.775               |
-| 5.000           | 5.088               | 4.934               |
-| 5.000           | 4.839               | 4.494               |
-| 4.000           | 3.930               | 4.153               |
-| 4.000           | 3.919               | 3.809               |
-| 5.000           | 4.935               | 4.714               |
-| *Total product average*                                     |
-| 4.800           | 4.711               | 4.485               |
-
-| Original rating | Time bias corrected | User (& time) bias corrected |
-|-----------------|---------------------|------------------------------|
-| *Individual product reviews*                                         |
-| 3.000           | 2.833               | 3.038                        |
-| 2.000           | 1.864               | 1.964                        |
-| 5.000           | 4.852               | 4.909                        |
-| 4.000           | 3.917               | 4.073                        |
-| 5.000           | 4.916               | 4.472                        |
-| 4.000           | 3.938               | 3.965                        |
-| 5.000           | 4.863               | 4.420                        |
-| 5.000           | 5.064               | 5.021                        |
-| 5.000           | 5.091               | 4.735                        |
-| 2.000           | 2.021               | 2.053                        |
-| 5.000           | 5.040               | 4.695                        |
-| 5.000           | 4.934               | 4.885                        |
-| 5.000           | 4.882               | 4.920                        |
-| 5.000           | 5.120               | 4.866                        |
-| 3.000           | 2.849               | 4.406                        |
-| 5.000           | 4.923               | 5.301                        |
-| 5.000           | 5.013               | 4.823                        |
-| 5.000           | 4.917               | 5.274                        |
-| 2.000           | 2.021               | 2.330                        |
-| 5.000           | 4.832               | 4.889                        |
-| *Total product average*                                              |
-| 4.250           | 4.195               | 4.252                        |
+*Hands-On Chemistry Activities with Real-Life Applications: Easy-to-Use Labs and Demonstrations for Grades 8-12*
 
 | Original rating | Time bias corrected | User (& time) bias corrected |
 |-----------------|---------------------|------------------------------|
@@ -476,14 +424,28 @@ Product 1 : *NAME OF PRODUCT*
 | 5.000           | 5.136               | 5.629                        |
 | 5.000           | 5.134               | 5.303                        |
 | 5.000           | 4.834               | 4.890                        |
-| *Total product average*                                              |<a name="conclusion_"></a>
-| 4.750           | 4.739               | 4.819                        |
+| *Total product average*                                              |
+| **4.750**       | **4.739**           | **4.819**                    |
 
+A few more examples, with only the average rating:
+
+|Product name  | Original rating | After time bias corrections | After use bias correction |
+|--|--|--|--|--|
+|*ShowTime  Popular: Level 2A (Showtime Piano)* 0 | 4.800 | 4.711 | 4.485 |
+|*Mad for Decades: 50 Years of Forgettable Humor from MAD Magazine*  | 4.250 | 4.195 | 4.252 |
+|*Pearson Nurse's Drug Guide 2011*  | 4.450 | 4.484 | 4.570 |
+|*Not a Suicide Pact: The Constitution in a Time of National Emergency (Inalienable Rights)*  | 3.750 | 3.851 | 4.289 |
+|*A Darwinian Left: Politics, Evolution, and Cooperation*  | 3.700 | 3.816 | 4.049 |
+
+<a name="conclusion_"></a>
+ 
+ 
 # 4. Conclusion
 
 ### Summary
 
-Wonderful summary
+There are a lot of modifiers that influence the rating of a review but this is not easy to tell whether this is due to a bias or some hidden variable. However, once we detect biases, removing them works quite well. Furthermore, it is sometimes difficult to say in what proportions to correct thoses biases and require the use of arbitrary parameters.<br>
+Hence, we can easily correct bias but it is hard to tell what are the biases and how much to correct them as it is quite subjective.
 
 ### Further Possible Work
 There are 2 possible ways to extend this model. 
@@ -503,6 +465,4 @@ Amazon users will be displeased if they would notice the bias correction techniq
 Similar to google search optimisation, vendors and fake reviewers or haters could abuse our correction if they knew how it worked. For example if one would want to give a positive review, one could give 5 stars on a day that has a very low average review. We would then correct this daily "bias" and make the review even higher. Also, our user correction could be abused. To get very high reviews, one has to vote 1 star on many products in order to bring the users average rating down, and rate 5 start on our product. The bias correction algorithm would increase the grade as the user usually gives low reviews. <br>
 The inverse tactics can be used to give very low reviews. 
 
-
-### Comparaison with Other Studies
-Yves did not find any
+**FINAL SENTENCE**
