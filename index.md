@@ -238,7 +238,7 @@ We have a huge peak for reviews with a title length of aproximatly 10 characters
 
 Overall however, we see that the average rating increases quite a lot for longer titles (more than 0.1 stars), probably because people that liked the product take some time to make good titles that might catch the attention of other people.
 
-For the number of reviews, this result is expected. Most of the people make short title, whith very few making extremly short titles (hard to do a title in 3 letters), and few make very long title. (Most "normal" people will write their opinion in the review body instead, those that write essays as their titles might be the same that don't understand how stars work.)
+For the number of reviews, this result is expected. Most of the people make short title, whith very few making extremly short titles (hard to do a title in 3 letters), and few make very long title. (Most "normal" people will write their opinion in the review body instead, those that write essays as their titles might be the same that don't understand how stars work...)
 
 If we look deeper at reviews with a title of length 10, in particular the 6 most common titles, we see something extepected:
 
