@@ -386,10 +386,12 @@ where
 
 \\[ \alpha = 1 - (helpful\\_ratio \cdot (1 - exp(-lambda \cdot total\\_votes)) \\ \\  (2)\\]
 
+\\(x\\) is the average rating for the user that wrote the review and \\(avg\\) is the median of all the users' average rating
+
 This will have the following effect:
 
-- We will correct a users bias. If a users average grade is higher than the average overall grade, then this user is classified as giving too high grades, therefore we will decrease the grade he gave slightly.
-- Alpha is a coefficient from 0 to 1 controlling the strength of the correction applied.
+- We will correct a users bias. If a users average grade is higher than the average overall grade, then this user is classified as giving too high grades, therefore we will decrease the grade he gave slightly. This is computed by \\(avg - x\\).
+- \\(\alpha\\) is a coefficient from 0 to 1 controlling the strength of the correction applied.
 	- If the review is deemed helpful by many people, many people agree with the rating and we will correct it less.
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
     
