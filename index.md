@@ -423,9 +423,8 @@ With the date bias and user bias correction implemented, we were ready to try ou
 | 5.000           | 5.136               | 5.629                        |
 | 5.000           | 5.134               | 5.303                        |
 | 5.000           | 4.834               | 4.890                        |
-| *Total product average*                                              |<a name="conclusion_"></a>
+| *Total product average*                                              |
 | 4.750           | 4.739               | 4.819                        |
-
 
 A few more examples, with only the average rating:
 
@@ -433,10 +432,11 @@ A few more examples, with only the average rating:
 |--|--|--|--|--|
 |ShowTime  Popular: Level 2A (Showtime Piano) | 1616770430 | 4.800 | 4.711 | 4.485 |
 |Mad for Decades: 50 Years of Forgettable Humor from MAD Magazine | 1435101286 | 4.250 | 4.195 | 4.252 |
-|Hands-On Chemistry Activities with Real-Life Applications: Easy-to-Use Labs and Demonstrations for Grades 8-12 | 0876282621 | 4.750 | 4.739 | 4.819 |
 |Pearson Nurse's Drug Guide 2011 | 0132149265 | 4.450 | 4.484 | 4.570 |
 |Not a Suicide Pact: The Constitution in a Time of National Emergency (Inalienable Rights) | 0195304276 | 3.750 | 3.851 | 4.289 |
 |A Darwinian Left: Politics, Evolution, and Cooperation'] | 0300083238 | 3.700 | 3.816 | 4.049 |
+
+<a name="conclusion_"></a>
  
  
 # 4. Conclusion
