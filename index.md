@@ -443,7 +443,8 @@ A few more examples, with only the average rating:
 
 ### Summary
 
-Wonderful summary
+There are a lot of modifiers that influence the rating of a review but this is not easy to tell whether this is due to a bias or some hidden variable. However, once we detect biases, removing them works quite well. Furthermore, it is sometimes difficult to say in what proportions to correct thoses biases and require the use of arbitrary parameters.<br>
+Hence, we can easily correct bias but it is hard to tell what are the biases and how much to correct them as it is quite subjective.
 
 ### Further Possible Work
 There are 2 possible ways to extend this model. 
