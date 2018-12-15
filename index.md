@@ -384,7 +384,7 @@ We will correct the users bias using the following formula:<br>
 
 where 
 
-\\[ \alpha = 1 - (helpful\\_ratio \cdot (1 - exp(-lambda \cdot total\\_votes)) \\ \\  (2)\\]
+\\[ \alpha = 1 - (helpful\\_ratio \cdot (1 - \exp(-lambda \cdot total\\_votes)) \\ \\  (2)\\]
 
 \\(x\\) is the average rating for the user that wrote the review and \\(avg\\) is the median of all the users' average rating
 
