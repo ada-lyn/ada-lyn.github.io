@@ -405,7 +405,7 @@ With the date bias and user bias correction implemented, we were ready to try ou
 
 Product 1 : *NAME OF PRODUCT*
 
-
+|----------|---|---|
 | original | 2 | 4 |
 | Time     | 4 | 6 |
 | User     | 8 | 0 |
