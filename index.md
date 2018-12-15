@@ -329,6 +329,8 @@ Here, we see that the first review has a huge difference of 4 stars between the 
   <img src="/img/herding/B008KL2ITW.png" width="99%" />
 </p>
 
+Here, we observe a similar effect, but this time the US first rating is lower, leading to a lower average rating.
+
 Finally, it is important to note that these "nice" examples are quite rare (hence the 0.145 as the correlation). For most of the product, either we don't have any clear separation of the averages, or it is actually the opposite effect that is observed. 
 
 <p float="left">
