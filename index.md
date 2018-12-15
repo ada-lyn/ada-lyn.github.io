@@ -143,14 +143,6 @@ However, the categories with a bad average rating (such as *Digital Software* wi
 
 We now would like to know if the day the review was posted on has any influence on the rating. Moreover, it would be interesting to look for a potential influence from the hour of the day the review was written at, but we don't have access to this information. Therefore we decided to split the data according to four different *time metrics*: by Year, by Month, by Day of Month and by Day of Week. 
 
-<p float="left">
-  <img src="/img/products/rating_by_month_evolution_Books.png" width="99%" />
-  <img src="/img/products/number_by_month_evolution_Books.png" width="99%" /> 
-</p>
-
-We can observe that the confidence bands for the average rating by month are quite tight. This allows us to draw conclusions with confidence. For the total number of reviews, however, we can not draw confidence bands. The number of reviews seems to have a general correlation with holidays. There is roughly a peak during the summer and one in the winter. The peak in the summer can be attributed to the fact that people have more time then, so they read more. Similarly, the peak in the winter (More specificaly in january) might correspond to people rating their Christmas presents. Note however that the reviews of the dataset range from may 1996 to july 2014. The lower values in the fall might also be partialy related to the fact that we do not have the data for fall 2014, but this alone should not have that much influence over all the years.
-
-We also see that the ratings are higher during holiday season. This we attribute to the people being happier then. On the opposite, the lower ratings in semptember-october-november could be connected to the bad mood of people due to the autumn's bad weather. It has to be noted that the effect is very small (about 0.03), but neverthesless statistically significant considering the amount of data available.
 
 <p float="left">
   <img src="/img/products/rating_by_year_evolution_Books.png" width="99%" />
@@ -179,7 +171,14 @@ There are however a few exceptions. The most notable ones are *Music* and *Video
 	<img src="/img/gif/number_vs_year_exceptions.gif" width="99%" />
 </p>
 
+<p float="left">
+  <img src="/img/products/rating_by_month_evolution_Books.png" width="99%" />
+  <img src="/img/products/number_by_month_evolution_Books.png" width="99%" /> 
+</p>
 
+We can observe that the confidence bands for the average rating by month are quite tight. This allows us to draw conclusions with confidence. For the total number of reviews, however, we can not draw confidence bands. The number of reviews seems to have a general correlation with holidays. There is roughly a peak during the summer and one in the winter. The peak in the summer can be attributed to the fact that people have more time then, so they read more. Similarly, the peak in the winter (More specificaly in january) might correspond to people rating their Christmas presents. Note however that the reviews of the dataset range from may 1996 to july 2014. The lower values in the fall might also be partialy related to the fact that we do not have the data for fall 2014, but this alone should not have that much influence over all the years.
+
+We also see that the ratings are higher during holiday season. This we attribute to the people being happier then. On the opposite, the lower ratings in semptember-october-november could be connected to the bad mood of people due to the autumn's bad weather. It has to be noted that the effect is very small (about 0.03), but neverthesless statistically significant considering the amount of data available.
 
 Now, let's look at the rating and number of reviews compared to the day of the week
 
