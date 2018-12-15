@@ -331,13 +331,13 @@ Here, we see that the first review has a huge difference of 4 stars between the 
 
 Here, we observe a similar effect, but this time the US first rating is lower, leading to a lower average rating.
 
-Finally, it is important to note that these "nice" examples are quite rare (hence the 0.145 as the correlation). For most of the product, either we don't have any clear separation of the averages, or it is actually the opposite effect that is observed. 
+Finally, it is important to note that these "nice" examples are quite rare (hence the 0.145 as the correlation). For the majority of products, either we don't have any clear separation of the averages, or it is actually the opposite effect that is observed. 
 
 <p float="left">
   <img src="/img/herding/B00000427L.png" width="99%" />
 </p>
 
-Here we can see that the averages keep moving up and down, and that the initial difference is of the opposite sign than the final product average. Note that the time range is really large, so it might have an effect. 
+Here we can see that the averages keep moving up and down, and that the initial difference (3) is of the opposite sign than the product final average rating (-0.32). Note that the time range is really large, so it might have an effect. 
 
 Overall we can say that there is indeed a herding behavior with Amazon reviews. It is quite small, which as explained before makes sense, but since there is so much variation from one product another, and many different factors other than the herding behavior that might affect the average. We found for instance a DVD that had 4.7 stars in the US and 2.1 stars in the UK; the herding effect was clear, since the first rating also had that difference, but the bad rating was actually due to the fact that the DVD was not compatible with Britsh TVs (=> The PAL vs NTSC video format encoding was the problem.). That makes it harder to know if the effect is actually due to the herding behavior, or just to the worse quality of the product in one of the country (as well as any other unkown factors). For all of these reasons, we decided not to use the effect in our bias correction.
 
