@@ -360,7 +360,7 @@ The correction by years seems to be able to fix really well the biases. Note tha
   <img src="/img/time_correction/N2.png" width="99%" />
 </p>
 
-The bias stayed pretty similar in terms of range (about 0.04) but not on the same month anymore. It may be due to a high correlation between the year and month and that correcting year biases changed the month biases. So at least we did not made the bias worse.
+The bias stayed pretty similar in terms of range (about 0.04) but not on the same months anymore. It may be due to a high correlation between the year and month and that correcting year biases changed the month biases. So at least we did not made the bias worse.
 
 <p float="left">
   <img src="/img/time_correction/N3.png" width="99%" />
