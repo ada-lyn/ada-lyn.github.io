@@ -337,7 +337,7 @@ Finally, it is important to note that these "nice" examples are quite rare (henc
   <img src="/img/herding/B00000427L.png" width="99%" />
 </p>
 
-Here we can see that the averages keep moving up and down, and that the initial difference (3) is of the opposite sign than the product final average rating (-0.32). Note that the time range is really large, so it might have an effect. 
+Here we can see that the averages keep moving up and down, and that the initial difference (3) is of the opposite sign than the product final average rating (-0.32). Note that the time range is really large, so it might also have an effect (Maybe very old reviews are not shown as much, so the herding behavior will be less important). 
 
 Overall we can say that there is indeed a herding behavior with Amazon reviews. It is quite small, which as explained before makes sense, but since there is so much variation from one product another, and many different factors other than the herding behavior that might affect the average. We found for instance a DVD that had 4.7 stars in the US and 2.1 stars in the UK; the herding effect was clear, since the first rating also had that difference, but the bad rating was actually due to the fact that the DVD was not compatible with Britsh TVs (=> The PAL vs NTSC video format encoding was the problem.). That makes it harder to know if the effect is actually due to the herding behavior, or just to the worse quality of the product in one of the country (as well as any other unkown factors). For all of these reasons, we decided not to use the effect in our bias correction.
 
