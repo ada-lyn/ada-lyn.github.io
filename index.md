@@ -386,7 +386,7 @@ where
 
 \\[ \alpha = 1 - (helpful\\_ratio \cdot (1 - exp(-lambda \cdot total\\_votes)) (2)\\]
 
-.<br>This will have the following effect:
+This will have the following effect:
 
 - We will correct a users bias. If a users average grade is higher than the average overall grade, then this user is classified as giving too high grades, therefore we will decrease the grade he gave slightly.
 - Alpha is a coefficient from 0 to 1 controlling the strength of the correction applied.
