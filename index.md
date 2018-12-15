@@ -266,7 +266,7 @@ While being an interesting analysis, it shows that these results will not result
 
 ### By Country
 
-In this part, we want to see if there are any differences between the way people rate articles in differents countries. As a reminde, we have data for the United States, the United Kingdom, France, Germany and Japan
+In this part, we want to see if there are any differences between the way people rate articles in differents countries. As a reminder, we have data for the United States, the United Kingdom, France, Germany and Japan
 
 To be able to correcly compare ratings between countries, we will have to limit our dataset to products that are available in both regions. Moreover, we will only keep reviews given during the same time period, since we saw earlier that the year of the review had quite a big impact on the rating.
 
@@ -329,7 +329,7 @@ Here, we see that the first review has a huge difference of 4 stars between the 
   <img src="/img/herding/B008KL2ITW.png" width="99%" />
 </p>
 
-Finally, it is important ot note that these "nice" examples are quite rare (hence the 0.145 as the correlation). For most of the product, either we don't have any clear separation of the averages, or it is actually the opposite effect that is observed. 
+Finally, it is important to note that these "nice" examples are quite rare (hence the 0.145 as the correlation). For most of the product, either we don't have any clear separation of the averages, or it is actually the opposite effect that is observed. 
 
 <p float="left">
   <img src="/img/herding/B00000427L.png" width="99%" />
