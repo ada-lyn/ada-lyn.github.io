@@ -368,17 +368,18 @@ The correction by years seems to be able to fix really well the biases. Note tha
 
 For months, the bias increased slightly, and wasn't on the same months anymore. It may be due to a high correlation between the year and month and that correcting year biases changed the month biases. Since the bias is still small, it will not be that important compared to the year bias.
 
-<p float="left">
-  <img src="/img/time_correction/N3.png" width="99%" />
-</p>
-
-For the day of the month, the range of the bias went down from about 0.025 to 0.012. So even though the bias was quite low we made a small improvement.
 
 <p float="left">
   <img src="/img/time_correction/N4.png" width="99%" />
 </p>
 
-Finally, for the day of the week, we have almost no change in the range of the bias, maybe a tiny bit smaller. But the bias was already really small initially.
+For the day of the week, we have almost no change in the range of the bias, maybe a tiny bit smaller. But the bias was already really small initially.
+
+<p float="left">
+  <img src="/img/time_correction/N3.png" width="99%" />
+</p>
+
+Finally, for the day of the month, the range of the bias went down from about 0.025 to 0.012. So even though the bias was quite low we made a small improvement.
 
 Overall, the time correction seems to have worked well, correcting the biggest biases in the years analysis and doing little or no change on the other time scales where the bias was way smaller anyways. Hence we can say it is quite conclusive.
 
