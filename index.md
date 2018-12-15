@@ -401,8 +401,6 @@ With the date bias and user bias correction implemented, we were ready to try ou
 Product 1 : *NAME OF PRODUCT*
 
 
-
-
 | Original rating | Time bias corrected | User bias corrected |
 |:---------------:|:-------------------:|:-------------------:|
 | *Individual product reviews*                                |
@@ -490,8 +488,10 @@ Wonderful summary
 ### Further Possible Work
 There are 2 possible ways to extend this model. 
 
-Firstly, we could extend the number of features used for correction by including herding behaviour, international ratings and more text based methods to correct individual reviews based on the review text.
+Firstly, we could extend the number of features used for correction by including herding behaviour, international ratings and more text based methods to correct individual reviews based on the review text. We could also have used some features, such as the product price, the product image or the "also bought" list, by getting them from Amazon ourselves. 
+
 Secondly, a different correction model may be used. We used a formula for correction that is based on our findings in the bias analysis, but one could try to use a learning based approach. For example a supervised learning task could  be used to predict the "true" score.<a name="usefulness_" /> The problem however would be to create the "true" responses for training. Perhaps, an expert group could be used.
+
 
 ### Usefulness
 We showed that amazon reviews have significant biases. We propose a method for correcting this bias. This method could be used for vendors to better understand the reviews they get. We do not recommend to use this method for correcting reviews displayed to the user. Doing so would pose two possible problems:
@@ -503,7 +503,6 @@ Amazon users will be displeased if they would notice the bias correction techniq
 Similar to google search optimisation, vendors and fake reviewers or haters could abuse our correction if they knew how it worked. For example if one would want to give a positive review, one could give 5 stars on a day that has a very low average review. We would then correct this daily "bias" and make the review even higher. Also, our user correction could be abused. To get very high reviews, one has to vote 1 star on many products in order to bring the users average rating down, and rate 5 start on our product. The bias correction algorithm would increase the grade as the user usually gives low reviews. <br>
 The inverse tactics can be used to give very low reviews. 
 
-(ethics, applicable, for whom, ...)
 
 ### Comparaison with Other Studies
 Yves did not find any
