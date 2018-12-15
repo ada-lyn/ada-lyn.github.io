@@ -190,7 +190,7 @@ Now, let's look at the rating and number of reviews compared to the day of the w
 
 For the days of the week, we can see that here, the confidence bands are wider. It has to be noted that in the weekday-system used here, the week starts at Sunday. Notably, we have a spike in ratings on monday, which is surprising as we would expect people not to be at their happiest on mondays. The number of ratings starts high at the beginning of the week, and then steadily decreases until the weekend where it is at its lowest point. We may assume that people use / test their new products during the weekend, and give it a rating the following week after, mainly on monday because they don't have the motivation to work. Here again, the effect on the average rating is statistically significant, but very small (in the order of 0.01).
 
-However, when we compare this with the other categories, it becomes harder to validate our theory, since it isn't present in all of them, which makes us think that the efect is more due to randomness than to any real factor.
+However, when we compare this with the other categories, it becomes harder to validate our theory, since it is not present in all of them, which makes us think that the efect is more due to randomness than to any real factor.
 
 <p float="left">
   <img src="/img/products/rating_by_dayofmonth_evolution_Books.png" width="99%" />
