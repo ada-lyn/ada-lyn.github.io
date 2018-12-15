@@ -396,7 +396,7 @@ This will have the following effect:
 	- If the reviewer has not given many reviews yet, we will not correct his rating that much since we cannot estimate his bias very well. 
 
 
-With the date bias and user bias correction implemented, we were ready to try our algorithm. We run it on a few articles, you can see right here some of the results. 
+With the date bias and user bias correction implemented, we were ready to try our algorithm. We run it on a few articles, you can see right here some of the results. For the first product, we show the average rating, as well as all the individual ratings. 
 
 *Hands-On Chemistry Activities with Real-Life Applications: Easy-to-Use Labs and Demonstrations for Grades 8-12* - 0876282621
 
