@@ -389,7 +389,7 @@ where
 
 if the review is not verified, we change alpha to be
 
-\\[ \alpha = alpha + (1 - alpha) * 0.5) \\ \\  (3)\\]
+\\[ \alpha = \alpha + (1 - \alpha) * 0.5) \\ \\  (3)\\]
 
 *x* is the average rating for the user that wrote the review and *avg* is the median of all the users' average rating
 
