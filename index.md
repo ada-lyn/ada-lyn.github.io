@@ -53,7 +53,7 @@ There are two main questions we will try to answer during this project:<br>
 
 ### Motivation
 
-Our goal is mostly to provide useful information to Amazon itself and to the products sellers. So that they can have a better idea of what a given review's rating really should be.
+Our goal is mostly to provide useful information to Amazon itself and to the products sellers. So that they can have a better idea of what a given review's rating should really be.
 For instance, they might receive a very bad review from someone and not understand why they had such a bad rating. But after bias correction it could be possible that the reviewer is just a "hater" (someone who always gives bad rating to every product) and that instead of a one-two stars it could be worth a 3-4 stars. There could be other factors that influenced the rating of that review and we will try to best correct them to valuable information.
 
 See more about that in the [Usefulness](#usefulness_) section at the end of the webpage.
