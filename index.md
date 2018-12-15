@@ -348,6 +348,7 @@ That makes it harder to know if the effect is actually due to the herding behavi
 # 3. Bias Correction
 
 ### Decisions
+
 As a conclusion from the above results, we will correct for the bias of specific users and for the bias of time. We saw that herding behaviour is an important effect, however it is difficult to quantify and calculate the unbiased rating. 
 
 ### Correction by Date
@@ -358,30 +359,31 @@ As discussed previously, we will try to remove time related bias. To do that, we
   <img src="/img/time_correction/N1.png" width="99%" />
 </p>
 
-The correction by years seems to be able to fix really well the biases. Note that it was also where the biggest biases where seen so even if further results of the other types of time period do not give such good results, this bias correction will still have been very significant! When reading the graphs, have a look at the axis as y scale is not the same on the corrected graphs.
+The correction by years seems to be able to fix really well the biases. Note that it was also where the biggest biases where seen so even if further results of the other types of time period do not give such good results, this bias correction will still have been very significant! When reading the graphs, have a look at the axis as *y* scale is not the same on the corrected graphs.
 
 <p float="left">
   <img src="/img/time_correction/N2.png" width="99%" />
 </p>
 
-The bias stayed pretty similar in terms of range (about 0.04) but not on the same months anymore. It may be due to a high correlation between the year and month and that correcting year biases changed the month biases. So at least we did not made the bias worse.
+For months, the bias increased slightly, and wasn't on the same months anymore. It may be due to a high correlation between the year and month and that correcting year biases changed the month biases. Since the bias is still small, it will not be that important compared to the year bias.
 
 <p float="left">
   <img src="/img/time_correction/N3.png" width="99%" />
 </p>
 
-The range of the bias went down from about 0.025 to 0.012. So even though the bias was quite low we made a small improvement.
+For the day of the month, the range of the bias went down from about 0.025 to 0.012. So even though the bias was quite low we made a small improvement.
 
 <p float="left">
   <img src="/img/time_correction/N4.png" width="99%" />
 </p>
 
-Almost no change in the range of the bias, maybe a tiny bit smaller. But the bias was really small here.
+Finally, for the day of the week, we have almost no change in the range of the bias, maybe a tiny bit smaller. But the bias was already really small initially.
 
 Overall, the time correction seems to have worked well, correcting the biggest biases in the years analysis and doing little or no change on the other time scales where the bias was way smaller anyways. Hence we can say it is quite conclusive.
 
 ### Correction by User History
 
+Now that we corrected the time bias, it is time to find a way to correct potential user bias. The method we used previously was logical and was made with a goal in mind: not having any more bias after the correction. However, it is not as simple to correct the bias correction, as we will not have a way to check if the final result in correct. We nevertheless think that our idea makes sense, and should be quite correct, although maybe a bit simple.
 
 We will correct the users bias using the following formula:<br>
 
@@ -393,7 +395,7 @@ where
 
 if the review is not verified, we change alpha to be
 
-\\[ \alpha = \alpha + (1 - \alpha) * 0.5) \\ \\  (3)\\]
+\\[ \alpha = \alpha + (1 - \alpha) * 0.5 \\ \\  (3)\\]
 
 *x* is the average rating for the user that wrote the review and *avg* is the median of all the users' average rating
 
