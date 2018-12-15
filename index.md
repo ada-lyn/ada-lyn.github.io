@@ -398,62 +398,7 @@ This will have the following effect:
 
 With the date bias and user bias correction implemented, we were ready to try our algorithm. We run it on a few articles, you can see right here some of the results. 
 
-Product 1 : *NAME OF PRODUCT* in depth
-
-
-| Original rating | Time bias corrected | User bias corrected |
-|:---------------:|:-------------------:|:-------------------:|
-| *Individual product reviews*                                |
-| 5.000           | 4.943               | 4.500               |
-| 5.000           | 5.096               | 4.933               |
-| 5.000           | 4.861               | 4.793               |
-| 4.000           | 3.849               | 3.698               |
-| 5.000           | 4.862               | 4.517               |
-| 5.000           | 4.851               | 4.908               |
-| 5.000           | 4.873               | 4.821               |
-| 5.000           | 4.934               | 4.490               |
-| 5.000           | 4.850               | 4.407               |
-| 5.000           | 4.833               | 4.667               |
-| 5.000           | 4.930               | 4.487               |
-| 5.000           | 4.854               | 4.411               |
-| 5.000           | 4.868               | 4.425               |
-| 4.000           | 3.864               | 3.754               |
-| 5.000           | 5.041               | 4.775               |
-| 5.000           | 5.088               | 4.934               |
-| 5.000           | 4.839               | 4.494               |
-| 4.000           | 3.930               | 4.153               |
-| 4.000           | 3.919               | 3.809               |
-| 5.000           | 4.935               | 4.714               |
-| *Total product average*                                     |
-| 4.800           | 4.711               | 4.485               |
-
-or 
-
-| Original rating | Time bias corrected | User (& time) bias corrected |
-|-----------------|---------------------|------------------------------|
-| *Individual product reviews*                                         |
-| 3.000           | 2.833               | 3.038                        |
-| 2.000           | 1.864               | 1.964                        |
-| 5.000           | 4.852               | 4.909                        |
-| 4.000           | 3.917               | 4.073                        |
-| 5.000           | 4.916               | 4.472                        |
-| 4.000           | 3.938               | 3.965                        |
-| 5.000           | 4.863               | 4.420                        |
-| 5.000           | 5.064               | 5.021                        |
-| 5.000           | 5.091               | 4.735                        |
-| 2.000           | 2.021               | 2.053                        |
-| 5.000           | 5.040               | 4.695                        |
-| 5.000           | 4.934               | 4.885                        |
-| 5.000           | 4.882               | 4.920                        |
-| 5.000           | 5.120               | 4.866                        |
-| 3.000           | 2.849               | 4.406                        |
-| 5.000           | 4.923               | 5.301                        |
-| 5.000           | 5.013               | 4.823                        |
-| 5.000           | 4.917               | 5.274                        |
-| 2.000           | 2.021               | 2.330                        |
-| 5.000           | 4.832               | 4.889                        |
-| *Total product average*                                              |
-| 4.250           | 4.195               | 4.252                        |
+*Mad for Decades: 50 Years of Forgettable Humor from MAD Magazine* - 1435101286
 
 | Original rating | Time bias corrected | User (& time) bias corrected |
 |-----------------|---------------------|------------------------------|
@@ -482,7 +427,7 @@ or
 | 4.750           | 4.739               | 4.819                        |
 
 
-A few more examples:
+A few more examples, with only the average rating:
 
 |Product name | Product id | Original score | After time bias corrections | After use bias correction |
 |--|--|--|--|--|
@@ -493,6 +438,7 @@ A few more examples:
 |Not a Suicide Pact: The Constitution in a Time of National Emergency (Inalienable Rights) | 0195304276 | 3.750 | 3.851 | 4.289 |
 |A Darwinian Left: Politics, Evolution, and Cooperation'] | 0300083238 | 3.700 | 3.816 | 4.049 |
  
+Mad for Decades: 50 Years of Forgettable Humor from MAD Magazine | 1435101286
  
 # 4. Conclusion
 
