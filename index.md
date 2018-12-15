@@ -401,6 +401,14 @@ This will have the following effect:
   <p>Lorem ipsum...</p>
 </div>
 
+With the date bias and user bias correction implemented, we were ready to try our algorithm. We run it on a few articles, you can see right here some of the results. 
+
+Product 1 : *NAME OF PRODUCT*
+
+
+| original | 2 | 4 |
+| Time     | 4 | 6 |
+| User     | 8 | 0 |
 
 
 | Original rating | Time bias corrected | User (& time) bias corrected |
