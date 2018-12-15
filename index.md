@@ -279,7 +279,7 @@ To be able to correcly compare ratings between countries, we will have to limit 
 We did pairwise comparaisons, since it is the way we have the most common data. You can see here the repartition of ratings in the US (on the left) versus the other countries (on the right). Pairwise comparaison between the other countries are available on the git repository. 
 
 <p float="left">
-  <img src="/img/countries/us_vs.gif" width="99%" />
+  <img src="/img/countries/us_vs.gif" width="80%" />
 </p>
 
 **TODO CREATE A BETTER GRAPH WITH ALL IN ONE**
