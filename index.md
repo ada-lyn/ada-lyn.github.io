@@ -270,7 +270,7 @@ In this part, we want to see if there are any differences between the way people
 
 To be able to correcly compare ratings between countries, we will have to limit our dataset to products that are available in both regions. Moreover, we will only keep reviews given during the same time period, since we saw earlier that the year of the review had quite a big impact on the rating.
 
-*e.g. If for a given article we have reviews from 2001 to 2015 in the US, but only from 2005 to 2015 in the UK, we will discard all reviews in the us before 2005.*
+*e.g. If for a given article we have reviews from 2001 to 2015 in the US, but only from 2005 to 2015 in the UK, we will discard all reviews in the US before 2005.*
 
 We did pairwise comparaisons, since it is the way we have the most common data. You can see here the repartition of ratings in the US (on the left) versus the other countries (on the right). 
 
@@ -279,15 +279,15 @@ We did pairwise comparaisons, since it is the way we have the most common data. 
 </p>
 
 
-We see that there is no significant difference of the ratings between countries. Our boxplots show that there is indeed a difference in the median, but the intervals are too large to confidently conclude anything. In france, germany and japan, there are products with lower average grades, but there does not seem to be a consistent bias present. We will therefore ignore this bias for the rest of our analysis.
+We see that there is no significant difference of the ratings between countries. Our boxplots show that there is indeed a difference in the median, but the intervals are too large to confidently conclude anything. In France, Germany and Japan, there are products with lower average grades, but there does not seem to be a consistent bias present. We will therefore ignore this bias for the rest of our analysis.
 
 #### Herding Behavior
 
-One of the bias that might  effect the ratings is what is called the Herding Behavior. Basically, for the same product, depending on the first review given to it, other reviews will vary. If the first review is very positive, other reviewers might have a tendency to also put a higher grade. The same is true for a first negative rating. If we want to make some analysis and give some hypotheses about this, we will need enough data, i.e. enough common products with a non negligable rating difference between the two countries. We have 29507 common reviews between the US and UK, which is not that much compared to the size of previous data, but we think it is still enough to see if this effect is indeed real.
+One of the bias that might affect the ratings is what is called the Herding Behavior. Basically, for the same product, depending on the first review given to it, other reviews will vary. If the first review is very positive, other reviewers might have a tendency to also put a higher grade. The same is true for a first negative rating. If we want to make some analysis and give some hypotheses about this, we will need enough data, i.e. enough common products with a non negligable rating difference between the two countries. We have 29507 common reviews between the US and UK, which is not that much compared to the size of previous data, but we think it is still enough to see if this effect is indeed real.
 
 *Approach*
 
-We will create a scatter plot, with on the x axis the first vote, on the y axis the average of the resulting votes. We exclude the first vote for the average calculation since it could affect the average. For example if it was significantly lower, and there would not be many votes, it could pull the average down. We will also only include products with at least 5 reviews, since we want to exlude any potential randomness due to such a low amount of reviews.
+We will create a scatter plot, with on the x axis the difference between the first rating in both markets, and on the y axis the difference in average of all ratings. We exclude the first vote for the average calculation since it could affect the average. For example if it was significantly lower, and there would not be many votes, it could pull the average down. We will also only include products with at least 5 reviews, since we want to exlude any potential randomness due to such a low amount of reviews.
 
 If there was no herding behaviour effect, we would expect a uniform cloud centered at [c_avg,c_avg], where c_avg is the average country difference. Since we did not observe any signifcant bias in the last section, we expect this value to be roughly 0.
 If herding behaviour is present, we still expect a point cloud centered at [c_avg,c_avg], but there will be a positive correlation between the first rating and the average rating.
@@ -306,7 +306,7 @@ In order to avoid this, we filter our resulting dataset to only contain integer 
   
 </p>
 
-Visual inspection of the regression slope shows that it is strictly positive. The confidence bands of the seaborn plot do not include a line $f(x) = c$, so we can conclude that there is herding behaviour. Moreover, we see that we have a Pearson's correlation coefficient of ~0.145, which is quite low, but significant and expected. If it was bigger, for instance 0.8, it might actually really problematic for Amazon, and woulnd mean that the vast majority of people would just look at older reviews, without giving their own opinion at all. Hence this is a good thing to have guite a low correlation. 
+Visual inspection of the regression slope shows that it is strictly positive. The confidence bands of the seaborn plot do not include a line $f(x) = c$, so we can conclude that there is herding behaviour. Moreover, we see that we have a Pearson's correlation coefficient of ~0.145, which is quite low, but significant and expected. If it was bigger, for instance 0.8, it might actually really problematic for Amazon, and would mean that the vast majority of people would just look at older reviews, without giving their own opinion at all. Hence this is a good thing to have quite a low correlation. 
 
 One question that follows from this is if this correlation also depends on the number of reviews for a product.
 
@@ -314,7 +314,7 @@ One question that follows from this is if this correlation also depends on the n
   <img src="/img/herding/int_100_300_steps_corr.png" width="99%" />
 </p>
 
-Here, we only used products that have between 100 and 300 reviews. We can clearly see a higher correlation, with a Pearson coeeficient of 0.323. There is more incertitude, due to the smaller amount of data, but we can confidently say that the effect is greater. We thought that it might be correlated to the number of reviews for a product, but after more experiments for higher (and lower) amounts of products, we could not find any relation. 
+Here, we only used products that have between 100 and 300 reviews. We can clearly see a higher correlation, with a Pearson coeeficient of 0.323. There is more incertitude, due to the smaller amount of data, but we can confidently say that the effect is greater. We thought that it might be correlated to the number of reviews for a product, but after more experiments for products with higher (and lower) amounts of reviews, we could not find any relation. 
 
 To better understand what is really happending, we looker deeper into a few products. 
 For each of them, we plotted the commulative average of the reviews written in both the US and UK, relative to the date. The first review was excluded in this cummulative average.
