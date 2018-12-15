@@ -428,13 +428,13 @@ With the date bias and user bias correction implemented, we were ready to try ou
 
 A few more examples, with only the average rating:
 
-|Product name | Product id | Original score | After time bias corrections | After use bias correction |
+|Product name | id | Original rating | After time bias corrections | After use bias correction |
 |--|--|--|--|--|
-|ShowTime  Popular: Level 2A (Showtime Piano) | 1616770430 | 4.800 | 4.711 | 4.485 |
-|Mad for Decades: 50 Years of Forgettable Humor from MAD Magazine | 1435101286 | 4.250 | 4.195 | 4.252 |
-|Pearson Nurse's Drug Guide 2011 | 0132149265 | 4.450 | 4.484 | 4.570 |
-|Not a Suicide Pact: The Constitution in a Time of National Emergency (Inalienable Rights) | 0195304276 | 3.750 | 3.851 | 4.289 |
-|A Darwinian Left: Politics, Evolution, and Cooperation'] | 0300083238 | 3.700 | 3.816 | 4.049 |
+|*ShowTime  Popular: Level 2A (Showtime Piano)* | 1616770430 | 4.800 | 4.711 | 4.485 |
+|*Mad for Decades: 50 Years of Forgettable Humor from MAD Magazine* | 1435101286 | 4.250 | 4.195 | 4.252 |
+|*Pearson Nurse's Drug Guide 2011* | 0132149265 | 4.450 | 4.484 | 4.570 |
+|*Not a Suicide Pact: The Constitution in a Time of National Emergency (Inalienable Rights)* | 0195304276 | 3.750 | 3.851 | 4.289 |
+|*A Darwinian Left: Politics, Evolution, and Cooperation* | 0300083238 | 3.700 | 3.816 | 4.049 |
 
 <a name="conclusion_"></a>
  
