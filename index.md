@@ -262,7 +262,7 @@ Now, for the review body length:
 
 For the body length however, we see that the result is completly different. A short review body generaly corresponds to a higher rating, whereas a long review coresponds to a lower rating. It probably is because there is not always much to say for excellent products, whereas you can describe a lot of negative points for the less good products. That trend is very clear between 0 and 2000 characters, with a huge drop of more than 0.5 stars, but for longer reviews, it is harder to conclude anything since the confidence interval is much larger, and we can see a lot of noise. That is obvisously due to the small quantity of reviews with more than 5000 characters (people rarelly will spend so much time writting reviews).
 
-While being an interesting analysis, it shows that these results will not result in bias correction as the title and body length are naturally correlated with the ratings and it makes perfect sense.
+While being an interesting analysis, it will not be used in bias correction as the title and body length are naturally correlated with the ratings and it makes perfect sense.
 
 ### By Country
 
