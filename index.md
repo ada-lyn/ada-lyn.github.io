@@ -424,7 +424,7 @@ With the date bias and user bias correction implemented, we were ready to try ou
 | 5.000           | 5.134               | 5.303                        |
 | 5.000           | 4.834               | 4.890                        |
 | *Total product average*                                              |
-| 4.750           | 4.739               | 4.819                        |
+| **4.750**       | **4.739**           | **4.819**                    |
 
 A few more examples, with only the average rating:
 
