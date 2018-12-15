@@ -281,7 +281,7 @@ We see that there is no significant difference of the ratings between countries.
 
 #### Herding Behavior
 
-One of the bias that might  effect the ratings is what is called the Herding Behavior. Basically, for the same product, depending on the first review given to it, other reviews will vary. If the first review is very positive, other reviewers might have a tendency to also put a higher grade. The same is true for a first negative rating. If we want to make some analysis and give some hypotheses about this, we will need enough data, i.e. enough common products with a non negligable rating difference between the two countries. We have 29507 common reviews between the US and UK, which isn't that much compared to the size of previous data, but we think it is still enough to see if this effect is indeed real.
+One of the bias that might  effect the ratings is what is called the Herding Behavior. Basically, for the same product, depending on the first review given to it, other reviews will vary. If the first review is very positive, other reviewers might have a tendency to also put a higher grade. The same is true for a first negative rating. If we want to make some analysis and give some hypotheses about this, we will need enough data, i.e. enough common products with a non negligable rating difference between the two countries. We have 29507 common reviews between the US and UK, which is not that much compared to the size of previous data, but we think it is still enough to see if this effect is indeed real.
 
 *Approach*
 
